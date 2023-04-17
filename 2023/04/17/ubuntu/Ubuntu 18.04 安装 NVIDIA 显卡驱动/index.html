@@ -9,7 +9,7 @@
     
     <title>
         
-            Hello World |
+            Ubuntu安装NVIDIA驱动 |
         
         RSIC
     </title>
@@ -164,7 +164,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">Hello World</span>
+                <span class="title-hover-animation">Ubuntu安装NVIDIA驱动</span>
             </div>
 
             
@@ -186,13 +186,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2022-10-25 11:40:36</span>
-        <span class="mobile">2022-10-25 11:40</span>
+        <span class="pc">2023-04-17 23:05:00</span>
+        <span class="mobile">2023-04-17 23:05</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-04-17 22:27:13</span>
+        <span class="pc">2023-04-17 23:11:09</span>
     </span>
     
     
@@ -201,7 +201,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/Hexo/">Hexo</a>&nbsp;
+                        <a href="/categories/Linux/">Linux</a>&nbsp;
                     </li>
                 
             </ul>
@@ -213,7 +213,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Hexo/">Hexo</a>&nbsp;
+                        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>&nbsp;
                     </li>
                 
             </ul>
@@ -223,12 +223,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>75 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.7k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>6 分钟</span>
         </span>
     
     
@@ -246,19 +246,128 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <p>我们今天的目标是在 Ubuntu 18.04 上安装 NVIDIA 显卡驱动，请注意，你的显卡一定要是 NVIDIA 的显卡才能按照这篇文章的方法安装。我将给大家介绍三种安装方法，建议使用第一种方法安装。</p>
+<p>先来说说带有 NVIDIA 独立显卡的电脑为什么要安装 NVIDIA 显卡驱动吧。下面是我从维基百科摘抄的显卡工作原理的介绍：</p>
+<blockquote>
+<p>显卡是插在主板上的扩展槽里的（现在一般是 PCI-E 插槽，此前还有 AGP、PCI、ISA 等插槽）。它主要负责把主机向显示器发出的显示信号转化为一般电器信号，使得显示器能明白个人计算机在让它做什么。显卡的主要芯片叫“显示芯片”（Video chipset，也叫 GPU 或 VPU，图形处理器或视觉处理器），是显卡的主要处理单元。显卡上也有和计算机存储器相似的存储器，称为“显示存储器”，简称显存。<br>早期的显卡只是单纯意义的显卡，只起到信号转换的作用；当前我们一般使用的显卡都带有 3D 画面运算和图形加速功能，所以也叫做“图形加速卡”或“3D 加速卡”。PC 上最早的显卡是 IBM 在 1981 年推出的 5150 个人计算机上所搭载的 MDA 和 CGA 两款 2D 加速卡。<br>显卡通常由总线接口、PCB 板、显示芯片、显存、RAMDAC、VGA BIOS、VGA 功能插针、D-sub 插座及其他外围组件构成，现在的显卡大多还具有 VGA、DVI 显示器接口或者 HDMI 接口及 S-Video 端子和 Display Port 接口。</p>
+</blockquote>
+<p>电脑硬件有 NVIDIA 的显卡，但是没有驱动，那它是不能工作的，所以为了让显卡能够工作，发挥它的作用，我们需要安装显卡驱动。好的，下面来看看三种不同的安装方法吧。</p>
+<h2 id="1-使用-Ubuntu-软件仓库中的稳定版本安装"><a href="#1-使用-Ubuntu-软件仓库中的稳定版本安装" class="headerlink" title="1. 使用 Ubuntu 软件仓库中的稳定版本安装"></a><strong>1. 使用 Ubuntu 软件仓库中的稳定版本安装</strong></h2><p><em>2020.08.09 补充：</em></p>
+<p>介于许多朋友看了这篇文章介绍的方法安装还是会遇到问题，我这里补充一种更好的安装方法，也建议使用这种方法安装，其实我在下面这篇文章中有介绍，请参考 2.2 小节。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/63584709" >史上最良心的 Ubuntu desktop 美化优化指导(1)<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="1-1-查看显卡硬件型号"><a href="#1-1-查看显卡硬件型号" class="headerlink" title="1.1. 查看显卡硬件型号"></a><strong>1.1. 查看显卡硬件型号</strong></h2><p>在终端输入：<code>ubuntu-drivers devices</code>，可以看到如下界面：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-5d32bffc05c68bf8edbd27fd20e837b0_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+<p>从上图可以看出，我的显卡是：<code>GM107M [GeForce GTX 860M]</code>，推荐安装的版本号是：<code>nvidia-driver-390 - distro non-free recommended</code>。</p>
+<h2 id="1-2-开始安装"><a href="#1-2-开始安装" class="headerlink" title="1.2. 开始安装"></a><strong>1.2. 开始安装</strong></h2><ul>
+<li>如果同意安装推荐版本，那我们只需要终端输入：<code>sudo ubuntu-drivers autoinstall</code> 就可以自动安装了。</li>
+<li>当然我们也可以使用 apt 命令安装自己想要安装的版本，比如我想安装 <code>340</code> 这个版本号的版本，终端输入：<code>sudo apt install nvidia-340</code> 就自动安装了。</li>
+<li>安装过程中按照提示操作，除非你知道每个提示的真实含义，否则所有的提示都选择默认就可以了，安装完成后重启系统，NVIDIA 显卡就可以正常工作了。安装完成后你可以参照 <code>https://linuxconfig.org/benchmark-your-graphics-card-on-linux</code> 上的介绍测试你的显卡。</li>
+</ul>
+<h2 id="2-使用-PPA-第三方软件仓库安装最新版本"><a href="#2-使用-PPA-第三方软件仓库安装最新版本" class="headerlink" title="2. 使用 PPA 第三方软件仓库安装最新版本"></a><strong>2. 使用 PPA 第三方软件仓库安装最新版本</strong></h2><ul>
+<li>添加 PPA 软件仓库：<code>sudo add-apt-repository ppa:graphics-drivers/ppa</code>，需要输入用户密码，按照提示还需要按下 Enter 键。</li>
+<li>更新软件索引：<code>sudo apt update</code></li>
+<li>接下来的步骤同方法一，只是这样我们就可以选择安装最新版本的驱动程序了。</li>
+</ul>
+<h2 id="3-从-NVIDIA-官网下载最新版驱动手动安装"><a href="#3-从-NVIDIA-官网下载最新版驱动手动安装" class="headerlink" title="3. 从 NVIDIA 官网下载最新版驱动手动安装"></a><strong>3. 从 NVIDIA 官网下载最新版驱动手动安装</strong></h2><ul>
+<li>打开终端，输入：<code>lshw -numeric -C display</code>，确认自己电脑显卡的型号，如下图：</li>
+</ul>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-592fd9491dfa98dfc005c2dd9e966404_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+<p>从上图可以看到，我的电脑的显卡是 <code>product: GM107M [GeForce GTX 860M] [10DE:1392]</code>，然后我们到 NVIDIA 的官网下载相应型号的驱动，官网地址是：<code>https://www.nvidia.com/Download/index.aspx</code>，如下图，我选择 GTX 860 显卡的驱动下载。</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic3.zhimg.com/v2-586ce06ccebb8ec8d2013f81e4d1232e_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+<p>注意每个选项，特别是操作系统那里，一定选择 Linux 64-bit</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
+                     
+                >英伟达 NVIDIA Quadro RTX8000 专业显卡</p>
+<p>京东</p>
+<p>¥37999.00</p>
+<p>去购买</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
+                     
+                ></p>
+<p>选好后点击 SEARCH 按钮搜索相应的驱动，如下图：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic4.zhimg.com/v2-cad8de4d54178b21244a0e2c124a55ff_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+<p>看到了吧，官方最新版本号已经是 418.43 了。点击 DOWNLOAD 按钮下载吧。</p>
+<p>接着需要先安装一些 NVIDIA 显卡依赖的软件，在终端依次执行如下命令：</p>
+<ul>
+<li><code>sudo dpkg --add-architecture i386</code></li>
+<li><code>sudo apt update</code></li>
+<li><code>sudo apt install build-essential libc6:i386</code></li>
+</ul>
+<p>Ubuntu 系统默认安装好是使用的一个开源的驱动：<code>nouveau</code>，我们要安装官方的驱动需要先禁用这个开源驱动，方法如下，依次执行：</p>
+<ul>
+<li><code>sudo bash -c &quot;echo blacklist nouveau &gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
+<li><code>sudo bash -c &quot;echo options nouveau modeset=0 &gt;&gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
+</ul>
+<p>执行完上面两条指令后，我们使用如下命令看看是否成功禁用了开源驱动：<code>cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</code>。如果和下面一样，表示成功了。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</span><br><span class="line">blacklist nouveau</span><br><span class="line">options nouveau modeset=0</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
+<p>这个时候我们需要先重启一下系统，重启吧。</p>
+<p>重启成功后打开终端，输入如下命令：<code>sudo telinit 3</code>。然后按快捷键：<code>CTRL+ALT+F1</code> 进入字符界面，输入用户名和密码，然后登录系统，进入我们保存下载 NVIDIA 驱动的目录，默认是：<code>Downloads/</code> 目录，<code>cd Downloads/</code>，然后执行：<code>bash NVIDIA-Linux-x86_64-418.43.bin</code>。注意：<code>NVIDIA-Linux-x86_64-418.43.bin</code> 要根据你下载的驱动文件的名字相应改动。</p>
+<p>安装过程中都点同意即可，如果你遇到下面的提示，安装下面我的输入输入后回车继续安装：</p>
+<blockquote>
+<p>The distribution-provided pre-install script failed!<br>Are you sure you want to continue? -&gt; <strong>CONTINUE INSTALLATION</strong><br>Would you like to run the nvidia-xconfig utility? -&gt; <strong>YES</strong></p>
+</blockquote>
+<p>安装完成后重启系统就可以点击软件列表中的 NVIDIA 的配置软件配置显卡驱动了，如果你遇到如下报错，请依次在终端输入如下命令解决：</p>
+<ul>
+<li>报错：WARNING: Unable to find suitable destination to install 32-bit compatibility libraries</li>
+<li>解决办法：<ul>
+<li>sudo dpkg –add-architecture i386</li>
+<li>sudo apt update</li>
+<li>sudo apt install libc6:i386</li>
+</ul>
+</li>
+</ul>
+<p>好了，今天分享了如何安装 NVIDIA 显卡驱动，再次提醒，如果你的显卡不是 NVIDIA 显卡，千万不要这么干，也不要在虚拟机中这么干。有什么不懂的可以留言和我讨论。</p>
 
             </div>
 
@@ -268,16 +377,16 @@
 <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li class="post-title">
-            <span class="type">本文标题</span>：<span class="content">Hello World</span>
+            <span class="type">本文标题</span>：<span class="content">Ubuntu安装NVIDIA驱动</span>
         </li>
         <li class="post-author">
             <span class="type">本文作者</span>：<span class="content">Ran Shuo</span>
         </li>
         <li class="post-time">
-            <span class="type">创建时间</span>：<span class="content">2022-10-25 11:40:36</span>
+            <span class="type">创建时间</span>：<span class="content">2023-04-17 23:05:00</span>
         </li>
         <li class="post-link">
-            <span class="type">本文链接</span>：<span class="content">2022/10/25/hello-world/</span>
+            <span class="type">本文链接</span>：<span class="content">2023/04/17/ubuntu/Ubuntu 18.04 安装 NVIDIA 显卡驱动/</span>
         </li>
         <li class="post-license">
             <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
@@ -295,7 +404,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/Hexo/">#Hexo</a>&nbsp;
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">#深度学习</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -307,18 +416,33 @@
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/"
+                               href="/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">ImageNet数据集的下载与使用</span>
+                                <span class="post-nav-title-item">使用SCP拷贝文件</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>
                         </div>
                     
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">ImageNet数据集的下载与使用</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
                     
                 </div>
             
@@ -330,7 +454,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8-Ubuntu-%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93%E4%B8%AD%E7%9A%84%E7%A8%B3%E5%AE%9A%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">1. 使用 Ubuntu 软件仓库中的稳定版本安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%9F%A5%E7%9C%8B%E6%98%BE%E5%8D%A1%E7%A1%AC%E4%BB%B6%E5%9E%8B%E5%8F%B7"><span class="nav-number">2.</span> <span class="nav-text">1.1. 查看显卡硬件型号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">1.2. 开始安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8-PPA-%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC"><span class="nav-number">4.</span> <span class="nav-text">2. 使用 PPA 第三方软件仓库安装最新版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BB%8E-NVIDIA-%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88%E9%A9%B1%E5%8A%A8%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="nav-number">5.</span> <span class="nav-text">3. 从 NVIDIA 官网下载最新版驱动手动安装</span></a></li></ol>
     </div>
 </div>
 

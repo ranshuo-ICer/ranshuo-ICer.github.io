@@ -9,7 +9,7 @@
     
     <title>
         
-            归档: 2022 |
+            SSH免密登陆 |
         
         RSIC
     </title>
@@ -80,7 +80,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active"
+                            <a class=""
                                href="/archives"
                             >
                                 归档
@@ -130,7 +130,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/archives">归档</a>
                 </li>
             
@@ -160,69 +160,228 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">SSH免密登陆</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Ran Shuo</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
         
-<div class="archive-list-container">
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-04-17 23:05:00</span>
+        <span class="mobile">2023-04-17 23:05</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[4]</span>
-            </div>
-            <ul class="article-list">
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-04-17 23:09:13</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/"
-                        >SSH免密登陆</a>
-                        <span class="article-date">04-17</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/"
-                        >使用SCP拷贝文件</a>
-                        <span class="article-date">04-17</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/04/17/ubuntu/Ubuntu%2018.04%20%E5%AE%89%E8%A3%85%20NVIDIA%20%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/"
-                        >Ubuntu安装NVIDIA驱动</a>
-                        <span class="article-date">04-17</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/"
-                        >ImageNet数据集的下载与使用</a>
-                        <span class="article-date">04-17</span>
+                    <li>
+                        <a href="/categories/Linux/">Linux</a>&nbsp;
                     </li>
                 
             </ul>
-        </section>
+        </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2022</span>
-                <span class="archive-year-post-count">[1]</span>
-            </div>
-            <ul class="article-list">
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2022/10/25/hello-world/"
-                        >Hello World</a>
-                        <span class="article-date">10-25</span>
+                    <li>
+                        <a href="/tags/SSH/">SSH</a>&nbsp;
                     </li>
                 
             </ul>
-        </section>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>123 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="SSH免密登陆"><a href="#SSH免密登陆" class="headerlink" title="SSH免密登陆"></a>SSH免密登陆</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
+<li>终端</li>
+<li>脑子</li>
+</ul>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h3><ul>
+<li>打开终端，输入 <code>ssh-keygen</code>，生成公钥和私钥</li>
+</ul>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612882454.png"
+                      alt="1680612882454"
+                ></p>
+<ul>
+<li>生成的文件如下：</li>
+</ul>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612946153.png"
+                      alt="1680612946153"
+                ></p>
+<p>其中的 <code>*.pub</code>文件是公钥。</p>
+<h3 id="部署公钥"><a href="#部署公钥" class="headerlink" title="部署公钥"></a>部署公钥</h3><ul>
+<li>将公钥上传到服务器的 <code>user/.ssh/</code>目录下：</li>
+</ul>
+<p>在服务器的 <code>.ssh</code>目录下新建文件 <code>authorized_keys</code></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613300625.png"
+                      alt="1680613300625"
+                ></p>
+<p>写入公钥的内容</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613342598.png"
+                      alt="1680613342598"
+                ></p>
+<p>保存。至此设置好了服务器端</p>
+<h3 id="使用私钥"><a href="#使用私钥" class="headerlink" title="使用私钥"></a>使用私钥</h3><h4 id="VScode使用方法"><a href="#VScode使用方法" class="headerlink" title="VScode使用方法"></a>VScode使用方法</h4><p>依次点击</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613473684.png"
+                      alt="1680613473684"
+                ></p>
+<p>编辑文件</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613555967.png"
+                      alt="1680613555967"
+                ></p>
+<p>点击保存即可</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">本文标题</span>：<span class="content">SSH免密登陆</span>
+        </li>
+        <li class="post-author">
+            <span class="type">本文作者</span>：<span class="content">Ran Shuo</span>
+        </li>
+        <li class="post-time">
+            <span class="type">创建时间</span>：<span class="content">2023-04-17 23:05:00</span>
+        </li>
+        <li class="post-link">
+            <span class="type">本文链接</span>：<span class="content">2023/04/17/ssh/ssh免密登陆/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="复制版权信息" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
     </div>
 </div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/SSH/">#SSH</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">使用SCP拷贝文件</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SSH%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86"><span class="nav-number">1.</span> <span class="nav-text">SSH免密登陆</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.2.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E7%A7%98%E9%92%A5"><span class="nav-number">1.2.1.</span> <span class="nav-text">生成秘钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5"><span class="nav-number">1.2.2.</span> <span class="nav-text">部署公钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E7%A7%81%E9%92%A5"><span class="nav-number">1.2.3.</span> <span class="nav-text">使用私钥</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#VScode%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">VScode使用方法</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
 
                 
             </div>
@@ -267,6 +426,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -365,6 +541,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
     
 </div>
 
