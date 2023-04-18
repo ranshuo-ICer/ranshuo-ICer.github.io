@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="RSIC">
+    
+    <title>
+        
+            如何建立自己的博客 |
+        
+        RSIC&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.jpg">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/brands.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"ranshuo-icer.github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.jpg","favicon":"/images/logo.jpg","avatar":"/images/logo.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"岁月本长，而忙者自促；天地本宽，而鄙者自隘；风花雪月本闲，而扰攘者自冗","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.jpg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               RSIC&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">如何建立自己的博客</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/logo.jpg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">RSIC</span>
+                            
+                                <span class="author-label">Lv1</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-04-18 09:05:00</span>
+        <span class="mobile">2023-04-18 09:05</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-04-18 10:09:44</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/blog/">blog</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/HEXO/">HEXO</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.7k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>6 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>看到别人酷炫的博客，自己也像整一个，如何操作呢？本篇文章将手把手教你建立自己的博客</p>
+<h1 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h1><blockquote>
+<p>Hexo 是一个快速、简洁且高效的静态博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。我们只需要通过 Markdown 语法写好自己的博客内容，然后通过简单的命令就能够将生成的网页上传到 Github，然后大家都可以来访问你的网页了。既方便了自己，也给了自己一个展示自己成果的平台，是不是一举两得</p>
+</blockquote>
+<p>Hexo官方也提供了一个安装教程，具体可以参考<a class="link"   target="_blank" rel="noopener" href="https://easyhexo.com/" >Easy Hexo 👨‍💻<i class="fas fa-external-link-alt"></i></a>和 <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >Documentation | Hexo<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><ul>
+<li>Windows：下载并安装 <a class="link"   target="_blank" rel="noopener" href="https://git-scm.com/download/win" >git<i class="fas fa-external-link-alt"></i></a>.</li>
+<li>Mac：使用 <a class="link"   target="_blank" rel="noopener" href="http://mxcl.github.com/homebrew/" >Homebrew<i class="fas fa-external-link-alt"></i></a>, <a class="link"   target="_blank" rel="noopener" href="http://www.macports.org/" >MacPorts<i class="fas fa-external-link-alt"></i></a> 或者下载 <a class="link"   target="_blank" rel="noopener" href="http://sourceforge.net/projects/git-osx-installer/" >安装程序<i class="fas fa-external-link-alt"></i></a>。</li>
+<li>Linux (Ubuntu, Debian)：<code>sudo apt-get install git-core</code></li>
+<li>Linux (Fedora, Red Hat, CentOS)：<code>sudo yum install git-core</code></li>
+</ul>
+<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>Node.js 为大多数平台提供了官方的 <a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/" >安装程序<i class="fas fa-external-link-alt"></i></a>。对于中国大陆地区用户，可以前往 <a class="link"   target="_blank" rel="noopener" href="https://npmmirror.com/mirrors/node/" >淘宝 Node.js 镜像<i class="fas fa-external-link-alt"></i></a> 下载。</p>
+<p>其它的安装方法：</p>
+<ul>
+<li>Windows：通过 <a class="link"   target="_blank" rel="noopener" href="https://github.com/jasongin/nvs/" >nvs<i class="fas fa-external-link-alt"></i></a>（推荐）或者 <a class="link"   target="_blank" rel="noopener" href="https://github.com/nvm-sh/nvm" >nvm<i class="fas fa-external-link-alt"></i></a> 安装。</li>
+<li>Mac：使用 <a class="link"   target="_blank" rel="noopener" href="https://brew.sh/" >Homebrew<i class="fas fa-external-link-alt"></i></a> 或 <a class="link"   target="_blank" rel="noopener" href="http://www.macports.org/" >MacPorts<i class="fas fa-external-link-alt"></i></a> 安装。</li>
+<li>Linux（DEB&#x2F;RPM-based）：从 <a class="link"   target="_blank" rel="noopener" href="https://github.com/nodesource/distributions" >NodeSource<i class="fas fa-external-link-alt"></i></a> 安装。</li>
+<li>其它：使用相应的软件包管理器进行安装，可以参考由 Node.js 提供的 <a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/package-manager/" >指导<i class="fas fa-external-link-alt"></i></a>。</li>
+</ul>
+<p>我的电脑是Windows，下面带着一起使用nvs的方法安装Node.js</p>
+<p>点击<a class="link"   target="_blank" rel="noopener" href="https://github.com/jasongin/nvs/releases" >Releases · jasongin&#x2F;nvs (github.com)<i class="fas fa-external-link-alt"></i></a>下载Windows安装包</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/hexo-blog/1681780963272.png"
+                      alt="1681780963272"
+                ></p>
+<p>下载完成后打开进行安装，安装完成界面如下：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/hexo-blog/1681781106078.png"
+                      alt="1681781106078"
+                ></p>
+<p>点击 <code>finish</code>。</p>
+<p>打开终端，输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvs add lts</span><br></pre></td></tr></table></figure>
+
+<p>安装最新的LTS版本</p>
+<p>使用 <code>nvs link</code> 将node.js永久加入环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvs <span class="built_in">link</span> lts</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>经过上述步骤安装完node.js后即可使用 <code>npm</code>安装hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-建站"><a href="#2-建站" class="headerlink" title="2. 建站"></a>2. 建站</h1><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<p>新建完成后，指定文件夹的目录如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>hexo g</code> 生成网页，<code>hexo s</code> 开启一个本地的服务，即可在本地浏览</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/hexo-blog/1681781945669.png"
+                      alt="1681781945669"
+                ></p>
+<p>在浏览器中输入 <code>http://localhost:4000/</code>查看网页</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/hexo-blog/1681782072352.png"
+                      alt="1681782072352"
+                ></p>
+<p>界面可能会不一样，因为我的使用了其他主题。</p>
+<p>以上只是个简单的示例，我们需要根据自己的需求修改 <code>_config.yml</code>文件，具体参数请参考hexo官方和easy hexo</p>
+<p>我们将在下一节用到 <code>_config.yaml</code></p>
+<h1 id="3-部署到Github"><a href="#3-部署到Github" class="headerlink" title="3. 部署到Github"></a>3. 部署到Github</h1><h2 id="建立托管仓库"><a href="#建立托管仓库" class="headerlink" title="建立托管仓库"></a>建立托管仓库</h2><p>部署的前提是要有个github账号，如果你没有的话自己去注册一个，如果不会注册的话就退出吧，你应该也用不到QAQ（bushi）</p>
+<p>在GitHub新建一个仓库，仓库名就是 <code>你注册时的用户名.github.io</code>：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/hexo-blog/1681782364729.png"
+                      alt="1681782364729"
+                ></p>
+<h2 id="设置SSH"><a href="#设置SSH" class="headerlink" title="设置SSH"></a>设置SSH</h2><p>生成 ssh 密钥文件，输入如下命令后直接三次回车即可，一般不需要设置密码；</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 生成 ssh 密钥</span><br><span class="line">ssh-keygen -t rsa -C &quot;github 注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>我生成秘钥的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;12345qq.com&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic2.zhimg.com/80/v2-9e2d268a169026242849e2ff5325fcad_720w.webp"
+                     
+                ></p>
+<p>一般执行上述命令之后，会生成 <code>id_rsa</code> 和 <code>id_rsa.pub</code> 两个文件，前者是我们私有的，而后者则是对外开放的。接着找到生成的 <code>.ssh</code> 的文件夹中的 id_rsa.pub 密钥，将内容复制；</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/hexo-blog/1681782620156.png"
+                      alt="1681782620156"
+                ></p>
+<p>然后打开 <a class="link"   href="https://link.zhihu.com/?target=https://github.com/settings/keys" >GitHub-Settings-Keys<i class="fas fa-external-link-alt"></i></a> 页面，创建一个新的 SSH key，填写 <code>Title</code> 和 <code>Key</code>，<code>Title</code> 可以随意，而 <code>Key</code> 的内容则是我们刚才复制的 <code>id_rsa.pub</code> 中的内容，最后点击 <code>Add SSH key</code> 即可；</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic2.zhimg.com/80/v2-fa367eb2c2c4749be656c34d782d6619_720w.webp"
+                     
+                ></p>
+<h2 id="配置-config-yaml"><a href="#配置-config-yaml" class="headerlink" title="配置 _config.yaml"></a>配置 <code>_config.yaml</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span> <span class="comment"># 类型填git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span> <span class="comment"># 你的Github仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 分支名称。默认填写 master 如果您使用的是 GitHub ，程序会尝试自动检测。</span></span><br><span class="line">  <span class="attr">message:</span> <span class="comment"># 提交信息可以自定义，不填的则默认为提交时间</span></span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>注意，上述填写Github仓库地址的时候可以使用ssh地址，如果前面的ssh设置正确的话，可以不用输入密码就提交到github</p>
+</blockquote>
+<h2 id="配置-Git"><a href="#配置-Git" class="headerlink" title="配置 Git"></a>配置 Git</h2><p>如果你只是安装好了 Git 但没有配置过你的 Git ，那么现在需要做的第一件事情就是设置你的 Git 用户名和邮箱。 在 Git Bash 中执行以下两条命令配置你的用户名和邮箱，这里建议用户名和邮箱与你的 GitHub 用户名和邮箱保持一致。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;Your_user_name&quot;</span></span><br><span class="line">$ git config --global user.email Your_email@example.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装部署插件-opens-new-window"><a href="#安装部署插件-opens-new-window" class="headerlink" title="安装部署插件(opens new window)"></a>安装<a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-deployer-git" >部署插件(opens new window)<i class="fas fa-external-link-alt"></i></a></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+
+<h2 id="发布到-GitHub"><a href="#发布到-GitHub" class="headerlink" title="发布到 GitHub"></a>发布到 GitHub</h2><p>在本地的 Hexo 站点根目录下，执行如下命令即可部署到 GitHub Pages 上。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo d -g</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="4-美化"><a href="#4-美化" class="headerlink" title="4. 美化"></a>4. 美化</h1><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/hexo-blog/1681783293434.png"
+                      alt="1681783293434"
+                ></p>
+<p>上面是bing给出的回答。我使用的keep主题，可以直接使用keep的模板，非常方便。具体请参考keep官方<a class="link"   target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/tutorial/get-start/quick-starter.html" >Keep 主题快速启动模板 | Keep 主题使用指南 (xpoet.cn)<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="下载模板"><a href="#下载模板" class="headerlink" title="下载模板"></a>下载模板</h2><h3 id="使用-Git-克隆"><a href="#使用-Git-克隆" class="headerlink" title="使用 Git 克隆"></a>使用 Git 克隆</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-keep/hexo-theme-keep-starter</span><br></pre></td></tr></table></figure>
+
+<h3 id="直接下载"><a href="#直接下载" class="headerlink" title="直接下载"></a>直接下载</h3><p><a class="link"   target="_blank" rel="noopener" href="https://github.com/theme-keep/hexo-theme-keep-starter/archive/refs/heads/main.zip" >点击这里下载 &gt;&gt; Keep 主题快速启动模板<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p>「 Keep 主题快速启动模板 」下载完成之后，需要安装项目依赖才能成功运行起来。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> hexo-theme-keep-starter</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意</p>
+<p>使用 Keep 主题必须确保你的 Node.js 版本 &gt;&#x3D; 14.0，当你的 Hexo 项目运行时报错或发出警告时，请注意升级你的 Node.js 版本。</p>
+</blockquote>
+<h2 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h2><p>项目依赖安装成功之后，使用如下命令即可运行项目，随即在浏览器上看到 Keep 主题的 Hexo 博客。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm run server</span><br></pre></td></tr></table></figure>
+
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://cdn.staticaly.com/gh/XPoet/image-hosting@master/keep-docs/keep-starter.45ebf5je2to0.webp"
+                      alt="keep-starter"
+                ></p>
+<h2 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h2><p>至此，我们可以直接在此模板上自由配置 Keep 主题，最后编译生成静态文件 -&gt; 部署发布。</p>
+<p><strong>注意：为确保你的主题配置项完全生效，请在 <code>source/_data/keep.yml</code> 路径下进行主题配置。</strong></p>
+<blockquote>
+<p>请勿随意移动 <code>keep.yml</code> 文件的路径，确保 <code>keep.yml</code> 在 <code>source/_data/</code> 路径下。<br>请勿随意更改 <code>keep.yml</code> 文件中的配置项字段名称，填写配置项之后，确保缩进是否正确。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编译生成静态文件</span></span><br><span class="line">$ npm run build</span><br><span class="line"></span><br><span class="line"><span class="comment"># 部署</span></span><br><span class="line">$ npm run deploy</span><br></pre></td></tr></table></figure>
+
+<p>部署到github的过程和前面一样，也需要在这个文件夹下安装git部署插件，修改 <code>_config.yaml</code>设置仓库路径。</p>
+<hr>
+<h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><blockquote>
+<p><a class="link"   target="_blank" rel="noopener" href="https://keep-docs.xpoet.cn/" >Keep 主题使用指南 | Hexo 主题 Keep 官方文档 (xpoet.cn)<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/370635512" >超详细 Hexo + Github Pages 博客搭建教程 - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/" >文档 | Hexo<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://easyhexo.com/" >Easy Hexo 👨‍💻<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">本文标题</span>：<span class="content">如何建立自己的博客</span>
+        </li>
+        <li class="post-author">
+            <span class="type">本文作者</span>：<span class="content">RSIC</span>
+        </li>
+        <li class="post-time">
+            <span class="type">创建时间</span>：<span class="content">2023-04-18 09:05:00</span>
+        </li>
+        <li class="post-link">
+            <span class="type">本文链接</span>：<span class="content">2023/04/18/hexo-blog/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="复制版权信息" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/HEXO/">#HEXO</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">SSH免密登陆</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">1.</span> <span class="nav-text">1. 安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">1.1.</span> <span class="nav-text">环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Git"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Node-js"><span class="nav-number">1.1.2.</span> <span class="nav-text">安装Node.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%BB%BA%E7%AB%99"><span class="nav-number">2.</span> <span class="nav-text">2. 建站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E9%83%A8%E7%BD%B2%E5%88%B0Github"><span class="nav-number">3.</span> <span class="nav-text">3. 部署到Github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E6%89%98%E7%AE%A1%E4%BB%93%E5%BA%93"><span class="nav-number">3.1.</span> <span class="nav-text">建立托管仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AESSH"><span class="nav-number">3.2.</span> <span class="nav-text">设置SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-config-yaml"><span class="nav-number">3.3.</span> <span class="nav-text">配置 _config.yaml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Git"><span class="nav-number">3.4.</span> <span class="nav-text">配置 Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6-opens-new-window"><span class="nav-number">3.5.</span> <span class="nav-text">安装部署插件(opens new window)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E5%88%B0-GitHub"><span class="nav-number">3.6.</span> <span class="nav-text">发布到 GitHub</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E7%BE%8E%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">4. 美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%A8%A1%E6%9D%BF"><span class="nav-number">4.1.</span> <span class="nav-text">下载模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Git-%E5%85%8B%E9%9A%86"><span class="nav-number">4.1.1.</span> <span class="nav-text">使用 Git 克隆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD"><span class="nav-number">4.1.2.</span> <span class="nav-text">直接下载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="nav-number">4.2.</span> <span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE"><span class="nav-number">4.3.</span> <span class="nav-text">运行项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="nav-number">4.4.</span> <span class="nav-text">配置主题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">参考：</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">RSIC</a>
+            
+        </div>
+        
+            <script async data-pjax
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/dark-light-toggle.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/code-block.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/post-helper.js"></script>
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/anime.min.js"></script>
+        
+        
+            <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/toc.js"></script>
+        
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
