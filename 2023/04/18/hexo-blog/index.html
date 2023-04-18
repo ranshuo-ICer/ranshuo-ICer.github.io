@@ -192,7 +192,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-04-18 10:09:44</span>
+        <span class="pc">2023-04-18 10:16:17</span>
     </span>
     
     
@@ -246,8 +246,8 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>看到别人酷炫的博客，自己也像整一个，如何操作呢？本篇文章将手把手教你建立自己的博客</p>
-<h1 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h1><blockquote>
+                <p>看到别人酷炫的博客，自己也想整一个，如何操作呢？本篇文章将手把手教你建立自己的博客</p>
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><blockquote>
 <p>Hexo 是一个快速、简洁且高效的静态博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。我们只需要通过 Markdown 语法写好自己的博客内容，然后通过简单的命令就能够将生成的网页上传到 Github，然后大家都可以来访问你的网页了。既方便了自己，也给了自己一个展示自己成果的平台，是不是一举两得</p>
 </blockquote>
 <p>Hexo官方也提供了一个安装教程，具体可以参考<a class="link"   target="_blank" rel="noopener" href="https://easyhexo.com/" >Easy Hexo 👨‍💻<i class="fas fa-external-link-alt"></i></a>和 <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >Documentation | Hexo<i class="fas fa-external-link-alt"></i></a></p>
@@ -288,10 +288,10 @@
 <p>使用 <code>nvs link</code> 将node.js永久加入环境变量</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvs <span class="built_in">link</span> lts</span><br></pre></td></tr></table></figure>
 
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>经过上述步骤安装完node.js后即可使用 <code>npm</code>安装hexo</p>
+<h2 id="安装Hexo-1"><a href="#安装Hexo-1" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>经过上述步骤安装完node.js后即可使用 <code>npm</code>安装hexo</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 
-<h1 id="2-建站"><a href="#2-建站" class="headerlink" title="2. 建站"></a>2. 建站</h1><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<h1 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h1><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 
 <p>新建完成后，指定文件夹的目录如下：</p>
@@ -314,7 +314,7 @@
 <p>界面可能会不一样，因为我的使用了其他主题。</p>
 <p>以上只是个简单的示例，我们需要根据自己的需求修改 <code>_config.yml</code>文件，具体参数请参考hexo官方和easy hexo</p>
 <p>我们将在下一节用到 <code>_config.yaml</code></p>
-<h1 id="3-部署到Github"><a href="#3-部署到Github" class="headerlink" title="3. 部署到Github"></a>3. 部署到Github</h1><h2 id="建立托管仓库"><a href="#建立托管仓库" class="headerlink" title="建立托管仓库"></a>建立托管仓库</h2><p>部署的前提是要有个github账号，如果你没有的话自己去注册一个，如果不会注册的话就退出吧，你应该也用不到QAQ（bushi）</p>
+<h1 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h1><h2 id="建立托管仓库"><a href="#建立托管仓库" class="headerlink" title="建立托管仓库"></a>建立托管仓库</h2><p>部署的前提是要有个github账号，如果你没有的话自己去注册一个，如果不会注册的话就退出吧，你应该也用不到QAQ（bushi）</p>
 <p>在GitHub新建一个仓库，仓库名就是 <code>你注册时的用户名.github.io</code>：</p>
 <p><img  
                      lazyload
@@ -323,7 +323,7 @@
                       alt="1681782364729"
                 ></p>
 <h2 id="设置SSH"><a href="#设置SSH" class="headerlink" title="设置SSH"></a>设置SSH</h2><p>生成 ssh 密钥文件，输入如下命令后直接三次回车即可，一般不需要设置密码；</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 生成 ssh 密钥</span><br><span class="line">ssh-keygen -t rsa -C &quot;github 注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成 ssh 密钥</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;github 注册邮箱&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>我生成秘钥的命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;12345qq.com&quot;</span></span><br></pre></td></tr></table></figure>
@@ -350,7 +350,6 @@
                 ></p>
 <h2 id="配置-config-yaml"><a href="#配置-config-yaml" class="headerlink" title="配置 _config.yaml"></a>配置 <code>_config.yaml</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span> <span class="comment"># 类型填git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span> <span class="comment"># 你的Github仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 分支名称。默认填写 master 如果您使用的是 GitHub ，程序会尝试自动检测。</span></span><br><span class="line">  <span class="attr">message:</span> <span class="comment"># 提交信息可以自定义，不填的则默认为提交时间</span></span><br></pre></td></tr></table></figure>
 
-
 <blockquote>
 <p>注意，上述填写Github仓库地址的时候可以使用ssh地址，如果前面的ssh设置正确的话，可以不用输入密码就提交到github</p>
 </blockquote>
@@ -362,8 +361,7 @@
 <h2 id="发布到-GitHub"><a href="#发布到-GitHub" class="headerlink" title="发布到 GitHub"></a>发布到 GitHub</h2><p>在本地的 Hexo 站点根目录下，执行如下命令即可部署到 GitHub Pages 上。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean &amp;&amp; hexo d -g</span><br></pre></td></tr></table></figure>
 
-
-<h1 id="4-美化"><a href="#4-美化" class="headerlink" title="4. 美化"></a>4. 美化</h1><p><img  
+<h1 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h1><p><img  
                      lazyload
                      alt="image"
                      data-src="/image/hexo-blog/1681783293434.png"
@@ -475,7 +473,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">1.</span> <span class="nav-text">1. 安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">1.1.</span> <span class="nav-text">环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Git"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Node-js"><span class="nav-number">1.1.2.</span> <span class="nav-text">安装Node.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%BB%BA%E7%AB%99"><span class="nav-number">2.</span> <span class="nav-text">2. 建站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E9%83%A8%E7%BD%B2%E5%88%B0Github"><span class="nav-number">3.</span> <span class="nav-text">3. 部署到Github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E6%89%98%E7%AE%A1%E4%BB%93%E5%BA%93"><span class="nav-number">3.1.</span> <span class="nav-text">建立托管仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AESSH"><span class="nav-number">3.2.</span> <span class="nav-text">设置SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-config-yaml"><span class="nav-number">3.3.</span> <span class="nav-text">配置 _config.yaml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Git"><span class="nav-number">3.4.</span> <span class="nav-text">配置 Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6-opens-new-window"><span class="nav-number">3.5.</span> <span class="nav-text">安装部署插件(opens new window)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E5%88%B0-GitHub"><span class="nav-number">3.6.</span> <span class="nav-text">发布到 GitHub</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E7%BE%8E%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">4. 美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%A8%A1%E6%9D%BF"><span class="nav-number">4.1.</span> <span class="nav-text">下载模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Git-%E5%85%8B%E9%9A%86"><span class="nav-number">4.1.1.</span> <span class="nav-text">使用 Git 克隆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD"><span class="nav-number">4.1.2.</span> <span class="nav-text">直接下载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="nav-number">4.2.</span> <span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE"><span class="nav-number">4.3.</span> <span class="nav-text">运行项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="nav-number">4.4.</span> <span class="nav-text">配置主题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">参考：</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="nav-number">1.1.</span> <span class="nav-text">环境准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Git"><span class="nav-number">1.1.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Node-js"><span class="nav-number">1.1.2.</span> <span class="nav-text">安装Node.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo-1"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BB%BA%E7%AB%99"><span class="nav-number">2.</span> <span class="nav-text">建站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%83%A8%E7%BD%B2%E5%88%B0Github"><span class="nav-number">3.</span> <span class="nav-text">部署到Github</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BB%BA%E7%AB%8B%E6%89%98%E7%AE%A1%E4%BB%93%E5%BA%93"><span class="nav-number">3.1.</span> <span class="nav-text">建立托管仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AESSH"><span class="nav-number">3.2.</span> <span class="nav-text">设置SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-config-yaml"><span class="nav-number">3.3.</span> <span class="nav-text">配置 _config.yaml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-Git"><span class="nav-number">3.4.</span> <span class="nav-text">配置 Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6-opens-new-window"><span class="nav-number">3.5.</span> <span class="nav-text">安装部署插件(opens new window)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E5%88%B0-GitHub"><span class="nav-number">3.6.</span> <span class="nav-text">发布到 GitHub</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BE%8E%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">美化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E6%A8%A1%E6%9D%BF"><span class="nav-number">4.1.</span> <span class="nav-text">下载模板</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Git-%E5%85%8B%E9%9A%86"><span class="nav-number">4.1.1.</span> <span class="nav-text">使用 Git 克隆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD"><span class="nav-number">4.1.2.</span> <span class="nav-text">直接下载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96"><span class="nav-number">4.2.</span> <span class="nav-text">安装依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E9%A1%B9%E7%9B%AE"><span class="nav-number">4.3.</span> <span class="nav-text">运行项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="nav-number">4.4.</span> <span class="nav-text">配置主题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">参考：</span></a></li></ol>
     </div>
 </div>
 
