@@ -192,6 +192,73 @@
       </tags>
   </entry>
   <entry>
+    <title>SSH免密登陆</title>
+    <url>/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</url>
+    <content><![CDATA[<h1 id="SSH免密登陆"><a href="#SSH免密登陆" class="headerlink" title="SSH免密登陆"></a>SSH免密登陆</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
+<li>终端</li>
+<li>脑子</li>
+</ul>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h3><ul>
+<li>打开终端，输入 <code>ssh-keygen</code>，生成公钥和私钥</li>
+</ul>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612882454.png"
+                      alt="1680612882454"
+                ></p>
+<ul>
+<li>生成的文件如下：</li>
+</ul>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612946153.png"
+                      alt="1680612946153"
+                ></p>
+<p>其中的 <code>*.pub</code>文件是公钥。</p>
+<h3 id="部署公钥"><a href="#部署公钥" class="headerlink" title="部署公钥"></a>部署公钥</h3><ul>
+<li>将公钥上传到服务器的 <code>user/.ssh/</code>目录下：</li>
+</ul>
+<p>在服务器的 <code>.ssh</code>目录下新建文件 <code>authorized_keys</code></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613300625.png"
+                      alt="1680613300625"
+                ></p>
+<p>写入公钥的内容</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613342598.png"
+                      alt="1680613342598"
+                ></p>
+<p>保存。至此设置好了服务器端</p>
+<h3 id="使用私钥"><a href="#使用私钥" class="headerlink" title="使用私钥"></a>使用私钥</h3><h4 id="VScode使用方法"><a href="#VScode使用方法" class="headerlink" title="VScode使用方法"></a>VScode使用方法</h4><p>依次点击</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613473684.png"
+                      alt="1680613473684"
+                ></p>
+<p>编辑文件</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613555967.png"
+                      alt="1680613555967"
+                ></p>
+<p>点击保存即可</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu安装NVIDIA驱动</title>
     <url>/2023/04/17/ubuntu/Ubuntu%2018.04%20%E5%AE%89%E8%A3%85%20NVIDIA%20%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/</url>
     <content><![CDATA[<p>我们今天的目标是在 Ubuntu 18.04 上安装 NVIDIA 显卡驱动，请注意，你的显卡一定要是 NVIDIA 的显卡才能按照这篇文章的方法安装。我将给大家介绍三种安装方法，建议使用第一种方法安装。</p>
@@ -325,6 +392,27 @@
       </tags>
   </entry>
   <entry>
+    <title>使用SCP拷贝文件</title>
+    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
+<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
+
+<p>对于文件夹，需要加入 <code>-r</code>参数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ImageNet数据集的下载与使用</title>
     <url>/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="ImageNet数据集的下载与使用"><a href="#ImageNet数据集的下载与使用" class="headerlink" title="ImageNet数据集的下载与使用"></a>ImageNet数据集的下载与使用</h1><h2 id="1-数据下载"><a href="#1-数据下载" class="headerlink" title="1. 数据下载"></a>1. 数据下载</h2><h3 id="1-1-方法一：官网下载"><a href="#1-1-方法一：官网下载" class="headerlink" title="1.1 方法一：官网下载"></a>1.1 方法一：官网下载</h3><p><a href="https://link.zhihu.com/?target=https://www.image-net.org/">ImageNet <strong>www.image-net.org/</strong></a></p>
@@ -392,94 +480,6 @@
       </categories>
       <tags>
         <tag>深度学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SSH免密登陆</title>
-    <url>/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</url>
-    <content><![CDATA[<h1 id="SSH免密登陆"><a href="#SSH免密登陆" class="headerlink" title="SSH免密登陆"></a>SSH免密登陆</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
-<li>终端</li>
-<li>脑子</li>
-</ul>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h3><ul>
-<li>打开终端，输入 <code>ssh-keygen</code>，生成公钥和私钥</li>
-</ul>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612882454.png"
-                      alt="1680612882454"
-                ></p>
-<ul>
-<li>生成的文件如下：</li>
-</ul>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612946153.png"
-                      alt="1680612946153"
-                ></p>
-<p>其中的 <code>*.pub</code>文件是公钥。</p>
-<h3 id="部署公钥"><a href="#部署公钥" class="headerlink" title="部署公钥"></a>部署公钥</h3><ul>
-<li>将公钥上传到服务器的 <code>user/.ssh/</code>目录下：</li>
-</ul>
-<p>在服务器的 <code>.ssh</code>目录下新建文件 <code>authorized_keys</code></p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613300625.png"
-                      alt="1680613300625"
-                ></p>
-<p>写入公钥的内容</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613342598.png"
-                      alt="1680613342598"
-                ></p>
-<p>保存。至此设置好了服务器端</p>
-<h3 id="使用私钥"><a href="#使用私钥" class="headerlink" title="使用私钥"></a>使用私钥</h3><h4 id="VScode使用方法"><a href="#VScode使用方法" class="headerlink" title="VScode使用方法"></a>VScode使用方法</h4><p>依次点击</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613473684.png"
-                      alt="1680613473684"
-                ></p>
-<p>编辑文件</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613555967.png"
-                      alt="1680613555967"
-                ></p>
-<p>点击保存即可</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>SSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用SCP拷贝文件</title>
-    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
-<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
-
-<p>对于文件夹，需要加入 <code>-r</code>参数</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
-
-<hr>
-<blockquote>
-<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>SSH</tag>
       </tags>
   </entry>
 </search>
