@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/10/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何建立自己的博客</title>
     <url>/2023/04/18/hexo-blog/</url>
     <content><![CDATA[<p>看到别人酷炫的博客，自己也想整一个，如何操作呢？本篇文章将手把手教你建立自己的博客</p>
@@ -192,91 +168,27 @@
       </tags>
   </entry>
   <entry>
-    <title>SSH免密登陆</title>
-    <url>/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</url>
-    <content><![CDATA[<h1 id="SSH免密登陆"><a href="#SSH免密登陆" class="headerlink" title="SSH免密登陆"></a>SSH免密登陆</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
-<li>终端</li>
-<li>脑子</li>
-</ul>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h3><ul>
-<li>打开终端，输入 <code>ssh-keygen</code>，生成公钥和私钥</li>
-</ul>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612882454.png"
-                      alt="1680612882454"
-                ></p>
-<ul>
-<li>生成的文件如下：</li>
-</ul>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612946153.png"
-                      alt="1680612946153"
-                ></p>
-<p>其中的 <code>*.pub</code>文件是公钥。</p>
-<h3 id="部署公钥"><a href="#部署公钥" class="headerlink" title="部署公钥"></a>部署公钥</h3><ul>
-<li>将公钥上传到服务器的 <code>user/.ssh/</code>目录下：</li>
-</ul>
-<p>在服务器的 <code>.ssh</code>目录下新建文件 <code>authorized_keys</code></p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613300625.png"
-                      alt="1680613300625"
-                ></p>
-<p>写入公钥的内容</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613342598.png"
-                      alt="1680613342598"
-                ></p>
-<p>保存。至此设置好了服务器端</p>
-<h3 id="使用私钥"><a href="#使用私钥" class="headerlink" title="使用私钥"></a>使用私钥</h3><h4 id="VScode使用方法"><a href="#VScode使用方法" class="headerlink" title="VScode使用方法"></a>VScode使用方法</h4><p>依次点击</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613473684.png"
-                      alt="1680613473684"
-                ></p>
-<p>编辑文件</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613555967.png"
-                      alt="1680613555967"
-                ></p>
-<p>点击保存即可</p>
+    <title>Hello World</title>
+    <url>/2022/10/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>SSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用SCP拷贝文件</title>
-    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
-<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
-
-<p>对于文件夹，需要加入 <code>-r</code>参数</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
-
-<hr>
-<blockquote>
-<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>SSH</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -480,6 +392,94 @@
       </categories>
       <tags>
         <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SSH免密登陆</title>
+    <url>/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</url>
+    <content><![CDATA[<h1 id="SSH免密登陆"><a href="#SSH免密登陆" class="headerlink" title="SSH免密登陆"></a>SSH免密登陆</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
+<li>终端</li>
+<li>脑子</li>
+</ul>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h3><ul>
+<li>打开终端，输入 <code>ssh-keygen</code>，生成公钥和私钥</li>
+</ul>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612882454.png"
+                      alt="1680612882454"
+                ></p>
+<ul>
+<li>生成的文件如下：</li>
+</ul>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612946153.png"
+                      alt="1680612946153"
+                ></p>
+<p>其中的 <code>*.pub</code>文件是公钥。</p>
+<h3 id="部署公钥"><a href="#部署公钥" class="headerlink" title="部署公钥"></a>部署公钥</h3><ul>
+<li>将公钥上传到服务器的 <code>user/.ssh/</code>目录下：</li>
+</ul>
+<p>在服务器的 <code>.ssh</code>目录下新建文件 <code>authorized_keys</code></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613300625.png"
+                      alt="1680613300625"
+                ></p>
+<p>写入公钥的内容</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613342598.png"
+                      alt="1680613342598"
+                ></p>
+<p>保存。至此设置好了服务器端</p>
+<h3 id="使用私钥"><a href="#使用私钥" class="headerlink" title="使用私钥"></a>使用私钥</h3><h4 id="VScode使用方法"><a href="#VScode使用方法" class="headerlink" title="VScode使用方法"></a>VScode使用方法</h4><p>依次点击</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613473684.png"
+                      alt="1680613473684"
+                ></p>
+<p>编辑文件</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613555967.png"
+                      alt="1680613555967"
+                ></p>
+<p>点击保存即可</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用SCP拷贝文件</title>
+    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
+<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
+
+<p>对于文件夹，需要加入 <code>-r</code>参数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
       </tags>
   </entry>
 </search>
