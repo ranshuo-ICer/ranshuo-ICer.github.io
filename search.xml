@@ -192,161 +192,174 @@
       </tags>
   </entry>
   <entry>
-    <title>SSH免密登陆</title>
-    <url>/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</url>
-    <content><![CDATA[<h1 id="SSH免密登陆"><a href="#SSH免密登陆" class="headerlink" title="SSH免密登陆"></a>SSH免密登陆</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
-<li>终端</li>
-<li>脑子</li>
+    <title>Ubuntu安装NVIDIA驱动</title>
+    <url>/2023/04/17/ubuntu/Ubuntu%2018.04%20%E5%AE%89%E8%A3%85%20NVIDIA%20%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/</url>
+    <content><![CDATA[<p>我们今天的目标是在 Ubuntu 18.04 上安装 NVIDIA 显卡驱动，请注意，你的显卡一定要是 NVIDIA 的显卡才能按照这篇文章的方法安装。我将给大家介绍三种安装方法，建议使用第一种方法安装。</p>
+<p>先来说说带有 NVIDIA 独立显卡的电脑为什么要安装 NVIDIA 显卡驱动吧。下面是我从维基百科摘抄的显卡工作原理的介绍：</p>
+<blockquote>
+<p>显卡是插在主板上的扩展槽里的（现在一般是 PCI-E 插槽，此前还有 AGP、PCI、ISA 等插槽）。它主要负责把主机向显示器发出的显示信号转化为一般电器信号，使得显示器能明白个人计算机在让它做什么。显卡的主要芯片叫“显示芯片”（Video chipset，也叫 GPU 或 VPU，图形处理器或视觉处理器），是显卡的主要处理单元。显卡上也有和计算机存储器相似的存储器，称为“显示存储器”，简称显存。<br>早期的显卡只是单纯意义的显卡，只起到信号转换的作用；当前我们一般使用的显卡都带有 3D 画面运算和图形加速功能，所以也叫做“图形加速卡”或“3D 加速卡”。PC 上最早的显卡是 IBM 在 1981 年推出的 5150 个人计算机上所搭载的 MDA 和 CGA 两款 2D 加速卡。<br>显卡通常由总线接口、PCB 板、显示芯片、显存、RAMDAC、VGA BIOS、VGA 功能插针、D-sub 插座及其他外围组件构成，现在的显卡大多还具有 VGA、DVI 显示器接口或者 HDMI 接口及 S-Video 端子和 Display Port 接口。</p>
+</blockquote>
+<p>电脑硬件有 NVIDIA 的显卡，但是没有驱动，那它是不能工作的，所以为了让显卡能够工作，发挥它的作用，我们需要安装显卡驱动。好的，下面来看看三种不同的安装方法吧。</p>
+<h2 id="1-使用-Ubuntu-软件仓库中的稳定版本安装"><a href="#1-使用-Ubuntu-软件仓库中的稳定版本安装" class="headerlink" title="1. 使用 Ubuntu 软件仓库中的稳定版本安装"></a><strong>1. 使用 Ubuntu 软件仓库中的稳定版本安装</strong></h2><p><em>2020.08.09 补充：</em></p>
+<p>介于许多朋友看了这篇文章介绍的方法安装还是会遇到问题，我这里补充一种更好的安装方法，也建议使用这种方法安装，其实我在下面这篇文章中有介绍，请参考 2.2 小节。</p>
+<p><a class="link"   href="https://zhuanlan.zhihu.com/p/63584709" >史上最良心的 Ubuntu desktop 美化优化指导(1)<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="1-1-查看显卡硬件型号"><a href="#1-1-查看显卡硬件型号" class="headerlink" title="1.1. 查看显卡硬件型号"></a><strong>1.1. 查看显卡硬件型号</strong></h2><p>在终端输入：<code>ubuntu-drivers devices</code>，可以看到如下界面：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-5d32bffc05c68bf8edbd27fd20e837b0_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+<p>从上图可以看出，我的显卡是：<code>GM107M [GeForce GTX 860M]</code>，推荐安装的版本号是：<code>nvidia-driver-390 - distro non-free recommended</code>。</p>
+<h2 id="1-2-开始安装"><a href="#1-2-开始安装" class="headerlink" title="1.2. 开始安装"></a><strong>1.2. 开始安装</strong></h2><ul>
+<li>如果同意安装推荐版本，那我们只需要终端输入：<code>sudo ubuntu-drivers autoinstall</code> 就可以自动安装了。</li>
+<li>当然我们也可以使用 apt 命令安装自己想要安装的版本，比如我想安装 <code>340</code> 这个版本号的版本，终端输入：<code>sudo apt install nvidia-340</code> 就自动安装了。</li>
+<li>安装过程中按照提示操作，除非你知道每个提示的真实含义，否则所有的提示都选择默认就可以了，安装完成后重启系统，NVIDIA 显卡就可以正常工作了。安装完成后你可以参照 <code>https://linuxconfig.org/benchmark-your-graphics-card-on-linux</code> 上的介绍测试你的显卡。</li>
 </ul>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h3><ul>
-<li>打开终端，输入 <code>ssh-keygen</code>，生成公钥和私钥</li>
+<h2 id="2-使用-PPA-第三方软件仓库安装最新版本"><a href="#2-使用-PPA-第三方软件仓库安装最新版本" class="headerlink" title="2. 使用 PPA 第三方软件仓库安装最新版本"></a><strong>2. 使用 PPA 第三方软件仓库安装最新版本</strong></h2><ul>
+<li>添加 PPA 软件仓库：<code>sudo add-apt-repository ppa:graphics-drivers/ppa</code>，需要输入用户密码，按照提示还需要按下 Enter 键。</li>
+<li>更新软件索引：<code>sudo apt update</code></li>
+<li>接下来的步骤同方法一，只是这样我们就可以选择安装最新版本的驱动程序了。</li>
+</ul>
+<h2 id="3-从-NVIDIA-官网下载最新版驱动手动安装"><a href="#3-从-NVIDIA-官网下载最新版驱动手动安装" class="headerlink" title="3. 从 NVIDIA 官网下载最新版驱动手动安装"></a><strong>3. 从 NVIDIA 官网下载最新版驱动手动安装</strong></h2><ul>
+<li>打开终端，输入：<code>lshw -numeric -C display</code>，确认自己电脑显卡的型号，如下图：</li>
 </ul>
 <p><img  
                      lazyload
                      alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612882454.png"
-                      alt="1680612882454"
+                     data-src="https://pic1.zhimg.com/v2-592fd9491dfa98dfc005c2dd9e966404_b.webp?consumer=ZHI_MENG"
+                     
                 ></p>
+<p>从上图可以看到，我的电脑的显卡是 <code>product: GM107M [GeForce GTX 860M] [10DE:1392]</code>，然后我们到 NVIDIA 的官网下载相应型号的驱动，官网地址是：<code>https://www.nvidia.com/Download/index.aspx</code>，如下图，我选择 GTX 860 显卡的驱动下载。</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic3.zhimg.com/v2-586ce06ccebb8ec8d2013f81e4d1232e_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+<p>注意每个选项，特别是操作系统那里，一定选择 Linux 64-bit</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
+                     
+                >英伟达 NVIDIA Quadro RTX8000 专业显卡</p>
+<p>京东</p>
+<p>¥37999.00</p>
+<p>去购买</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
+                     
+                ></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
+                     
+                ></p>
+<p>选好后点击 SEARCH 按钮搜索相应的驱动，如下图：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic4.zhimg.com/v2-cad8de4d54178b21244a0e2c124a55ff_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+<p>看到了吧，官方最新版本号已经是 418.43 了。点击 DOWNLOAD 按钮下载吧。</p>
+<p>接着需要先安装一些 NVIDIA 显卡依赖的软件，在终端依次执行如下命令：</p>
 <ul>
-<li>生成的文件如下：</li>
+<li><code>sudo dpkg --add-architecture i386</code></li>
+<li><code>sudo apt update</code></li>
+<li><code>sudo apt install build-essential libc6:i386</code></li>
 </ul>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612946153.png"
-                      alt="1680612946153"
-                ></p>
-<p>其中的 <code>*.pub</code>文件是公钥。</p>
-<h3 id="部署公钥"><a href="#部署公钥" class="headerlink" title="部署公钥"></a>部署公钥</h3><ul>
-<li>将公钥上传到服务器的 <code>user/.ssh/</code>目录下：</li>
+<p>Ubuntu 系统默认安装好是使用的一个开源的驱动：<code>nouveau</code>，我们要安装官方的驱动需要先禁用这个开源驱动，方法如下，依次执行：</p>
+<ul>
+<li><code>sudo bash -c &quot;echo blacklist nouveau &gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
+<li><code>sudo bash -c &quot;echo options nouveau modeset=0 &gt;&gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
 </ul>
-<p>在服务器的 <code>.ssh</code>目录下新建文件 <code>authorized_keys</code></p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613300625.png"
-                      alt="1680613300625"
-                ></p>
-<p>写入公钥的内容</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613342598.png"
-                      alt="1680613342598"
-                ></p>
-<p>保存。至此设置好了服务器端</p>
-<h3 id="使用私钥"><a href="#使用私钥" class="headerlink" title="使用私钥"></a>使用私钥</h3><h4 id="VScode使用方法"><a href="#VScode使用方法" class="headerlink" title="VScode使用方法"></a>VScode使用方法</h4><p>依次点击</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613473684.png"
-                      alt="1680613473684"
-                ></p>
-<p>编辑文件</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613555967.png"
-                      alt="1680613555967"
-                ></p>
-<p>点击保存即可</p>
+<p>执行完上面两条指令后，我们使用如下命令看看是否成功禁用了开源驱动：<code>cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</code>。如果和下面一样，表示成功了。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</span><br><span class="line">blacklist nouveau</span><br><span class="line">options nouveau modeset=0</span><br></pre></td></tr></table></figure>
+
+<p>这个时候我们需要先重启一下系统，重启吧。</p>
+<p>重启成功后打开终端，输入如下命令：<code>sudo telinit 3</code>。然后按快捷键：<code>CTRL+ALT+F1</code> 进入字符界面，输入用户名和密码，然后登录系统，进入我们保存下载 NVIDIA 驱动的目录，默认是：<code>Downloads/</code> 目录，<code>cd Downloads/</code>，然后执行：<code>bash NVIDIA-Linux-x86_64-418.43.bin</code>。注意：<code>NVIDIA-Linux-x86_64-418.43.bin</code> 要根据你下载的驱动文件的名字相应改动。</p>
+<p>安装过程中都点同意即可，如果你遇到下面的提示，安装下面我的输入输入后回车继续安装：</p>
+<blockquote>
+<p>The distribution-provided pre-install script failed!<br>Are you sure you want to continue? -&gt; <strong>CONTINUE INSTALLATION</strong><br>Would you like to run the nvidia-xconfig utility? -&gt; <strong>YES</strong></p>
+</blockquote>
+<p>安装完成后重启系统就可以点击软件列表中的 NVIDIA 的配置软件配置显卡驱动了，如果你遇到如下报错，请依次在终端输入如下命令解决：</p>
+<ul>
+<li>报错：WARNING: Unable to find suitable destination to install 32-bit compatibility libraries</li>
+<li>解决办法：<ul>
+<li>sudo dpkg –add-architecture i386</li>
+<li>sudo apt update</li>
+<li>sudo apt install libc6:i386</li>
+</ul>
+</li>
+</ul>
+<p>好了，今天分享了如何安装 NVIDIA 显卡驱动，再次提醒，如果你的显卡不是 NVIDIA 显卡，千万不要这么干，也不要在虚拟机中这么干。有什么不懂的可以留言和我讨论。</p>
 ]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>SSH</tag>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
-    <title>使用SCP拷贝文件</title>
-    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
-<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
-
-<p>对于文件夹，需要加入 <code>-r</code>参数</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
-
-<hr>
-<blockquote>
-<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>SSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ImageNet数据集的下载与使用</title>
-    <url>/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="ImageNet数据集的下载与使用"><a href="#ImageNet数据集的下载与使用" class="headerlink" title="ImageNet数据集的下载与使用"></a>ImageNet数据集的下载与使用</h1><h2 id="1-数据下载"><a href="#1-数据下载" class="headerlink" title="1. 数据下载"></a>1. 数据下载</h2><h3 id="1-1-方法一：官网下载"><a href="#1-1-方法一：官网下载" class="headerlink" title="1.1 方法一：官网下载"></a>1.1 方法一：官网下载</h3><p><a href="https://link.zhihu.com/?target=https://www.image-net.org/">ImageNet <strong>www.image-net.org/</strong></a></p>
-<p>在官方网站注册账号，注册时最好使用教育邮箱(.edu )之后。按照流程申请，收到邮件之后可以就可以在 Download界面里下数据啦~<br>推荐下载12年的数据，因为比较经典。不如果你如果凑巧财力雄厚，也可以考虑最顶上那个ImageNet21k，它相比12年的数据大的离谱。</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pica.zhimg.com/80/v2-b757f1bbb9600f7ae4bc1dd551cbbfdb_720w.webp?source=1940ef5c"
-                     
-                ></p>
-<p>点进去之后，下载如下三个压缩包（图片分类任务用这三个足够了）</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/80/v2-4c58bc88b0d657922d6ee7d4c9498b19_720w.webp?source=1940ef5c"
-                     
-                ></p>
-<h3 id="1-2-方法二"><a href="#1-2-方法二" class="headerlink" title="1.2 方法二"></a>1.2 方法二</h3><p>如果你觉得这么下不方便&#x2F;网速太慢容易断，可以在这个网址自行找12年的版本下载（别全下了呀）</p>
-<p><a href="https://link.zhihu.com/?target=https://hyper.ai/datasets/4889">ImageNet 10 图像识别数据集 - 数据集下载 - 超神经<strong>hyper.ai&#x2F;datasets&#x2F;4889</strong></a></p>
-<h2 id="2-数据解压"><a href="#2-数据解压" class="headerlink" title="2. 数据解压"></a>2. 数据解压</h2><p>下载完毕后把 Development kit 留着备用，我们会得到训练集与验证集的两个压缩包，分别是 <code>ILSVRC2012_img_train.tar</code> 和 <code>ILSVRC2012_img_val.tar</code>。</p>
-<p>首先创建两个用于放训练集和测试集的文件夹，然后解压：</p>
-<figure class="highlight console"><table><tr><td class="code"><pre><span class="line">mkdir train</span><br><span class="line">mkdir val</span><br><span class="line">tar xvf ILSVRC2012_img_train.tar -C ./train</span><br><span class="line">tar xvf ILSVRC2012_img_val.tar -C ./val</span><br></pre></td></tr></table></figure>
-
-<p>对于train的压缩包，解压之后其实还是1000个tar压缩包（对应1000个类别），需要再次解压，解压脚本unzip.sh如下（PS：可能需要自己改一下目录 dir ）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span>=./train </span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> `<span class="built_in">ls</span> <span class="variable">$dir</span>/*tar` <span class="keyword">do</span>   </span><br><span class="line">  filename=`<span class="built_in">basename</span> <span class="variable">$x</span> .tar`   </span><br><span class="line">  <span class="built_in">mkdir</span> <span class="variable">$dir</span>/<span class="variable">$filename</span>   </span><br><span class="line">  tar -xvf <span class="variable">$x</span> -C <span class="variable">$dir</span>/<span class="variable">$filename</span> </span><br><span class="line"><span class="keyword">done</span> </span><br><span class="line"><span class="built_in">rm</span> *.tar</span><br></pre></td></tr></table></figure>
-
-<p>执行脚本之后，我们就获得了1000个文件夹和对应的图片数据啦~截至目前，我们已经把所有的 JPEG 图片搞了出来。</p>
-<h2 id="3-数据标签"><a href="#3-数据标签" class="headerlink" title="3. 数据标签"></a>3. 数据标签</h2><p>对于训练集，不同类别的数据躺在不同的文件夹里，用起来很方便（同一文件夹的视为一类）。但是验证集没有对应的标签，需要额外处理。</p>
-<p>验证集的标签在 Development kit （文件名为 <code>ILSVRC2012_devkit_t12.tar.gz</code>）中的 <code>ILSVRC2012_devkit_t12\data\ILSVRC2012_validation_ground_truth.txt</code> 中：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/80/v2-10219b98d7686a62a5f86d3d7322ac6b_720w.webp?source=1940ef5c"
-                     
-                ></p>
-<p>但是新的问题又来了，那就是这个数字和文件夹的名字虽然是一一对应的，但还是需要额外的映射……好在映射关系储存在和txt文件同目录下的 <code>meta.mat</code> 文件中。我们希望验证集的文件结构长得和训练集一样，即 :</p>
-<ul>
-<li>&#x2F;val<ul>
-<li>&#x2F;n01440764<ul>
-<li>images</li>
-</ul>
-</li>
-<li>&#x2F;n01443537</li>
-<li>images</li>
-</ul>
-</li>
-</ul>
-<p>因此，我们首先解压 devkit 压缩包，把我们需要的东西取出来：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xzf ILSVRC2012_devkit_t12.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>之后，在imagenet目录（devkit和val的<a class="link"   href="https://www.zhihu.com/search?q=%E6%A0%B9%E7%9B%AE%E5%BD%95&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:1930557182%7D" >根目录<i class="fas fa-external-link-alt"></i></a>下）创建并运行如下 python 脚本</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">move_valimg</span>(<span class="params">val_dir=<span class="string">&#x27;./val&#x27;</span>, devkit_dir=<span class="string">&#x27;./ILSVRC2012_devkit_t12&#x27;</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    move valimg to correspongding folders.</span></span><br><span class="line"><span class="string">    val_id(start from 1) -&gt; ILSVRC_ID(start from 1) -&gt; WIND</span></span><br><span class="line"><span class="string">    organize like:</span></span><br><span class="line"><span class="string">    /val</span></span><br><span class="line"><span class="string">       /n01440764</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">       /n01443537</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">        .....</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># load synset, val ground truth and val images list</span></span><br><span class="line">    synset = io.loadmat(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;meta.mat&#x27;</span>))</span><br><span class="line">  </span><br><span class="line">    ground_truth = <span class="built_in">open</span>(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;ILSVRC2012_validation_ground_truth.txt&#x27;</span>))</span><br><span class="line">    lines = ground_truth.readlines()</span><br><span class="line">    labels = [<span class="built_in">int</span>(line[:-<span class="number">1</span>]) <span class="keyword">for</span> line <span class="keyword">in</span> lines]</span><br><span class="line">  </span><br><span class="line">    root, _, filenames = <span class="built_in">next</span>(os.walk(val_dir))</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="comment"># val image name -&gt; ILSVRC ID -&gt; WIND</span></span><br><span class="line">        val_id = <span class="built_in">int</span>(filename.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>].split(<span class="string">&#x27;_&#x27;</span>)[-<span class="number">1</span>])</span><br><span class="line">        ILSVRC_ID = labels[val_id-<span class="number">1</span>]</span><br><span class="line">        WIND = synset[<span class="string">&#x27;synsets&#x27;</span>][ILSVRC_ID-<span class="number">1</span>][<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;val_id:%d, ILSVRC_ID:%d, WIND:%s&quot;</span> % (val_id, ILSVRC_ID, WIND))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># move val images</span></span><br><span class="line">        output_dir = os.path.join(root, WIND)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(output_dir):</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            os.mkdir(output_dir)</span><br><span class="line">        shutil.move(os.path.join(root, filename), os.path.join(output_dir, filename))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    move_valimg()</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-用Pytorch加载"><a href="#4-用Pytorch加载" class="headerlink" title="4. 用Pytorch加载"></a>4. 用Pytorch加载</h2><p>使用 torchvision.datasets.ImageFolder() 就可以直接加载处理好的数据集啦！</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torchvision.datasets <span class="keyword">as</span> datasets</span><br><span class="line"></span><br><span class="line">root = <span class="string">&#x27;data/imagenet&#x27;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_imagenet</span>(<span class="params">root, train = <span class="literal">True</span>, transform = <span class="literal">None</span>, target_transform = <span class="literal">None</span></span>):</span><br><span class="line">    <span class="keyword">if</span> train:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;train&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;val&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> datasets.ImageFolder(root = root,</span><br><span class="line">                               transform = transform,</span><br><span class="line">                               target_transform = target_transform)</span><br></pre></td></tr></table></figure>
-
-<p>作者：薰风初入弦<br>链接：<a class="link"   href="https://www.zhihu.com/question/264345314/answer/1930557182" >https://www.zhihu.com/question/264345314/answer/1930557182<i class="fas fa-external-link-alt"></i></a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<hr>
-<blockquote>
-<p>[^1] <a class="link"   href="https://www.zhihu.com/question/264345314" >ImageNet使用方法？ - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
+    <title>Pytorch损失函数CrossEntropyLoss和NLLLoss</title>
+    <url>/2023/06/16/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/CrossEntropyLoss,%20NLLLoss%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<h2 id="什么是logits"><a href="#什么是logits" class="headerlink" title="什么是logits"></a>什么是logits</h2><p>作者：王峰</p>
+<p>链接：<a class="link"   href="https://www.zhihu.com/question/60751553/answer/1986650670" >https://www.zhihu.com/question/60751553/answer/1986650670<i class="fas fa-external-link-alt"></i></a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>logit原本是一个函数，它是sigmoid函数（也叫标准logistic函数） $p (x) &#x3D; \frac{1}{1+e^{-x}}$ 的反函数：  $logit(p) &#x3D; \log\left(\frac{p}{1-p}\right)$ 。logit这个名字的来源即为<strong>log</strong>istic un<strong>it。</strong></p>
+<p>但在深度学习中，logits就是最终的全连接层的输出，而非其本意。通常神经网络中都是先有logits，而后通过sigmoid函数或者softmax函数得到概率$P$的，所以大部分情况下都无需用到logit函数的表达式。</p>
+<p>什么时候我们会真的需要用到logit函数呢？考虑这样一个问题：如果我们拿到了一个黑盒模型的概率输出，想要用这个模型生成一批数据来distill（知识蒸馏）我们自己的模型，但distill过程往往又需要调节温度项来重新计算概率（大概是这么个形式： $p(x) &#x3D; \frac{1}{1+e^{-x&#x2F;T}}$ ），此时我们就需要从概率值反推logits了，而反推的过程就如上边的公式所述： $logit(p) &#x3D; \log\left(\frac{p}{1-p}\right)$ 。所以对于logistic regression来说，logit恰好是输出概率经过logit函数的结果，因此即使我们并没有真正地用到logit函数，也不妨将其称作logit。</p>
+<p>但是，目前大家用得更多的是多分类的softmax函数，而它的反函数其实并不是logit函数，而是log函数 $\log(p)$ ，这样再次经过softmax函数： $\hat{p}_i &#x3D;\frac{e^{\log p_i}}{\sum_j e^{\log p_j}} &#x3D; \frac{p_i}{\sum_j p_j} &#x3D; p_i$ ，就得到了原来的概率。这里需要注意的是：所有logits共同减去一个数字，其得到的softmax结果是不变的，所以得到的logits并不一定与原始logits一模一样，而是会相差一个常数。</p>
+<p>由此可见，使用logit一词来表示网络最后一层的输出，实际上只适用于logistic regression。而对于现在更多使用的多分类器softmax来说，其反函数应该是log函数，而非logit，继续用logit一词实际上是不恰当的。我个人倾向于使用“分数”或者直接说是最后一个全连接层的输出，这样比较形象，也不至于让初学者摸不到头脑。</p>
+<h2 id="Softmax和Log-softmax"><a href="#Softmax和Log-softmax" class="headerlink" title="Softmax和Log_softmax"></a>Softmax和Log_softmax</h2><p>Softmax是标准的归一化函数，可以简单的理解为将神经网络的输出$[-\infin, +\infin]$归一化到$[0,1]$，并且各项的和是1，就好像输出的是属于不同类别的概率$P$</p>
+<p>$$<br>Softmax(z_i)&#x3D;\frac{e^{z_i}}{\sum_{j&#x3D;0}^{n}{e^{z_j}}}</p>
+<p>$$</p>
+<p>但是在计算的过程中，若是$z_j$极大，会出现上溢出，当$z_j$为负数时，又容易出现下溢出问题（被四舍五入为0）。</p>
+<p>经过适当变换</p>
+<p>$$<br>Softmax(z_i)&#x3D;\frac{e^{z_i}e^{-max(z)}}{\sum_{j&#x3D;0}^{n}{e^{z_j}}e^{-max(z)}}&#x3D;\frac{e^{z_i-max(z)}}{\sum_{j&#x3D;0}^{n}{e^{z_j-max(z)}}}</p>
+<p>$$</p>
+<p>这样，$e$的指数最大为0，不会发生上溢出。对结果取$log$</p>
+<p>$$<br>Log(Softmax(z_i))&#x3D;Log(\frac{e^{z_i-max(z)}}{\sum_{j&#x3D;0}^{n}{e^{z_j-max(z)}}})\<br>&#x3D;z_i-max(z)-Log(\sum_{j&#x3D;0}^ne^{z_j-max(z)})<br>$$</p>
+<h2 id="交叉熵损失函数CrossEntropyLoss"><a href="#交叉熵损失函数CrossEntropyLoss" class="headerlink" title="交叉熵损失函数CrossEntropyLoss"></a>交叉熵损失函数CrossEntropyLoss</h2><p>之前提到过<a href="https://ranshuo-icer.github.io/2023/06/16/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E4%BB%80%E4%B9%88%E6%98%AFCrossEntropy%EF%BC%8C%E4%BA%A4%E5%8F%89%E7%86%B5/">什么是交叉熵损失函数 | RSIC&#39;s Blog (ranshuo-icer.github.io)</a></p>
+<p>其公式为</p>
+<p>$$<br>H(P,Q)&#x3D;-\sum_{i}P_i\times log(Q_i)<br>$$</p>
+<p>即使用实际的分布$P$去计算预测的分布$Q$的平均编码长度。</p>
+<p>在深度学习的分类任务中，$Q$通常为全连接的输出经过$softmax$得到，因此从全连接的输出$x$与真实标签$y$的交叉熵为</p>
+<p>$$<br>H(y,x)&#x3D;-\sum_iy_i\times log(softmax(x))<br>$$</p>
+<p>上面提到，为了避免计算softmax时出现溢出问题，都是计算的$log(softmax)$，再计算指数$e^{log(softmax)}$。当使用交叉熵作为损失函数时，即可省略后者，结合起来就是Pytorch中的 <code>nn.CrossEntropyLoss</code>，详见pytorch官方手册<a class="link"   href="https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss" >CrossEntropyLoss — PyTorch 2.0 documentation<i class="fas fa-external-link-alt"></i></a></p>
+<p>那NLLLoss是什么呢？</p>
+<p><a class="link"   href="https://pytorch.org/docs/stable/generated/torch.nn.NLLLoss.html#torch.nn.NLLLoss" >NLLLoss — PyTorch 2.0 documentation<i class="fas fa-external-link-alt"></i></a></p>
+<p>The negative log likelihood loss. It is useful to train a classification problem with C classes. The input given through a forward call is expected to contain log-probabilities of each class. <strong>Obtaining log-probabilities in a neural network is easily achieved by adding a LogSoftmax layer in the last layer of your network. You may use CrossEntropyLoss instead, if you prefer not to add an extra layer.</strong></p>
+<p>即 <code>softmax + log + nllloss = crossentropyloss</code></p>
 ]]></content>
       <categories>
         <category>深度学习</category>
       </categories>
       <tags>
-        <tag>深度学习</tag>
+        <tag>深度学习,损失函数</tag>
       </tags>
   </entry>
   <entry>
@@ -529,136 +542,161 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu安装NVIDIA驱动</title>
-    <url>/2023/04/17/ubuntu/Ubuntu%2018.04%20%E5%AE%89%E8%A3%85%20NVIDIA%20%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/</url>
-    <content><![CDATA[<p>我们今天的目标是在 Ubuntu 18.04 上安装 NVIDIA 显卡驱动，请注意，你的显卡一定要是 NVIDIA 的显卡才能按照这篇文章的方法安装。我将给大家介绍三种安装方法，建议使用第一种方法安装。</p>
-<p>先来说说带有 NVIDIA 独立显卡的电脑为什么要安装 NVIDIA 显卡驱动吧。下面是我从维基百科摘抄的显卡工作原理的介绍：</p>
-<blockquote>
-<p>显卡是插在主板上的扩展槽里的（现在一般是 PCI-E 插槽，此前还有 AGP、PCI、ISA 等插槽）。它主要负责把主机向显示器发出的显示信号转化为一般电器信号，使得显示器能明白个人计算机在让它做什么。显卡的主要芯片叫“显示芯片”（Video chipset，也叫 GPU 或 VPU，图形处理器或视觉处理器），是显卡的主要处理单元。显卡上也有和计算机存储器相似的存储器，称为“显示存储器”，简称显存。<br>早期的显卡只是单纯意义的显卡，只起到信号转换的作用；当前我们一般使用的显卡都带有 3D 画面运算和图形加速功能，所以也叫做“图形加速卡”或“3D 加速卡”。PC 上最早的显卡是 IBM 在 1981 年推出的 5150 个人计算机上所搭载的 MDA 和 CGA 两款 2D 加速卡。<br>显卡通常由总线接口、PCB 板、显示芯片、显存、RAMDAC、VGA BIOS、VGA 功能插针、D-sub 插座及其他外围组件构成，现在的显卡大多还具有 VGA、DVI 显示器接口或者 HDMI 接口及 S-Video 端子和 Display Port 接口。</p>
-</blockquote>
-<p>电脑硬件有 NVIDIA 的显卡，但是没有驱动，那它是不能工作的，所以为了让显卡能够工作，发挥它的作用，我们需要安装显卡驱动。好的，下面来看看三种不同的安装方法吧。</p>
-<h2 id="1-使用-Ubuntu-软件仓库中的稳定版本安装"><a href="#1-使用-Ubuntu-软件仓库中的稳定版本安装" class="headerlink" title="1. 使用 Ubuntu 软件仓库中的稳定版本安装"></a><strong>1. 使用 Ubuntu 软件仓库中的稳定版本安装</strong></h2><p><em>2020.08.09 补充：</em></p>
-<p>介于许多朋友看了这篇文章介绍的方法安装还是会遇到问题，我这里补充一种更好的安装方法，也建议使用这种方法安装，其实我在下面这篇文章中有介绍，请参考 2.2 小节。</p>
-<p><a class="link"   href="https://zhuanlan.zhihu.com/p/63584709" >史上最良心的 Ubuntu desktop 美化优化指导(1)<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="1-1-查看显卡硬件型号"><a href="#1-1-查看显卡硬件型号" class="headerlink" title="1.1. 查看显卡硬件型号"></a><strong>1.1. 查看显卡硬件型号</strong></h2><p>在终端输入：<code>ubuntu-drivers devices</code>，可以看到如下界面：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-5d32bffc05c68bf8edbd27fd20e837b0_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-<p>从上图可以看出，我的显卡是：<code>GM107M [GeForce GTX 860M]</code>，推荐安装的版本号是：<code>nvidia-driver-390 - distro non-free recommended</code>。</p>
-<h2 id="1-2-开始安装"><a href="#1-2-开始安装" class="headerlink" title="1.2. 开始安装"></a><strong>1.2. 开始安装</strong></h2><ul>
-<li>如果同意安装推荐版本，那我们只需要终端输入：<code>sudo ubuntu-drivers autoinstall</code> 就可以自动安装了。</li>
-<li>当然我们也可以使用 apt 命令安装自己想要安装的版本，比如我想安装 <code>340</code> 这个版本号的版本，终端输入：<code>sudo apt install nvidia-340</code> 就自动安装了。</li>
-<li>安装过程中按照提示操作，除非你知道每个提示的真实含义，否则所有的提示都选择默认就可以了，安装完成后重启系统，NVIDIA 显卡就可以正常工作了。安装完成后你可以参照 <code>https://linuxconfig.org/benchmark-your-graphics-card-on-linux</code> 上的介绍测试你的显卡。</li>
+    <title>SSH免密登陆</title>
+    <url>/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</url>
+    <content><![CDATA[<h1 id="SSH免密登陆"><a href="#SSH免密登陆" class="headerlink" title="SSH免密登陆"></a>SSH免密登陆</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
+<li>终端</li>
+<li>脑子</li>
 </ul>
-<h2 id="2-使用-PPA-第三方软件仓库安装最新版本"><a href="#2-使用-PPA-第三方软件仓库安装最新版本" class="headerlink" title="2. 使用 PPA 第三方软件仓库安装最新版本"></a><strong>2. 使用 PPA 第三方软件仓库安装最新版本</strong></h2><ul>
-<li>添加 PPA 软件仓库：<code>sudo add-apt-repository ppa:graphics-drivers/ppa</code>，需要输入用户密码，按照提示还需要按下 Enter 键。</li>
-<li>更新软件索引：<code>sudo apt update</code></li>
-<li>接下来的步骤同方法一，只是这样我们就可以选择安装最新版本的驱动程序了。</li>
-</ul>
-<h2 id="3-从-NVIDIA-官网下载最新版驱动手动安装"><a href="#3-从-NVIDIA-官网下载最新版驱动手动安装" class="headerlink" title="3. 从 NVIDIA 官网下载最新版驱动手动安装"></a><strong>3. 从 NVIDIA 官网下载最新版驱动手动安装</strong></h2><ul>
-<li>打开终端，输入：<code>lshw -numeric -C display</code>，确认自己电脑显卡的型号，如下图：</li>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h3><ul>
+<li>打开终端，输入 <code>ssh-keygen</code>，生成公钥和私钥</li>
 </ul>
 <p><img  
                      lazyload
                      alt="image"
-                     data-src="https://pic1.zhimg.com/v2-592fd9491dfa98dfc005c2dd9e966404_b.webp?consumer=ZHI_MENG"
-                     
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612882454.png"
+                      alt="1680612882454"
                 ></p>
-<p>从上图可以看到，我的电脑的显卡是 <code>product: GM107M [GeForce GTX 860M] [10DE:1392]</code>，然后我们到 NVIDIA 的官网下载相应型号的驱动，官网地址是：<code>https://www.nvidia.com/Download/index.aspx</code>，如下图，我选择 GTX 860 显卡的驱动下载。</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic3.zhimg.com/v2-586ce06ccebb8ec8d2013f81e4d1232e_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-<p>注意每个选项，特别是操作系统那里，一定选择 Linux 64-bit</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
-                     
-                >英伟达 NVIDIA Quadro RTX8000 专业显卡</p>
-<p>京东</p>
-<p>¥37999.00</p>
-<p>去购买</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
-                     
-                ></p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
-                     
-                ></p>
-<p>选好后点击 SEARCH 按钮搜索相应的驱动，如下图：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic4.zhimg.com/v2-cad8de4d54178b21244a0e2c124a55ff_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-<p>看到了吧，官方最新版本号已经是 418.43 了。点击 DOWNLOAD 按钮下载吧。</p>
-<p>接着需要先安装一些 NVIDIA 显卡依赖的软件，在终端依次执行如下命令：</p>
 <ul>
-<li><code>sudo dpkg --add-architecture i386</code></li>
-<li><code>sudo apt update</code></li>
-<li><code>sudo apt install build-essential libc6:i386</code></li>
+<li>生成的文件如下：</li>
 </ul>
-<p>Ubuntu 系统默认安装好是使用的一个开源的驱动：<code>nouveau</code>，我们要安装官方的驱动需要先禁用这个开源驱动，方法如下，依次执行：</p>
-<ul>
-<li><code>sudo bash -c &quot;echo blacklist nouveau &gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
-<li><code>sudo bash -c &quot;echo options nouveau modeset=0 &gt;&gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612946153.png"
+                      alt="1680612946153"
+                ></p>
+<p>其中的 <code>*.pub</code>文件是公钥。</p>
+<h3 id="部署公钥"><a href="#部署公钥" class="headerlink" title="部署公钥"></a>部署公钥</h3><ul>
+<li>将公钥上传到服务器的 <code>user/.ssh/</code>目录下：</li>
 </ul>
-<p>执行完上面两条指令后，我们使用如下命令看看是否成功禁用了开源驱动：<code>cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</code>。如果和下面一样，表示成功了。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</span><br><span class="line">blacklist nouveau</span><br><span class="line">options nouveau modeset=0</span><br></pre></td></tr></table></figure>
-
-<p>这个时候我们需要先重启一下系统，重启吧。</p>
-<p>重启成功后打开终端，输入如下命令：<code>sudo telinit 3</code>。然后按快捷键：<code>CTRL+ALT+F1</code> 进入字符界面，输入用户名和密码，然后登录系统，进入我们保存下载 NVIDIA 驱动的目录，默认是：<code>Downloads/</code> 目录，<code>cd Downloads/</code>，然后执行：<code>bash NVIDIA-Linux-x86_64-418.43.bin</code>。注意：<code>NVIDIA-Linux-x86_64-418.43.bin</code> 要根据你下载的驱动文件的名字相应改动。</p>
-<p>安装过程中都点同意即可，如果你遇到下面的提示，安装下面我的输入输入后回车继续安装：</p>
-<blockquote>
-<p>The distribution-provided pre-install script failed!<br>Are you sure you want to continue? -&gt; <strong>CONTINUE INSTALLATION</strong><br>Would you like to run the nvidia-xconfig utility? -&gt; <strong>YES</strong></p>
-</blockquote>
-<p>安装完成后重启系统就可以点击软件列表中的 NVIDIA 的配置软件配置显卡驱动了，如果你遇到如下报错，请依次在终端输入如下命令解决：</p>
-<ul>
-<li>报错：WARNING: Unable to find suitable destination to install 32-bit compatibility libraries</li>
-<li>解决办法：<ul>
-<li>sudo dpkg –add-architecture i386</li>
-<li>sudo apt update</li>
-<li>sudo apt install libc6:i386</li>
-</ul>
-</li>
-</ul>
-<p>好了，今天分享了如何安装 NVIDIA 显卡驱动，再次提醒，如果你的显卡不是 NVIDIA 显卡，千万不要这么干，也不要在虚拟机中这么干。有什么不懂的可以留言和我讨论。</p>
+<p>在服务器的 <code>.ssh</code>目录下新建文件 <code>authorized_keys</code></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613300625.png"
+                      alt="1680613300625"
+                ></p>
+<p>写入公钥的内容</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613342598.png"
+                      alt="1680613342598"
+                ></p>
+<p>保存。至此设置好了服务器端</p>
+<h3 id="使用私钥"><a href="#使用私钥" class="headerlink" title="使用私钥"></a>使用私钥</h3><h4 id="VScode使用方法"><a href="#VScode使用方法" class="headerlink" title="VScode使用方法"></a>VScode使用方法</h4><p>依次点击</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613473684.png"
+                      alt="1680613473684"
+                ></p>
+<p>编辑文件</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613555967.png"
+                      alt="1680613555967"
+                ></p>
+<p>点击保存即可</p>
 ]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ImageNet数据集的下载与使用</title>
+    <url>/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="ImageNet数据集的下载与使用"><a href="#ImageNet数据集的下载与使用" class="headerlink" title="ImageNet数据集的下载与使用"></a>ImageNet数据集的下载与使用</h1><h2 id="1-数据下载"><a href="#1-数据下载" class="headerlink" title="1. 数据下载"></a>1. 数据下载</h2><h3 id="1-1-方法一：官网下载"><a href="#1-1-方法一：官网下载" class="headerlink" title="1.1 方法一：官网下载"></a>1.1 方法一：官网下载</h3><p><a href="https://link.zhihu.com/?target=https://www.image-net.org/">ImageNet <strong>www.image-net.org/</strong></a></p>
+<p>在官方网站注册账号，注册时最好使用教育邮箱(.edu )之后。按照流程申请，收到邮件之后可以就可以在 Download界面里下数据啦~<br>推荐下载12年的数据，因为比较经典。不如果你如果凑巧财力雄厚，也可以考虑最顶上那个ImageNet21k，它相比12年的数据大的离谱。</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pica.zhimg.com/80/v2-b757f1bbb9600f7ae4bc1dd551cbbfdb_720w.webp?source=1940ef5c"
+                     
+                ></p>
+<p>点进去之后，下载如下三个压缩包（图片分类任务用这三个足够了）</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/80/v2-4c58bc88b0d657922d6ee7d4c9498b19_720w.webp?source=1940ef5c"
+                     
+                ></p>
+<h3 id="1-2-方法二"><a href="#1-2-方法二" class="headerlink" title="1.2 方法二"></a>1.2 方法二</h3><p>如果你觉得这么下不方便&#x2F;网速太慢容易断，可以在这个网址自行找12年的版本下载（别全下了呀）</p>
+<p><a href="https://link.zhihu.com/?target=https://hyper.ai/datasets/4889">ImageNet 10 图像识别数据集 - 数据集下载 - 超神经<strong>hyper.ai&#x2F;datasets&#x2F;4889</strong></a></p>
+<h2 id="2-数据解压"><a href="#2-数据解压" class="headerlink" title="2. 数据解压"></a>2. 数据解压</h2><p>下载完毕后把 Development kit 留着备用，我们会得到训练集与验证集的两个压缩包，分别是 <code>ILSVRC2012_img_train.tar</code> 和 <code>ILSVRC2012_img_val.tar</code>。</p>
+<p>首先创建两个用于放训练集和测试集的文件夹，然后解压：</p>
+<figure class="highlight console"><table><tr><td class="code"><pre><span class="line">mkdir train</span><br><span class="line">mkdir val</span><br><span class="line">tar xvf ILSVRC2012_img_train.tar -C ./train</span><br><span class="line">tar xvf ILSVRC2012_img_val.tar -C ./val</span><br></pre></td></tr></table></figure>
+
+<p>对于train的压缩包，解压之后其实还是1000个tar压缩包（对应1000个类别），需要再次解压，解压脚本unzip.sh如下（PS：可能需要自己改一下目录 dir ）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span>=./train </span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> `<span class="built_in">ls</span> <span class="variable">$dir</span>/*tar` <span class="keyword">do</span>   </span><br><span class="line">  filename=`<span class="built_in">basename</span> <span class="variable">$x</span> .tar`   </span><br><span class="line">  <span class="built_in">mkdir</span> <span class="variable">$dir</span>/<span class="variable">$filename</span>   </span><br><span class="line">  tar -xvf <span class="variable">$x</span> -C <span class="variable">$dir</span>/<span class="variable">$filename</span> </span><br><span class="line"><span class="keyword">done</span> </span><br><span class="line"><span class="built_in">rm</span> *.tar</span><br></pre></td></tr></table></figure>
+
+<p>执行脚本之后，我们就获得了1000个文件夹和对应的图片数据啦~截至目前，我们已经把所有的 JPEG 图片搞了出来。</p>
+<h2 id="3-数据标签"><a href="#3-数据标签" class="headerlink" title="3. 数据标签"></a>3. 数据标签</h2><p>对于训练集，不同类别的数据躺在不同的文件夹里，用起来很方便（同一文件夹的视为一类）。但是验证集没有对应的标签，需要额外处理。</p>
+<p>验证集的标签在 Development kit （文件名为 <code>ILSVRC2012_devkit_t12.tar.gz</code>）中的 <code>ILSVRC2012_devkit_t12\data\ILSVRC2012_validation_ground_truth.txt</code> 中：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/80/v2-10219b98d7686a62a5f86d3d7322ac6b_720w.webp?source=1940ef5c"
+                     
+                ></p>
+<p>但是新的问题又来了，那就是这个数字和文件夹的名字虽然是一一对应的，但还是需要额外的映射……好在映射关系储存在和txt文件同目录下的 <code>meta.mat</code> 文件中。我们希望验证集的文件结构长得和训练集一样，即 :</p>
+<ul>
+<li>&#x2F;val<ul>
+<li>&#x2F;n01440764<ul>
+<li>images</li>
+</ul>
+</li>
+<li>&#x2F;n01443537</li>
+<li>images</li>
+</ul>
+</li>
+</ul>
+<p>因此，我们首先解压 devkit 压缩包，把我们需要的东西取出来：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xzf ILSVRC2012_devkit_t12.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>之后，在imagenet目录（devkit和val的<a class="link"   href="https://www.zhihu.com/search?q=%E6%A0%B9%E7%9B%AE%E5%BD%95&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:1930557182%7D" >根目录<i class="fas fa-external-link-alt"></i></a>下）创建并运行如下 python 脚本</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">move_valimg</span>(<span class="params">val_dir=<span class="string">&#x27;./val&#x27;</span>, devkit_dir=<span class="string">&#x27;./ILSVRC2012_devkit_t12&#x27;</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    move valimg to correspongding folders.</span></span><br><span class="line"><span class="string">    val_id(start from 1) -&gt; ILSVRC_ID(start from 1) -&gt; WIND</span></span><br><span class="line"><span class="string">    organize like:</span></span><br><span class="line"><span class="string">    /val</span></span><br><span class="line"><span class="string">       /n01440764</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">       /n01443537</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">        .....</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># load synset, val ground truth and val images list</span></span><br><span class="line">    synset = io.loadmat(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;meta.mat&#x27;</span>))</span><br><span class="line">  </span><br><span class="line">    ground_truth = <span class="built_in">open</span>(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;ILSVRC2012_validation_ground_truth.txt&#x27;</span>))</span><br><span class="line">    lines = ground_truth.readlines()</span><br><span class="line">    labels = [<span class="built_in">int</span>(line[:-<span class="number">1</span>]) <span class="keyword">for</span> line <span class="keyword">in</span> lines]</span><br><span class="line">  </span><br><span class="line">    root, _, filenames = <span class="built_in">next</span>(os.walk(val_dir))</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="comment"># val image name -&gt; ILSVRC ID -&gt; WIND</span></span><br><span class="line">        val_id = <span class="built_in">int</span>(filename.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>].split(<span class="string">&#x27;_&#x27;</span>)[-<span class="number">1</span>])</span><br><span class="line">        ILSVRC_ID = labels[val_id-<span class="number">1</span>]</span><br><span class="line">        WIND = synset[<span class="string">&#x27;synsets&#x27;</span>][ILSVRC_ID-<span class="number">1</span>][<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;val_id:%d, ILSVRC_ID:%d, WIND:%s&quot;</span> % (val_id, ILSVRC_ID, WIND))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># move val images</span></span><br><span class="line">        output_dir = os.path.join(root, WIND)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(output_dir):</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            os.mkdir(output_dir)</span><br><span class="line">        shutil.move(os.path.join(root, filename), os.path.join(output_dir, filename))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    move_valimg()</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-用Pytorch加载"><a href="#4-用Pytorch加载" class="headerlink" title="4. 用Pytorch加载"></a>4. 用Pytorch加载</h2><p>使用 torchvision.datasets.ImageFolder() 就可以直接加载处理好的数据集啦！</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torchvision.datasets <span class="keyword">as</span> datasets</span><br><span class="line"></span><br><span class="line">root = <span class="string">&#x27;data/imagenet&#x27;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_imagenet</span>(<span class="params">root, train = <span class="literal">True</span>, transform = <span class="literal">None</span>, target_transform = <span class="literal">None</span></span>):</span><br><span class="line">    <span class="keyword">if</span> train:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;train&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;val&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> datasets.ImageFolder(root = root,</span><br><span class="line">                               transform = transform,</span><br><span class="line">                               target_transform = target_transform)</span><br></pre></td></tr></table></figure>
+
+<p>作者：薰风初入弦<br>链接：<a class="link"   href="https://www.zhihu.com/question/264345314/answer/1930557182" >https://www.zhihu.com/question/264345314/answer/1930557182<i class="fas fa-external-link-alt"></i></a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<hr>
+<blockquote>
+<p>[^1] <a class="link"   href="https://www.zhihu.com/question/264345314" >ImageNet使用方法？ - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
         <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用SCP拷贝文件</title>
+    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
+<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
+
+<p>对于文件夹，需要加入 <code>-r</code>参数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
       </tags>
   </entry>
 </search>

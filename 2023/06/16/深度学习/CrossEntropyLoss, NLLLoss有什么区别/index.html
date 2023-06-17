@@ -9,7 +9,7 @@
     
     <title>
         
-            使用SCP拷贝文件 |
+            Pytorch损失函数CrossEntropyLoss和NLLLoss |
         
         RSIC&#39;s Blog
     </title>
@@ -164,7 +164,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">使用SCP拷贝文件</span>
+                <span class="title-hover-animation">Pytorch损失函数CrossEntropyLoss和NLLLoss</span>
             </div>
 
             
@@ -186,13 +186,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-04-17 23:05:00</span>
-        <span class="mobile">2023-04-17 23:05</span>
+        <span class="pc">2023-06-16 14:00:00</span>
+        <span class="mobile">2023-06-16 14:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-04-17 23:08:43</span>
+        <span class="pc">2023-06-17 18:22:35</span>
     </span>
     
     
@@ -201,7 +201,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/Linux/">Linux</a>&nbsp;
+                        <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>&nbsp;
                     </li>
                 
             </ul>
@@ -213,7 +213,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/SSH/">SSH</a>&nbsp;
+                        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/">深度学习,损失函数</a>&nbsp;
                     </li>
                 
             </ul>
@@ -223,12 +223,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>105 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.1k 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+            <i class="fas fa-clock"></i>&nbsp;<span>4 分钟</span>
         </span>
     
     
@@ -246,16 +246,33 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
-<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
-
-<p>对于文件夹，需要加入 <code>-r</code>参数</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
-
-<hr>
-<blockquote>
-<p>更多使用方法请参考：<a class="link"   target="_blank" rel="noopener" href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
+                <h2 id="什么是logits"><a href="#什么是logits" class="headerlink" title="什么是logits"></a>什么是logits</h2><p>作者：王峰</p>
+<p>链接：<a class="link"   target="_blank" rel="noopener" href="https://www.zhihu.com/question/60751553/answer/1986650670" >https://www.zhihu.com/question/60751553/answer/1986650670<i class="fas fa-external-link-alt"></i></a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>logit原本是一个函数，它是sigmoid函数（也叫标准logistic函数） $p (x) &#x3D; \frac{1}{1+e^{-x}}$ 的反函数：  $logit(p) &#x3D; \log\left(\frac{p}{1-p}\right)$ 。logit这个名字的来源即为<strong>log</strong>istic un<strong>it。</strong></p>
+<p>但在深度学习中，logits就是最终的全连接层的输出，而非其本意。通常神经网络中都是先有logits，而后通过sigmoid函数或者softmax函数得到概率$P$的，所以大部分情况下都无需用到logit函数的表达式。</p>
+<p>什么时候我们会真的需要用到logit函数呢？考虑这样一个问题：如果我们拿到了一个黑盒模型的概率输出，想要用这个模型生成一批数据来distill（知识蒸馏）我们自己的模型，但distill过程往往又需要调节温度项来重新计算概率（大概是这么个形式： $p(x) &#x3D; \frac{1}{1+e^{-x&#x2F;T}}$ ），此时我们就需要从概率值反推logits了，而反推的过程就如上边的公式所述： $logit(p) &#x3D; \log\left(\frac{p}{1-p}\right)$ 。所以对于logistic regression来说，logit恰好是输出概率经过logit函数的结果，因此即使我们并没有真正地用到logit函数，也不妨将其称作logit。</p>
+<p>但是，目前大家用得更多的是多分类的softmax函数，而它的反函数其实并不是logit函数，而是log函数 $\log(p)$ ，这样再次经过softmax函数： $\hat{p}_i &#x3D;\frac{e^{\log p_i}}{\sum_j e^{\log p_j}} &#x3D; \frac{p_i}{\sum_j p_j} &#x3D; p_i$ ，就得到了原来的概率。这里需要注意的是：所有logits共同减去一个数字，其得到的softmax结果是不变的，所以得到的logits并不一定与原始logits一模一样，而是会相差一个常数。</p>
+<p>由此可见，使用logit一词来表示网络最后一层的输出，实际上只适用于logistic regression。而对于现在更多使用的多分类器softmax来说，其反函数应该是log函数，而非logit，继续用logit一词实际上是不恰当的。我个人倾向于使用“分数”或者直接说是最后一个全连接层的输出，这样比较形象，也不至于让初学者摸不到头脑。</p>
+<h2 id="Softmax和Log-softmax"><a href="#Softmax和Log-softmax" class="headerlink" title="Softmax和Log_softmax"></a>Softmax和Log_softmax</h2><p>Softmax是标准的归一化函数，可以简单的理解为将神经网络的输出$[-\infin, +\infin]$归一化到$[0,1]$，并且各项的和是1，就好像输出的是属于不同类别的概率$P$</p>
+<p>$$<br>Softmax(z_i)&#x3D;\frac{e^{z_i}}{\sum_{j&#x3D;0}^{n}{e^{z_j}}}</p>
+<p>$$</p>
+<p>但是在计算的过程中，若是$z_j$极大，会出现上溢出，当$z_j$为负数时，又容易出现下溢出问题（被四舍五入为0）。</p>
+<p>经过适当变换</p>
+<p>$$<br>Softmax(z_i)&#x3D;\frac{e^{z_i}e^{-max(z)}}{\sum_{j&#x3D;0}^{n}{e^{z_j}}e^{-max(z)}}&#x3D;\frac{e^{z_i-max(z)}}{\sum_{j&#x3D;0}^{n}{e^{z_j-max(z)}}}</p>
+<p>$$</p>
+<p>这样，$e$的指数最大为0，不会发生上溢出。对结果取$log$</p>
+<p>$$<br>Log(Softmax(z_i))&#x3D;Log(\frac{e^{z_i-max(z)}}{\sum_{j&#x3D;0}^{n}{e^{z_j-max(z)}}})\<br>&#x3D;z_i-max(z)-Log(\sum_{j&#x3D;0}^ne^{z_j-max(z)})<br>$$</p>
+<h2 id="交叉熵损失函数CrossEntropyLoss"><a href="#交叉熵损失函数CrossEntropyLoss" class="headerlink" title="交叉熵损失函数CrossEntropyLoss"></a>交叉熵损失函数CrossEntropyLoss</h2><p>之前提到过<a href="https://ranshuo-icer.github.io/2023/06/16/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E4%BB%80%E4%B9%88%E6%98%AFCrossEntropy%EF%BC%8C%E4%BA%A4%E5%8F%89%E7%86%B5/">什么是交叉熵损失函数 | RSIC&#39;s Blog (ranshuo-icer.github.io)</a></p>
+<p>其公式为</p>
+<p>$$<br>H(P,Q)&#x3D;-\sum_{i}P_i\times log(Q_i)<br>$$</p>
+<p>即使用实际的分布$P$去计算预测的分布$Q$的平均编码长度。</p>
+<p>在深度学习的分类任务中，$Q$通常为全连接的输出经过$softmax$得到，因此从全连接的输出$x$与真实标签$y$的交叉熵为</p>
+<p>$$<br>H(y,x)&#x3D;-\sum_iy_i\times log(softmax(x))<br>$$</p>
+<p>上面提到，为了避免计算softmax时出现溢出问题，都是计算的$log(softmax)$，再计算指数$e^{log(softmax)}$。当使用交叉熵作为损失函数时，即可省略后者，结合起来就是Pytorch中的 <code>nn.CrossEntropyLoss</code>，详见pytorch官方手册<a class="link"   target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html#torch.nn.CrossEntropyLoss" >CrossEntropyLoss — PyTorch 2.0 documentation<i class="fas fa-external-link-alt"></i></a></p>
+<p>那NLLLoss是什么呢？</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://pytorch.org/docs/stable/generated/torch.nn.NLLLoss.html#torch.nn.NLLLoss" >NLLLoss — PyTorch 2.0 documentation<i class="fas fa-external-link-alt"></i></a></p>
+<p>The negative log likelihood loss. It is useful to train a classification problem with C classes. The input given through a forward call is expected to contain log-probabilities of each class. <strong>Obtaining log-probabilities in a neural network is easily achieved by adding a LogSoftmax layer in the last layer of your network. You may use CrossEntropyLoss instead, if you prefer not to add an extra layer.</strong></p>
+<p>即 <code>softmax + log + nllloss = crossentropyloss</code></p>
 
             </div>
 
@@ -265,16 +282,16 @@
 <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li class="post-title">
-            <span class="type">本文标题</span>：<span class="content">使用SCP拷贝文件</span>
+            <span class="type">本文标题</span>：<span class="content">Pytorch损失函数CrossEntropyLoss和NLLLoss</span>
         </li>
         <li class="post-author">
             <span class="type">本文作者</span>：<span class="content">RSIC</span>
         </li>
         <li class="post-time">
-            <span class="type">创建时间</span>：<span class="content">2023-04-17 23:05:00</span>
+            <span class="type">创建时间</span>：<span class="content">2023-06-16 14:00:00</span>
         </li>
         <li class="post-link">
-            <span class="type">本文链接</span>：<span class="content">2023/04/17/ssh/ssh拷贝文件/</span>
+            <span class="type">本文链接</span>：<span class="content">2023/06/16/深度学习/CrossEntropyLoss, NLLLoss有什么区别/</span>
         </li>
         <li class="post-license">
             <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
@@ -292,7 +309,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/SSH/">#SSH</a>&nbsp;
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0-%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/">#深度学习,损失函数</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -301,29 +318,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">ImageNet数据集的下载与使用</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2022/10/25/hello-world/"
+                               href="/2023/06/16/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/%E4%BB%80%E4%B9%88%E6%98%AFCrossEntropy%EF%BC%8C%E4%BA%A4%E5%8F%89%E7%86%B5/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Hello World</span>
+                                <span class="post-nav-title-item">什么是交叉熵损失函数</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
@@ -342,7 +344,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8SCP%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">使用SCP拷贝文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">命令格式</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFlogits"><span class="nav-number">1.</span> <span class="nav-text">什么是logits</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Softmax%E5%92%8CLog-softmax"><span class="nav-number">2.</span> <span class="nav-text">Softmax和Log_softmax</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%A4%E5%8F%89%E7%86%B5%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0CrossEntropyLoss"><span class="nav-number">3.</span> <span class="nav-text">交叉熵损失函数CrossEntropyLoss</span></a></li></ol>
     </div>
 </div>
 
