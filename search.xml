@@ -192,6 +192,27 @@
       </tags>
   </entry>
   <entry>
+    <title>使用SCP拷贝文件</title>
+    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
+<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
+
+<p>对于文件夹，需要加入 <code>-r</code>参数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SSH免密登陆</title>
     <url>/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</url>
     <content><![CDATA[<h1 id="SSH免密登陆"><a href="#SSH免密登陆" class="headerlink" title="SSH免密登陆"></a>SSH免密登陆</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
@@ -250,27 +271,6 @@
                       alt="1680613555967"
                 ></p>
 <p>点击保存即可</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>SSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用SCP拷贝文件</title>
-    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
-<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
-
-<p>对于文件夹，需要加入 <code>-r</code>参数</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
-
-<hr>
-<blockquote>
-<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
 ]]></content>
       <categories>
         <category>Linux</category>
