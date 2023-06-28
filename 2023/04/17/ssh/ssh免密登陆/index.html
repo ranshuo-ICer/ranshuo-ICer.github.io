@@ -24,7 +24,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
     KEEP.hexo_config = {"hostname":"ranshuo-icer.github.io","root":"/","language":"zh-CN","path":"search.xml"}
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.jpg","favicon":"/images/logo.jpg","avatar":"/images/logo.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"岁月本长，而忙者自促；天地本宽，而鄙者自隘；风花雪月本闲，而扰攘者自冗","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"giscus","giscus":{"enable":true,"repo":"ranshuo-ICer/ranshuo-ICer.github.io","repo_id":"R_kgDOJX3BYg","category":"Announcements","category_id":"DIC_kwDOJX3BYs4CXiOk","mapping":"pathname","reactions_enabled":1,"emit_metadata":0,"theme":"preferred-color-scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"bottom","loading":"lazy"},"valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.6.1"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/logo.jpg","favicon":"/images/logo.jpg","avatar":"/images/logo.jpg","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"岁月本长，而忙者自促；天地本宽，而鄙者自隘；风花雪月本闲，而扰攘者自冗","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"giscus","giscus":{"repo":"ranshuo-ICer/ranshuo-ICer.github.io","repo_id":"R_kgDOJX3BYg","category":"Announcements","category_id":"DIC_kwDOJX3BYs4CXiOk","position":"top","lang":"zh-CN","Available values":"light | dark | dark_high_contrast | transparent_dark | preferred-color-scheme","light_theme":"light","dark_theme":"dark"},"valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":true},"img_align":"left","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
@@ -350,13 +350,13 @@
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2023/04/17/ubuntu/Ubuntu%2018.04%20%E5%AE%89%E8%A3%85%20NVIDIA%20%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/"
+                               href="/2023/04/18/hexo-blog/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">Ubuntu安装NVIDIA驱动</span>
+                                <span class="post-nav-title-item">如何建立自己的博客</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>
@@ -404,14 +404,14 @@
     s.setAttribute("data-category-id", "DIC_kwDOJX3BYs4CXiOk")
     s.setAttribute("data-mapping", "pathname")
     s.setAttribute("data-strict", "0")
-    s.setAttribute("data-reactions-enabled", "1")
+    s.setAttribute("data-reactions-enabled", "")
     s.setAttribute("data-emit-metadata", "0")
-    s.setAttribute("data-input-position", "")
+    s.setAttribute("data-input-position", "top")
     s.setAttribute("data-lang", "zh-CN")
     s.setAttribute("crossorigin", "anonymous")
     s.setAttribute("async", "")
     s.setAttribute("loading", "lazy")
-    s.setAttribute("data-theme", document.body.getAttribute("class").includes("light-mode") ? "" : "")
+    s.setAttribute("data-theme", document.body.getAttribute("class").includes("light-mode") ? "light" : "dark")
     document.querySelector("div.giscus") ? document.body.appendChild(s) : console.log("")
     const toggle = document.querySelector('.tool-dark-light-toggle');
       if (toggle) {
@@ -419,7 +419,7 @@
       }
     }
     function changeGiscusTheme () {
-      const theme = document.body.getAttribute("class").includes("light-mode") ? "" : ""
+      const theme = document.body.getAttribute("class").includes("light-mode") ? "light" : "dark"
       function sendMessage(message) {
         const iframe = document.querySelector('iframe.giscus-frame');
         if (!iframe) return;

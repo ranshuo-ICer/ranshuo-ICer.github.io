@@ -192,6 +192,94 @@
       </tags>
   </entry>
   <entry>
+    <title>SSH免密登陆</title>
+    <url>/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</url>
+    <content><![CDATA[<h1 id="SSH免密登陆"><a href="#SSH免密登陆" class="headerlink" title="SSH免密登陆"></a>SSH免密登陆</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
+<li>终端</li>
+<li>脑子</li>
+</ul>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h3><ul>
+<li>打开终端，输入 <code>ssh-keygen</code>，生成公钥和私钥</li>
+</ul>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612882454.png"
+                      alt="1680612882454"
+                ></p>
+<ul>
+<li>生成的文件如下：</li>
+</ul>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612946153.png"
+                      alt="1680612946153"
+                ></p>
+<p>其中的 <code>*.pub</code>文件是公钥。</p>
+<h3 id="部署公钥"><a href="#部署公钥" class="headerlink" title="部署公钥"></a>部署公钥</h3><ul>
+<li>将公钥上传到服务器的 <code>user/.ssh/</code>目录下：</li>
+</ul>
+<p>在服务器的 <code>.ssh</code>目录下新建文件 <code>authorized_keys</code></p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613300625.png"
+                      alt="1680613300625"
+                ></p>
+<p>写入公钥的内容</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613342598.png"
+                      alt="1680613342598"
+                ></p>
+<p>保存。至此设置好了服务器端</p>
+<h3 id="使用私钥"><a href="#使用私钥" class="headerlink" title="使用私钥"></a>使用私钥</h3><h4 id="VScode使用方法"><a href="#VScode使用方法" class="headerlink" title="VScode使用方法"></a>VScode使用方法</h4><p>依次点击</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613473684.png"
+                      alt="1680613473684"
+                ></p>
+<p>编辑文件</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613555967.png"
+                      alt="1680613555967"
+                ></p>
+<p>点击保存即可</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用SCP拷贝文件</title>
+    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
+<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
+
+<p>对于文件夹，需要加入 <code>-r</code>参数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>SSH</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ubuntu安装NVIDIA驱动</title>
     <url>/2023/04/17/ubuntu/Ubuntu%2018.04%20%E5%AE%89%E8%A3%85%20NVIDIA%20%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/</url>
     <content><![CDATA[<p>我们今天的目标是在 Ubuntu 18.04 上安装 NVIDIA 显卡驱动，请注意，你的显卡一定要是 NVIDIA 的显卡才能按照这篇文章的方法安装。我将给大家介绍三种安装方法，建议使用第一种方法安装。</p>
@@ -325,94 +413,6 @@
       </tags>
   </entry>
   <entry>
-    <title>SSH免密登陆</title>
-    <url>/2023/04/17/ssh/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/</url>
-    <content><![CDATA[<h1 id="SSH免密登陆"><a href="#SSH免密登陆" class="headerlink" title="SSH免密登陆"></a>SSH免密登陆</h1><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
-<li>终端</li>
-<li>脑子</li>
-</ul>
-<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="生成秘钥"><a href="#生成秘钥" class="headerlink" title="生成秘钥"></a>生成秘钥</h3><ul>
-<li>打开终端，输入 <code>ssh-keygen</code>，生成公钥和私钥</li>
-</ul>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612882454.png"
-                      alt="1680612882454"
-                ></p>
-<ul>
-<li>生成的文件如下：</li>
-</ul>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680612946153.png"
-                      alt="1680612946153"
-                ></p>
-<p>其中的 <code>*.pub</code>文件是公钥。</p>
-<h3 id="部署公钥"><a href="#部署公钥" class="headerlink" title="部署公钥"></a>部署公钥</h3><ul>
-<li>将公钥上传到服务器的 <code>user/.ssh/</code>目录下：</li>
-</ul>
-<p>在服务器的 <code>.ssh</code>目录下新建文件 <code>authorized_keys</code></p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613300625.png"
-                      alt="1680613300625"
-                ></p>
-<p>写入公钥的内容</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613342598.png"
-                      alt="1680613342598"
-                ></p>
-<p>保存。至此设置好了服务器端</p>
-<h3 id="使用私钥"><a href="#使用私钥" class="headerlink" title="使用私钥"></a>使用私钥</h3><h4 id="VScode使用方法"><a href="#VScode使用方法" class="headerlink" title="VScode使用方法"></a>VScode使用方法</h4><p>依次点击</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613473684.png"
-                      alt="1680613473684"
-                ></p>
-<p>编辑文件</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="/image/ssh%E5%85%8D%E5%AF%86%E7%99%BB%E9%99%86/1680613555967.png"
-                      alt="1680613555967"
-                ></p>
-<p>点击保存即可</p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>SSH</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用SCP拷贝文件</title>
-    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
-<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
-
-<p>对于文件夹，需要加入 <code>-r</code>参数</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
-
-<hr>
-<blockquote>
-<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>SSH</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Pytorch损失函数CrossEntropyLoss和NLLLoss</title>
     <url>/2023/06/16/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/CrossEntropyLoss,%20NLLLoss%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</url>
     <content><![CDATA[<h2 id="什么是logits"><a href="#什么是logits" class="headerlink" title="什么是logits"></a>什么是logits</h2><p>作者：王峰</p>
@@ -446,6 +446,76 @@
       </categories>
       <tags>
         <tag>深度学习 损失函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ImageNet数据集的下载与使用</title>
+    <url>/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="ImageNet数据集的下载与使用"><a href="#ImageNet数据集的下载与使用" class="headerlink" title="ImageNet数据集的下载与使用"></a>ImageNet数据集的下载与使用</h1><h2 id="1-数据下载"><a href="#1-数据下载" class="headerlink" title="1. 数据下载"></a>1. 数据下载</h2><h3 id="1-1-方法一：官网下载"><a href="#1-1-方法一：官网下载" class="headerlink" title="1.1 方法一：官网下载"></a>1.1 方法一：官网下载</h3><p><a href="https://link.zhihu.com/?target=https://www.image-net.org/">ImageNet <strong>www.image-net.org/</strong></a></p>
+<p>在官方网站注册账号，注册时最好使用教育邮箱(.edu )之后。按照流程申请，收到邮件之后可以就可以在 Download界面里下数据啦~<br>推荐下载12年的数据，因为比较经典。不如果你如果凑巧财力雄厚，也可以考虑最顶上那个ImageNet21k，它相比12年的数据大的离谱。</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pica.zhimg.com/80/v2-b757f1bbb9600f7ae4bc1dd551cbbfdb_720w.webp?source=1940ef5c"
+                     
+                ></p>
+<p>点进去之后，下载如下三个压缩包（图片分类任务用这三个足够了）</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/80/v2-4c58bc88b0d657922d6ee7d4c9498b19_720w.webp?source=1940ef5c"
+                     
+                ></p>
+<h3 id="1-2-方法二"><a href="#1-2-方法二" class="headerlink" title="1.2 方法二"></a>1.2 方法二</h3><p>如果你觉得这么下不方便&#x2F;网速太慢容易断，可以在这个网址自行找12年的版本下载（别全下了呀）</p>
+<p><a href="https://link.zhihu.com/?target=https://hyper.ai/datasets/4889">ImageNet 10 图像识别数据集 - 数据集下载 - 超神经<strong>hyper.ai&#x2F;datasets&#x2F;4889</strong></a></p>
+<h2 id="2-数据解压"><a href="#2-数据解压" class="headerlink" title="2. 数据解压"></a>2. 数据解压</h2><p>下载完毕后把 Development kit 留着备用，我们会得到训练集与验证集的两个压缩包，分别是 <code>ILSVRC2012_img_train.tar</code> 和 <code>ILSVRC2012_img_val.tar</code>。</p>
+<p>首先创建两个用于放训练集和测试集的文件夹，然后解压：</p>
+<figure class="highlight console"><table><tr><td class="code"><pre><span class="line">mkdir train</span><br><span class="line">mkdir val</span><br><span class="line">tar xvf ILSVRC2012_img_train.tar -C ./train</span><br><span class="line">tar xvf ILSVRC2012_img_val.tar -C ./val</span><br></pre></td></tr></table></figure>
+
+<p>对于train的压缩包，解压之后其实还是1000个tar压缩包（对应1000个类别），需要再次解压，解压脚本unzip.sh如下（PS：可能需要自己改一下目录 dir ）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span>=./train </span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> `<span class="built_in">ls</span> <span class="variable">$dir</span>/*tar` <span class="keyword">do</span>   </span><br><span class="line">  filename=`<span class="built_in">basename</span> <span class="variable">$x</span> .tar`   </span><br><span class="line">  <span class="built_in">mkdir</span> <span class="variable">$dir</span>/<span class="variable">$filename</span>   </span><br><span class="line">  tar -xvf <span class="variable">$x</span> -C <span class="variable">$dir</span>/<span class="variable">$filename</span> </span><br><span class="line"><span class="keyword">done</span> </span><br><span class="line"><span class="built_in">rm</span> *.tar</span><br></pre></td></tr></table></figure>
+
+<p>执行脚本之后，我们就获得了1000个文件夹和对应的图片数据啦~截至目前，我们已经把所有的 JPEG 图片搞了出来。</p>
+<h2 id="3-数据标签"><a href="#3-数据标签" class="headerlink" title="3. 数据标签"></a>3. 数据标签</h2><p>对于训练集，不同类别的数据躺在不同的文件夹里，用起来很方便（同一文件夹的视为一类）。但是验证集没有对应的标签，需要额外处理。</p>
+<p>验证集的标签在 Development kit （文件名为 <code>ILSVRC2012_devkit_t12.tar.gz</code>）中的 <code>ILSVRC2012_devkit_t12\data\ILSVRC2012_validation_ground_truth.txt</code> 中：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/80/v2-10219b98d7686a62a5f86d3d7322ac6b_720w.webp?source=1940ef5c"
+                     
+                ></p>
+<p>但是新的问题又来了，那就是这个数字和文件夹的名字虽然是一一对应的，但还是需要额外的映射……好在映射关系储存在和txt文件同目录下的 <code>meta.mat</code> 文件中。我们希望验证集的文件结构长得和训练集一样，即 :</p>
+<ul>
+<li>&#x2F;val<ul>
+<li>&#x2F;n01440764<ul>
+<li>images</li>
+</ul>
+</li>
+<li>&#x2F;n01443537</li>
+<li>images</li>
+</ul>
+</li>
+</ul>
+<p>因此，我们首先解压 devkit 压缩包，把我们需要的东西取出来：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xzf ILSVRC2012_devkit_t12.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>之后，在imagenet目录（devkit和val的<a class="link"   href="https://www.zhihu.com/search?q=%E6%A0%B9%E7%9B%AE%E5%BD%95&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:1930557182%7D" >根目录<i class="fas fa-external-link-alt"></i></a>下）创建并运行如下 python 脚本</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">move_valimg</span>(<span class="params">val_dir=<span class="string">&#x27;./val&#x27;</span>, devkit_dir=<span class="string">&#x27;./ILSVRC2012_devkit_t12&#x27;</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    move valimg to correspongding folders.</span></span><br><span class="line"><span class="string">    val_id(start from 1) -&gt; ILSVRC_ID(start from 1) -&gt; WIND</span></span><br><span class="line"><span class="string">    organize like:</span></span><br><span class="line"><span class="string">    /val</span></span><br><span class="line"><span class="string">       /n01440764</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">       /n01443537</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">        .....</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># load synset, val ground truth and val images list</span></span><br><span class="line">    synset = io.loadmat(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;meta.mat&#x27;</span>))</span><br><span class="line">  </span><br><span class="line">    ground_truth = <span class="built_in">open</span>(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;ILSVRC2012_validation_ground_truth.txt&#x27;</span>))</span><br><span class="line">    lines = ground_truth.readlines()</span><br><span class="line">    labels = [<span class="built_in">int</span>(line[:-<span class="number">1</span>]) <span class="keyword">for</span> line <span class="keyword">in</span> lines]</span><br><span class="line">  </span><br><span class="line">    root, _, filenames = <span class="built_in">next</span>(os.walk(val_dir))</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="comment"># val image name -&gt; ILSVRC ID -&gt; WIND</span></span><br><span class="line">        val_id = <span class="built_in">int</span>(filename.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>].split(<span class="string">&#x27;_&#x27;</span>)[-<span class="number">1</span>])</span><br><span class="line">        ILSVRC_ID = labels[val_id-<span class="number">1</span>]</span><br><span class="line">        WIND = synset[<span class="string">&#x27;synsets&#x27;</span>][ILSVRC_ID-<span class="number">1</span>][<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;val_id:%d, ILSVRC_ID:%d, WIND:%s&quot;</span> % (val_id, ILSVRC_ID, WIND))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># move val images</span></span><br><span class="line">        output_dir = os.path.join(root, WIND)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(output_dir):</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            os.mkdir(output_dir)</span><br><span class="line">        shutil.move(os.path.join(root, filename), os.path.join(output_dir, filename))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    move_valimg()</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-用Pytorch加载"><a href="#4-用Pytorch加载" class="headerlink" title="4. 用Pytorch加载"></a>4. 用Pytorch加载</h2><p>使用 torchvision.datasets.ImageFolder() 就可以直接加载处理好的数据集啦！</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torchvision.datasets <span class="keyword">as</span> datasets</span><br><span class="line"></span><br><span class="line">root = <span class="string">&#x27;data/imagenet&#x27;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_imagenet</span>(<span class="params">root, train = <span class="literal">True</span>, transform = <span class="literal">None</span>, target_transform = <span class="literal">None</span></span>):</span><br><span class="line">    <span class="keyword">if</span> train:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;train&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;val&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> datasets.ImageFolder(root = root,</span><br><span class="line">                               transform = transform,</span><br><span class="line">                               target_transform = target_transform)</span><br></pre></td></tr></table></figure>
+
+<p>作者：薰风初入弦<br>链接：<a class="link"   href="https://www.zhihu.com/question/264345314/answer/1930557182" >https://www.zhihu.com/question/264345314/answer/1930557182<i class="fas fa-external-link-alt"></i></a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<hr>
+<blockquote>
+<p>[^1] <a class="link"   href="https://www.zhihu.com/question/264345314" >ImageNet使用方法？ - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -625,76 +695,6 @@
       </categories>
       <tags>
         <tag>深度学习,损失函数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ImageNet数据集的下载与使用</title>
-    <url>/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="ImageNet数据集的下载与使用"><a href="#ImageNet数据集的下载与使用" class="headerlink" title="ImageNet数据集的下载与使用"></a>ImageNet数据集的下载与使用</h1><h2 id="1-数据下载"><a href="#1-数据下载" class="headerlink" title="1. 数据下载"></a>1. 数据下载</h2><h3 id="1-1-方法一：官网下载"><a href="#1-1-方法一：官网下载" class="headerlink" title="1.1 方法一：官网下载"></a>1.1 方法一：官网下载</h3><p><a href="https://link.zhihu.com/?target=https://www.image-net.org/">ImageNet <strong>www.image-net.org/</strong></a></p>
-<p>在官方网站注册账号，注册时最好使用教育邮箱(.edu )之后。按照流程申请，收到邮件之后可以就可以在 Download界面里下数据啦~<br>推荐下载12年的数据，因为比较经典。不如果你如果凑巧财力雄厚，也可以考虑最顶上那个ImageNet21k，它相比12年的数据大的离谱。</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pica.zhimg.com/80/v2-b757f1bbb9600f7ae4bc1dd551cbbfdb_720w.webp?source=1940ef5c"
-                     
-                ></p>
-<p>点进去之后，下载如下三个压缩包（图片分类任务用这三个足够了）</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/80/v2-4c58bc88b0d657922d6ee7d4c9498b19_720w.webp?source=1940ef5c"
-                     
-                ></p>
-<h3 id="1-2-方法二"><a href="#1-2-方法二" class="headerlink" title="1.2 方法二"></a>1.2 方法二</h3><p>如果你觉得这么下不方便&#x2F;网速太慢容易断，可以在这个网址自行找12年的版本下载（别全下了呀）</p>
-<p><a href="https://link.zhihu.com/?target=https://hyper.ai/datasets/4889">ImageNet 10 图像识别数据集 - 数据集下载 - 超神经<strong>hyper.ai&#x2F;datasets&#x2F;4889</strong></a></p>
-<h2 id="2-数据解压"><a href="#2-数据解压" class="headerlink" title="2. 数据解压"></a>2. 数据解压</h2><p>下载完毕后把 Development kit 留着备用，我们会得到训练集与验证集的两个压缩包，分别是 <code>ILSVRC2012_img_train.tar</code> 和 <code>ILSVRC2012_img_val.tar</code>。</p>
-<p>首先创建两个用于放训练集和测试集的文件夹，然后解压：</p>
-<figure class="highlight console"><table><tr><td class="code"><pre><span class="line">mkdir train</span><br><span class="line">mkdir val</span><br><span class="line">tar xvf ILSVRC2012_img_train.tar -C ./train</span><br><span class="line">tar xvf ILSVRC2012_img_val.tar -C ./val</span><br></pre></td></tr></table></figure>
-
-<p>对于train的压缩包，解压之后其实还是1000个tar压缩包（对应1000个类别），需要再次解压，解压脚本unzip.sh如下（PS：可能需要自己改一下目录 dir ）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span>=./train </span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> `<span class="built_in">ls</span> <span class="variable">$dir</span>/*tar` <span class="keyword">do</span>   </span><br><span class="line">  filename=`<span class="built_in">basename</span> <span class="variable">$x</span> .tar`   </span><br><span class="line">  <span class="built_in">mkdir</span> <span class="variable">$dir</span>/<span class="variable">$filename</span>   </span><br><span class="line">  tar -xvf <span class="variable">$x</span> -C <span class="variable">$dir</span>/<span class="variable">$filename</span> </span><br><span class="line"><span class="keyword">done</span> </span><br><span class="line"><span class="built_in">rm</span> *.tar</span><br></pre></td></tr></table></figure>
-
-<p>执行脚本之后，我们就获得了1000个文件夹和对应的图片数据啦~截至目前，我们已经把所有的 JPEG 图片搞了出来。</p>
-<h2 id="3-数据标签"><a href="#3-数据标签" class="headerlink" title="3. 数据标签"></a>3. 数据标签</h2><p>对于训练集，不同类别的数据躺在不同的文件夹里，用起来很方便（同一文件夹的视为一类）。但是验证集没有对应的标签，需要额外处理。</p>
-<p>验证集的标签在 Development kit （文件名为 <code>ILSVRC2012_devkit_t12.tar.gz</code>）中的 <code>ILSVRC2012_devkit_t12\data\ILSVRC2012_validation_ground_truth.txt</code> 中：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/80/v2-10219b98d7686a62a5f86d3d7322ac6b_720w.webp?source=1940ef5c"
-                     
-                ></p>
-<p>但是新的问题又来了，那就是这个数字和文件夹的名字虽然是一一对应的，但还是需要额外的映射……好在映射关系储存在和txt文件同目录下的 <code>meta.mat</code> 文件中。我们希望验证集的文件结构长得和训练集一样，即 :</p>
-<ul>
-<li>&#x2F;val<ul>
-<li>&#x2F;n01440764<ul>
-<li>images</li>
-</ul>
-</li>
-<li>&#x2F;n01443537</li>
-<li>images</li>
-</ul>
-</li>
-</ul>
-<p>因此，我们首先解压 devkit 压缩包，把我们需要的东西取出来：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xzf ILSVRC2012_devkit_t12.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>之后，在imagenet目录（devkit和val的<a class="link"   href="https://www.zhihu.com/search?q=%E6%A0%B9%E7%9B%AE%E5%BD%95&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:1930557182%7D" >根目录<i class="fas fa-external-link-alt"></i></a>下）创建并运行如下 python 脚本</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">move_valimg</span>(<span class="params">val_dir=<span class="string">&#x27;./val&#x27;</span>, devkit_dir=<span class="string">&#x27;./ILSVRC2012_devkit_t12&#x27;</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    move valimg to correspongding folders.</span></span><br><span class="line"><span class="string">    val_id(start from 1) -&gt; ILSVRC_ID(start from 1) -&gt; WIND</span></span><br><span class="line"><span class="string">    organize like:</span></span><br><span class="line"><span class="string">    /val</span></span><br><span class="line"><span class="string">       /n01440764</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">       /n01443537</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">        .....</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># load synset, val ground truth and val images list</span></span><br><span class="line">    synset = io.loadmat(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;meta.mat&#x27;</span>))</span><br><span class="line">  </span><br><span class="line">    ground_truth = <span class="built_in">open</span>(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;ILSVRC2012_validation_ground_truth.txt&#x27;</span>))</span><br><span class="line">    lines = ground_truth.readlines()</span><br><span class="line">    labels = [<span class="built_in">int</span>(line[:-<span class="number">1</span>]) <span class="keyword">for</span> line <span class="keyword">in</span> lines]</span><br><span class="line">  </span><br><span class="line">    root, _, filenames = <span class="built_in">next</span>(os.walk(val_dir))</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="comment"># val image name -&gt; ILSVRC ID -&gt; WIND</span></span><br><span class="line">        val_id = <span class="built_in">int</span>(filename.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>].split(<span class="string">&#x27;_&#x27;</span>)[-<span class="number">1</span>])</span><br><span class="line">        ILSVRC_ID = labels[val_id-<span class="number">1</span>]</span><br><span class="line">        WIND = synset[<span class="string">&#x27;synsets&#x27;</span>][ILSVRC_ID-<span class="number">1</span>][<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;val_id:%d, ILSVRC_ID:%d, WIND:%s&quot;</span> % (val_id, ILSVRC_ID, WIND))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># move val images</span></span><br><span class="line">        output_dir = os.path.join(root, WIND)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(output_dir):</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            os.mkdir(output_dir)</span><br><span class="line">        shutil.move(os.path.join(root, filename), os.path.join(output_dir, filename))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    move_valimg()</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-用Pytorch加载"><a href="#4-用Pytorch加载" class="headerlink" title="4. 用Pytorch加载"></a>4. 用Pytorch加载</h2><p>使用 torchvision.datasets.ImageFolder() 就可以直接加载处理好的数据集啦！</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torchvision.datasets <span class="keyword">as</span> datasets</span><br><span class="line"></span><br><span class="line">root = <span class="string">&#x27;data/imagenet&#x27;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_imagenet</span>(<span class="params">root, train = <span class="literal">True</span>, transform = <span class="literal">None</span>, target_transform = <span class="literal">None</span></span>):</span><br><span class="line">    <span class="keyword">if</span> train:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;train&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;val&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> datasets.ImageFolder(root = root,</span><br><span class="line">                               transform = transform,</span><br><span class="line">                               target_transform = target_transform)</span><br></pre></td></tr></table></figure>
-
-<p>作者：薰风初入弦<br>链接：<a class="link"   href="https://www.zhihu.com/question/264345314/answer/1930557182" >https://www.zhihu.com/question/264345314/answer/1930557182<i class="fas fa-external-link-alt"></i></a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<hr>
-<blockquote>
-<p>[^1] <a class="link"   href="https://www.zhihu.com/question/264345314" >ImageNet使用方法？ - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
