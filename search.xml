@@ -192,9 +192,9 @@
       </tags>
   </entry>
   <entry>
-    <title>transformer</title>
+    <title>transformer学习记录</title>
     <url>/2023/07/07/transformer/</url>
-    <content><![CDATA[<p>最近在和老师汇报Transformer的学习进展，PPT经过不少的修改和完善，现备份在这里：<a href="pdf/1.pdf">点击下载</a></p>
+    <content><![CDATA[<p>最近在和老师汇报Transformer的学习进展，备份一下PPT：<a href="/pdf/transformer.pdf" target="_blank" rel="nofollow">PDF</a>|<a href="/pdf/transformer.pptx" target="_blank" rel="nofollow">PPT</a></p>
 <iframe src="pdf/transformer_ppt.html" frameborder="0" width="100%" height="1000"></iframe>
 ]]></content>
   </entry>
