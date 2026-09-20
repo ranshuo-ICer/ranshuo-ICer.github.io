@@ -265,6 +265,12 @@ KEEP.initUtils = () => {
 
     getHowLongAgo(timestamp) {
       const lang = KEEP.language_ago
+      // guard: if a post timestamp is not in the past yet (clock skew, or a
+      // date slightly ahead of "now"), every branch below is skipped and the
+      // function returns undefined, which renders as the text "undefined"
+      if (!(timestamp > 0)) {
+        return this.setHowLongAgoLanguage(1, lang.second)
+      }
       const __Y = Math.floor(timestamp / (60 * 60 * 24 * 30) / 12)
       const __M = Math.floor(timestamp / (60 * 60 * 24 * 30))
       const __W = Math.floor(timestamp / (60 * 60 * 24) / 7)
