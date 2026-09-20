@@ -88,6 +88,14 @@
                         </li>
                     
                         <li class="menu-item">
+                            <a class=""
+                               href="/trips/qianjiangyuan-suchang-trip/"
+                            >
+                                自驾攻略
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
                             <a class="active"
                                href="/tags"
                             >
@@ -132,6 +140,11 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/trips/qianjiangyuan-suchang-trip/">自驾攻略</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -354,33 +367,6 @@
                 '.page-container',
                 '.pjax'
             ],
-            history: true,
-            debug: false,
-            cacheBust: false,
-            timeout: 0,
-            analytics: false,
-            currentUrlFullReload: false,
-            scrollRestoration: false,
-            // scrollTo: true,
-        });
-
-        document.addEventListener('pjax:send', () => {
-            KEEP.utils.pjaxProgressBarStart();
-        });
-
-        document.addEventListener('pjax:complete', () => {
-            KEEP.utils.pjaxProgressBarEnd();
-            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
-            KEEP.refresh();
-        });
-    });
-</script>
-
-
-
-</body>
-</html>
-      ],
             history: true,
             debug: false,
             cacheBust: false,

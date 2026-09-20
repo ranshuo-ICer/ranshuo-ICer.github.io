@@ -194,6 +194,13 @@
       </tags>
   </entry>
   <entry>
+    <title>transformer学习记录</title>
+    <url>/2023/07/07/transformer/</url>
+    <content><![CDATA[<p>最近在和老师汇报Transformer的学习进展，备份一下PPT：<a href="/pdf/transformer.pdf" target="_blank" rel="nofollow">PDF</a>|<a href="/pdf/transformer.pptx" target="_blank" rel="nofollow">PPT</a></p>
+<iframe src="pdf/transformer_ppt.html" frameborder="0" width="100%" height="1000"></iframe>
+]]></content>
+  </entry>
+  <entry>
     <title>博客源码丢了，我从线上站点把它反推了回来</title>
     <url>/2026/09/20/hexo-source-recovery/</url>
     <content><![CDATA[<p>事情是这样的：想给博客改点东西，打开电脑才发现——本地的 Hexo 工程目录不见了。</p>
@@ -274,13 +281,6 @@
       <tags>
         <tag>Hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>transformer学习记录</title>
-    <url>/2023/07/07/transformer/</url>
-    <content><![CDATA[<p>最近在和老师汇报Transformer的学习进展，备份一下PPT：<a href="/pdf/transformer.pdf" target="_blank" rel="nofollow">PDF</a>|<a href="/pdf/transformer.pptx" target="_blank" rel="nofollow">PPT</a></p>
-<iframe src="pdf/transformer_ppt.html" frameborder="0" width="100%" height="1000"></iframe>
-]]></content>
   </entry>
   <entry>
     <title>SSH免密登陆</title>
