@@ -9,7 +9,7 @@
     
     <title>
         
-            Ubuntu安装NVIDIA驱动 |
+            博客源码丢了，我从线上站点把它反推了回来 |
         
         RSIC&#39;s Blog
     </title>
@@ -164,7 +164,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">Ubuntu安装NVIDIA驱动</span>
+                <span class="title-hover-animation">博客源码丢了，我从线上站点把它反推了回来</span>
             </div>
 
             
@@ -186,13 +186,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-04-17 23:05:00</span>
-        <span class="mobile">2023-04-17 23:05</span>
+        <span class="pc">2026-09-20 23:45:00</span>
+        <span class="mobile">2026-09-20 23:45</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-04-17 23:11:09</span>
+        <span class="pc">2026-09-20 23:45:00</span>
     </span>
     
     
@@ -201,7 +201,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/Linux/">Linux</a>&nbsp;
+                        <a href="/categories/blog/">blog</a>&nbsp;
                     </li>
                 
             </ul>
@@ -213,7 +213,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>&nbsp;
+                        <a href="/tags/Hexo/">Hexo</a>&nbsp;
                     </li>
                 
             </ul>
@@ -223,7 +223,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>1.7k 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>1.6k 字</span>
         </span>
     
     
@@ -246,137 +246,77 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>我们今天的目标是在 Ubuntu 18.04 上安装 NVIDIA 显卡驱动，请注意，你的显卡一定要是 NVIDIA 的显卡才能按照这篇文章的方法安装。我将给大家介绍三种安装方法，建议使用第一种方法安装。</p>
-<p>先来说说带有 NVIDIA 独立显卡的电脑为什么要安装 NVIDIA 显卡驱动吧。下面是我从维基百科摘抄的显卡工作原理的介绍：</p>
+                <p>事情是这样的：想给博客改点东西，打开电脑才发现——本地的 Hexo 工程目录不见了。</p>
+<p>一开始还比較淡定，想着”GitHub 上应该有吧”。结果一查，事情比想象的有意思。</p>
+<h1 id="先确认：源码到底还在不在"><a href="#先确认：源码到底还在不在" class="headerlink" title="先确认：源码到底还在不在"></a>先确认：源码到底还在不在</h1><h2 id="GitHub-仓库里只有”成品”"><a href="#GitHub-仓库里只有”成品”" class="headerlink" title="GitHub 仓库里只有”成品”"></a>GitHub 仓库里只有”成品”</h2><p>打开 <code>ranshuo-ICer.github.io</code> 这个仓库，里面是这些东西：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index.html  archives/  categories/  tags/  css/  js/  font/  image/  images/  pdf/  search.xml</span><br></pre></td></tr></table></figure>
+
+<p>眼熟吗？这就是 <code>hexo generate</code> 出来的 <code>public/</code> 目录，也就是<strong>部署产物</strong>，不是源码。</p>
+<p>再看提交历史：一共 20 个提交，全部叫 <code>Site updated: 2023-xx-xx xx:xx:xx</code>，<strong>第一个提交的目录树里只有一个 <code>placeholder</code> 文件</strong>。分支也只有 <code>master</code> 一个。</p>
+<p>结论很明确：<strong>源码从来没有进过这个仓库</strong>。当初用 <code>hexo deploy</code> 推上去的，只是生成好的静态页面。</p>
+<h2 id="本机也翻遍了"><a href="#本机也翻遍了" class="headerlink" title="本机也翻遍了"></a>本机也翻遍了</h2><ul>
+<li>全盘（C&#x2F;D&#x2F;E&#x2F;F&#x2F;G）扫描 <code>_posts</code> 目录、<code>*hexo*</code> 文件：没有</li>
+<li>回收站：没有</li>
+<li>OneDrive、Documents、Desktop、Downloads、Kuaipan：没有</li>
+<li>WSL、hexo 命令、npm 安装日志、编辑器”最近打开”：都没有痕迹</li>
+</ul>
+<p>说明这个博客当初是在另一台机器（或者另一个环境）上搭的，本机从来没留下过源码。</p>
+<p><strong>原始工程文件确实找不回来了。</strong></p>
+<h1 id="那就反过来：从成品推出源码"><a href="#那就反过来：从成品推出源码" class="headerlink" title="那就反过来：从成品推出源码"></a>那就反过来：从成品推出源码</h1><p>好在站点还在线，而静态站点里其实藏着几乎全部信息。关键是别急着”手抄”，要去找那些<strong>机器能读出来的痕迹</strong>。</p>
+<h2 id="1-主题配置直接内嵌在页面里"><a href="#1-主题配置直接内嵌在页面里" class="headerlink" title="1. 主题配置直接内嵌在页面里"></a>1. 主题配置直接内嵌在页面里</h2><p>Keep 主题（其它主题也类似）会把配置序列化到页面里，方便前端 JS 使用：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">id</span>=<span class="string">&quot;hexo-configurations&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="variable constant_">KEEP</span>.<span class="property">hexo_config</span> = &#123;<span class="string">&quot;hostname&quot;</span>:<span class="string">&quot;...&quot;</span>,<span class="string">&quot;root&quot;</span>:<span class="string">&quot;/&quot;</span>,<span class="string">&quot;language&quot;</span>:<span class="string">&quot;zh-CN&quot;</span>,<span class="string">&quot;path&quot;</span>:<span class="string">&quot;search.xml&quot;</span>&#125;</span></span><br><span class="line"><span class="language-javascript">  <span class="variable constant_">KEEP</span>.<span class="property">theme_config</span> = &#123;<span class="string">&quot;toc&quot;</span>:&#123;...&#125;,<span class="string">&quot;style&quot;</span>:&#123;<span class="string">&quot;primary_color&quot;</span>:<span class="string">&quot;#0066cc&quot;</span>,...&#125;,...&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>把这段 JSON 拿出来，主题配置基本就齐了：配色、logo&#x2F;头像&#x2F;favicon、首屏签名、菜单、本地搜索、PJAX、lazyload、评论（giscus 的 repo &#x2F; category id 都在里面）。</p>
+<h2 id="2-用”特征”把主题版本钉死"><a href="#2-用”特征”把主题版本钉死" class="headerlink" title="2. 用”特征”把主题版本钉死"></a>2. 用”特征”把主题版本钉死</h2><p>CDN 链接会暴露主题版本：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//cdn.jsdelivr.net/npm/hexo-theme-keep@3.6.1/source/font/css/fontawesome.min.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>但光有版本号不够——npm 上发布的 3.6.1 并不带 giscus 评论，而线上站点有。于是去比对主题仓库的历史：</p>
+<ul>
+<li>线上 <code>css/style.css</code> 里<strong>没有</strong> <code>.page-numbers</code>（说明还没加”页码”特性）</li>
+<li>页脚<strong>没有</strong>全站字数</li>
+<li>但评论用的是 giscus</li>
+</ul>
+<p>结果正好卡在主题仓库的 <code>edbb953</code>（2023-01-18）这个提交上：<code>package.json</code> 里还写着 3.6.1，但已经有 giscus 支持。把这一版导出成 <code>themes/keep</code> 就还原了。</p>
 <blockquote>
-<p>显卡是插在主板上的扩展槽里的（现在一般是 PCI-E 插槽，此前还有 AGP、PCI、ISA 等插槽）。它主要负责把主机向显示器发出的显示信号转化为一般电器信号，使得显示器能明白个人计算机在让它做什么。显卡的主要芯片叫“显示芯片”（Video chipset，也叫 GPU 或 VPU，图形处理器或视觉处理器），是显卡的主要处理单元。显卡上也有和计算机存储器相似的存储器，称为“显示存储器”，简称显存。<br>早期的显卡只是单纯意义的显卡，只起到信号转换的作用；当前我们一般使用的显卡都带有 3D 画面运算和图形加速功能，所以也叫做“图形加速卡”或“3D 加速卡”。PC 上最早的显卡是 IBM 在 1981 年推出的 5150 个人计算机上所搭载的 MDA 和 CGA 两款 2D 加速卡。<br>显卡通常由总线接口、PCB 板、显示芯片、显存、RAMDAC、VGA BIOS、VGA 功能插针、D-sub 插座及其他外围组件构成，现在的显卡大多还具有 VGA、DVI 显示器接口或者 HDMI 接口及 S-Video 端子和 Display Port 接口。</p>
+<p>找这类”版本特征”比猜版本号靠谱得多：少一个 CSS 类、多一段模板，都是硬证据。</p>
 </blockquote>
-<p>电脑硬件有 NVIDIA 的显卡，但是没有驱动，那它是不能工作的，所以为了让显卡能够工作，发挥它的作用，我们需要安装显卡驱动。好的，下面来看看三种不同的安装方法吧。</p>
-<h2 id="1-使用-Ubuntu-软件仓库中的稳定版本安装"><a href="#1-使用-Ubuntu-软件仓库中的稳定版本安装" class="headerlink" title="1. 使用 Ubuntu 软件仓库中的稳定版本安装"></a><strong>1. 使用 Ubuntu 软件仓库中的稳定版本安装</strong></h2><p><em>2020.08.09 补充：</em></p>
-<p>介于许多朋友看了这篇文章介绍的方法安装还是会遇到问题，我这里补充一种更好的安装方法，也建议使用这种方法安装，其实我在下面这篇文章中有介绍，请参考 2.2 小节。</p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/63584709" >史上最良心的 Ubuntu desktop 美化优化指导(1)<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="1-1-查看显卡硬件型号"><a href="#1-1-查看显卡硬件型号" class="headerlink" title="1.1. 查看显卡硬件型号"></a><strong>1.1. 查看显卡硬件型号</strong></h2><p>在终端输入：<code>ubuntu-drivers devices</code>，可以看到如下界面：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-5d32bffc05c68bf8edbd27fd20e837b0_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-
-<p>从上图可以看出，我的显卡是：<code>GM107M [GeForce GTX 860M]</code>，推荐安装的版本号是：<code>nvidia-driver-390 - distro non-free recommended</code>。</p>
-<h2 id="1-2-开始安装"><a href="#1-2-开始安装" class="headerlink" title="1.2. 开始安装"></a><strong>1.2. 开始安装</strong></h2><ul>
-<li>如果同意安装推荐版本，那我们只需要终端输入：<code>sudo ubuntu-drivers autoinstall</code> 就可以自动安装了。</li>
-<li>当然我们也可以使用 apt 命令安装自己想要安装的版本，比如我想安装 <code>340</code> 这个版本号的版本，终端输入：<code>sudo apt install nvidia-340</code> 就自动安装了。</li>
-<li>安装过程中按照提示操作，除非你知道每个提示的真实含义，否则所有的提示都选择默认就可以了，安装完成后重启系统，NVIDIA 显卡就可以正常工作了。安装完成后你可以参照 <code>https://linuxconfig.org/benchmark-your-graphics-card-on-linux</code> 上的介绍测试你的显卡。</li>
-</ul>
-<h2 id="2-使用-PPA-第三方软件仓库安装最新版本"><a href="#2-使用-PPA-第三方软件仓库安装最新版本" class="headerlink" title="2. 使用 PPA 第三方软件仓库安装最新版本"></a><strong>2. 使用 PPA 第三方软件仓库安装最新版本</strong></h2><ul>
-<li>添加 PPA 软件仓库：<code>sudo add-apt-repository ppa:graphics-drivers/ppa</code>，需要输入用户密码，按照提示还需要按下 Enter 键。</li>
-<li>更新软件索引：<code>sudo apt update</code></li>
-<li>接下来的步骤同方法一，只是这样我们就可以选择安装最新版本的驱动程序了。</li>
-</ul>
-<h2 id="3-从-NVIDIA-官网下载最新版驱动手动安装"><a href="#3-从-NVIDIA-官网下载最新版驱动手动安装" class="headerlink" title="3. 从 NVIDIA 官网下载最新版驱动手动安装"></a><strong>3. 从 NVIDIA 官网下载最新版驱动手动安装</strong></h2><ul>
-<li>打开终端，输入：<code>lshw -numeric -C display</code>，确认自己电脑显卡的型号，如下图：</li>
-</ul>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-592fd9491dfa98dfc005c2dd9e966404_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-
-<p>从上图可以看到，我的电脑的显卡是 <code>product: GM107M [GeForce GTX 860M] [10DE:1392]</code>，然后我们到 NVIDIA 的官网下载相应型号的驱动，官网地址是：<code>https://www.nvidia.com/Download/index.aspx</code>，如下图，我选择 GTX 860 显卡的驱动下载。</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic3.zhimg.com/v2-586ce06ccebb8ec8d2013f81e4d1232e_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-
-<p>注意每个选项，特别是操作系统那里，一定选择 Linux 64-bit</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
-                     
-                ></p>
-
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
-                     
-                ></p>
-
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
-                     
-                >英伟达 NVIDIA Quadro RTX8000 专业显卡</p>
-<p>京东</p>
-<p>¥37999.00</p>
-<p>去购买</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
-                     
-                ></p>
-
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
-                     
-                ></p>
-
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
-                     
-                ></p>
-
-<p>选好后点击 SEARCH 按钮搜索相应的驱动，如下图：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic4.zhimg.com/v2-cad8de4d54178b21244a0e2c124a55ff_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-
-<p>看到了吧，官方最新版本号已经是 418.43 了。点击 DOWNLOAD 按钮下载吧。</p>
-<p>接着需要先安装一些 NVIDIA 显卡依赖的软件，在终端依次执行如下命令：</p>
+<h2 id="3-正文：代码块、图片都有自己的”写法指纹”"><a href="#3-正文：代码块、图片都有自己的”写法指纹”" class="headerlink" title="3. 正文：代码块、图片都有自己的”写法指纹”"></a>3. 正文：代码块、图片都有自己的”写法指纹”</h2><p>正文 HTML 里有不少线索：</p>
 <ul>
-<li><code>sudo dpkg --add-architecture i386</code></li>
-<li><code>sudo apt update</code></li>
-<li><code>sudo apt install build-essential libc6:i386</code></li>
+<li>代码块是 <code>&lt;figure class=&quot;highlight bash&quot;&gt;</code> → 说明原文是 <code> </code>bash &#96;&#96;&#96; 围栏；<code>highlight plaintext</code> 对应”没写语言的围栏”，而 <code>&lt;pre&gt;&lt;code&gt;</code> 对应<strong>四个空格缩进的代码块</strong>——两者渲染结果不一样</li>
+<li>图片被主题的 lazyload 过滤器改写过，会出现”两个 alt 属性”：</li>
 </ul>
-<p>Ubuntu 系统默认安装好是使用的一个开源的驱动：<code>nouveau</code>，我们要安装官方的驱动需要先禁用这个开源驱动，方法如下，依次执行：</p>
-<ul>
-<li><code>sudo bash -c &quot;echo blacklist nouveau &gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
-<li><code>sudo bash -c &quot;echo options nouveau modeset=0 &gt;&gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
-</ul>
-<p>执行完上面两条指令后，我们使用如下命令看看是否成功禁用了开源驱动：<code>cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</code>。如果和下面一样，表示成功了。</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</span><br><span class="line">blacklist nouveau</span><br><span class="line">options nouveau modeset=0</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 原文是 ![1680612882454](xxx.png) --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">lazyload</span> <span class="attr">alt</span>=<span class="string">&quot;image&quot;</span> <span class="attr">data-src</span>=<span class="string">&quot;xxx.png&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;1680612882454&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 原文是原生 &lt;img src=&quot;xxx.png&quot;&gt; --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">lazyload</span> <span class="attr">alt</span>=<span class="string">&quot;image&quot;</span> <span class="attr">data-src</span>=<span class="string">&quot;xxx.png&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>这个时候我们需要先重启一下系统，重启吧。</p>
-<p>重启成功后打开终端，输入如下命令：<code>sudo telinit 3</code>。然后按快捷键：<code>CTRL+ALT+F1</code> 进入字符界面，输入用户名和密码，然后登录系统，进入我们保存下载 NVIDIA 驱动的目录，默认是：<code>Downloads/</code> 目录，<code>cd Downloads/</code>，然后执行：<code>bash NVIDIA-Linux-x86_64-418.43.bin</code>。注意：<code>NVIDIA-Linux-x86_64-418.43.bin</code> 要根据你下载的驱动文件的名字相应改动。</p>
-<p>安装过程中都点同意即可，如果你遇到下面的提示，安装下面我的输入输入后回车继续安装：</p>
-<blockquote>
-<p>The distribution-provided pre-install script failed!<br>Are you sure you want to continue? -&gt; <strong>CONTINUE INSTALLATION</strong><br>Would you like to run the nvidia-xconfig utility? -&gt; <strong>YES</strong></p>
-</blockquote>
-<p>安装完成后重启系统就可以点击软件列表中的 NVIDIA 的配置软件配置显卡驱动了，如果你遇到如下报错，请依次在终端输入如下命令解决：</p>
+<p>按这个规律就能分别还原成 Markdown 图片和原生 HTML 图片，连 alt 文本都不会丢。</p>
+<p>（有意思的是，重复的 <code>alt</code> 属性在真正的 HTML 解析器里会被丢掉，所以这个判断得在<strong>原始文本</strong>上做，不能先解析再判断。）</p>
+<h2 id="4-最麻烦的是公式"><a href="#4-最麻烦的是公式" class="headerlink" title="4. 最麻烦的是公式"></a>4. 最麻烦的是公式</h2><p>文章里的数学公式，页面中是 MathJax 渲染后的 <strong>SVG</strong>，原始 LaTeX 并没有保留。但 SVG 里有两个关键信息：</p>
 <ul>
-<li>报错：WARNING: Unable to find suitable destination to install 32-bit compatibility libraries</li>
-<li>解决办法：<ul>
-<li>sudo dpkg –add-architecture i386</li>
-<li>sudo apt update</li>
-<li>sudo apt install libc6:i386</li>
+<li><code>data-mml-node=&quot;mfrac&quot; / &quot;msqrt&quot; / &quot;msubsup&quot; / &quot;munderover&quot; / &quot;mtable&quot;</code> → 完整的 MathML 结构</li>
+<li>每个字形 <code>&lt;path data-c=&quot;1D707&quot;&gt;</code> → 字符编码（十六进制码点）</li>
 </ul>
-</li>
+<p>于是写个脚本按结构递归重建 LaTeX：<code>mfrac</code> → <code>\frac&#123;&#125;&#123;&#125;</code>、<code>msqrt</code> → <code>\sqrt&#123;&#125;</code>、<code>msubsup</code> → <code>_&#123;&#125;^&#123;&#125;</code>、<code>mtable</code> → <code>\begin&#123;matrix&#125;</code>…… 最后再把字形码点还原成字符。</p>
+<p>踩过的几个坑，记录一下：</p>
+<ul>
+<li>MathJax 的 <code>msubsup</code> 子节点顺序是 <code>[底, 上标, 下标]</code>，不是直觉上的”先下标后上标”</li>
+<li>重建出来的 <code>\sum_&#123;n&#125;^&#123;j=0&#125;</code> 如果写成 <code>\sum _&#123;n&#125;</code>（宏后面多一个空格），Markdown 会把 <code>_</code> 当成强调符号吃掉，公式直接渲染失败</li>
+<li>矩阵的行分隔符 <code>\\</code> 会被 Markdown 转义成 <code>\</code>，得写成 <code>\\\\</code> 才能活着走到 MathJax</li>
+<li>大调色：<code>\log</code> 这种”正体”运算符和斜体的 <code>log</code> 在 SVG 里码点不同，能区分出来</li>
 </ul>
-<p>好了，今天分享了如何安装 NVIDIA 显卡驱动，再次提醒，如果你的显卡不是 NVIDIA 显卡，千万不要这么干，也不要在虚拟机中这么干。有什么不懂的可以留言和我讨论。</p>
+<h2 id="5-最后用”逐文件对比”验收"><a href="#5-最后用”逐文件对比”验收" class="headerlink" title="5. 最后用”逐文件对比”验收"></a>5. 最后用”逐文件对比”验收</h2><p>重建完不是靠眼睛看，而是把新构建的 <code>public/</code> 和线上仓库逐文件 diff：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx hexo clean &amp;&amp; npx hexo generate</span><br><span class="line"><span class="comment"># 再和线上克隆逐个文件比对（忽略空白差异）</span></span><br></pre></td></tr></table></figure>
+
+<p>结果：<strong>96 个文件对 96 个文件，一个不多一个不少</strong>；其中 67 个逐字节相同或只有空白差异，剩下的差异都能解释（比如页脚年份取的是构建当年、几处字数统计、两个矩阵公式的行间距）。</p>
+<h1 id="现在的工程"><a href="#现在的工程" class="headerlink" title="现在的工程"></a>现在的工程</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">blog-source/</span><br><span class="line">├── _config.yml          # 站点配置</span><br><span class="line">├── _config.keep.yml     # 主题配置</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds/</span><br><span class="line">├── source/</span><br><span class="line">│   ├── _posts/          # 10 篇文章（保留原有子目录结构）</span><br><span class="line">│   ├── tags/  categories/</span><br><span class="line">│   ├── image/  images/  pdf/</span><br><span class="line">└── themes/keep/         # 主题快照</span><br></pre></td></tr></table></figure>
+
+<p>日常还是老几样：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npx hexo server      <span class="comment"># 本地预览</span></span><br><span class="line">npx hexo generate    <span class="comment"># 生成 public/</span></span><br><span class="line">npx hexo deploy      <span class="comment"># 部署</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="教训"><a href="#教训" class="headerlink" title="教训"></a>教训</h1><ol>
+<li><strong>源码要单独放一个仓库</strong>（或者至少本地 + 云端各留一份）。<code>hexo deploy</code> 推上去的永远是 <code>public/</code> 的产物，产物里没有 Markdown、没有配置、没有主题改动</li>
+<li>顺手搞清楚了：<code>hexo deploy</code> 底层是 <code>git push --force</code>，会覆盖远端历史。想保留历史就 clone 下来、覆盖工作区、普通 push</li>
+<li>静态站点是”可反推”的：只要站点还在线，文章内容、图片、代码块、甚至公式都有办法救回来。但<strong>能救回来 ≠ 不用备份</strong>，反推一次的成本比备份高太多了</li>
+</ol>
+<p>这次算是把博客从”尸体”里捞了回来，也顺手把还原过程写成工具留着了。</p>
 
             </div>
 
@@ -386,16 +326,16 @@
 <div class="article-copyright-info-container">
     <ul class="copyright-info-content">
         <li class="post-title">
-            <span class="type">本文标题</span>：<span class="content">Ubuntu安装NVIDIA驱动</span>
+            <span class="type">本文标题</span>：<span class="content">博客源码丢了，我从线上站点把它反推了回来</span>
         </li>
         <li class="post-author">
             <span class="type">本文作者</span>：<span class="content">RSIC</span>
         </li>
         <li class="post-time">
-            <span class="type">创建时间</span>：<span class="content">2023-04-17 23:05:00</span>
+            <span class="type">创建时间</span>：<span class="content">2026-09-20 23:45:00</span>
         </li>
         <li class="post-link">
-            <span class="type">本文链接</span>：<span class="content">2023/04/17/ubuntu/Ubuntu 18.04 安装 NVIDIA 显卡驱动/</span>
+            <span class="type">本文链接</span>：<span class="content">2026/09/20/hexo-source-recovery/</span>
         </li>
         <li class="post-license">
             <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
@@ -413,7 +353,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">#深度学习</a>&nbsp;
+                            <a href="/tags/Hexo/">#Hexo</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -422,29 +362,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">使用SCP拷贝文件</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/"
+                               href="/2023/07/07/transformer/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">ImageNet数据集的下载与使用</span>
+                                <span class="post-nav-title-item">transformer学习记录</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
@@ -530,7 +455,7 @@
             <div class="toc-content-container">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BD%BF%E7%94%A8-Ubuntu-%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93%E4%B8%AD%E7%9A%84%E7%A8%B3%E5%AE%9A%E7%89%88%E6%9C%AC%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">1. 使用 Ubuntu 软件仓库中的稳定版本安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%9F%A5%E7%9C%8B%E6%98%BE%E5%8D%A1%E7%A1%AC%E4%BB%B6%E5%9E%8B%E5%8F%B7"><span class="nav-number">2.</span> <span class="nav-text">1.1. 查看显卡硬件型号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">1.2. 开始安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8-PPA-%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6%E4%BB%93%E5%BA%93%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC"><span class="nav-number">4.</span> <span class="nav-text">2. 使用 PPA 第三方软件仓库安装最新版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BB%8E-NVIDIA-%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88%E9%A9%B1%E5%8A%A8%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85"><span class="nav-number">5.</span> <span class="nav-text">3. 从 NVIDIA 官网下载最新版驱动手动安装</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%88%E7%A1%AE%E8%AE%A4%EF%BC%9A%E6%BA%90%E7%A0%81%E5%88%B0%E5%BA%95%E8%BF%98%E5%9C%A8%E4%B8%8D%E5%9C%A8"><span class="nav-number">1.</span> <span class="nav-text">先确认：源码到底还在不在</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-%E4%BB%93%E5%BA%93%E9%87%8C%E5%8F%AA%E6%9C%89%E2%80%9D%E6%88%90%E5%93%81%E2%80%9D"><span class="nav-number">1.1.</span> <span class="nav-text">GitHub 仓库里只有”成品”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AC%E6%9C%BA%E4%B9%9F%E7%BF%BB%E9%81%8D%E4%BA%86"><span class="nav-number">1.2.</span> <span class="nav-text">本机也翻遍了</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%82%A3%E5%B0%B1%E5%8F%8D%E8%BF%87%E6%9D%A5%EF%BC%9A%E4%BB%8E%E6%88%90%E5%93%81%E6%8E%A8%E5%87%BA%E6%BA%90%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">那就反过来：从成品推出源码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E7%9B%B4%E6%8E%A5%E5%86%85%E5%B5%8C%E5%9C%A8%E9%A1%B5%E9%9D%A2%E9%87%8C"><span class="nav-number">2.1.</span> <span class="nav-text">1. 主题配置直接内嵌在页面里</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%94%A8%E2%80%9D%E7%89%B9%E5%BE%81%E2%80%9D%E6%8A%8A%E4%B8%BB%E9%A2%98%E7%89%88%E6%9C%AC%E9%92%89%E6%AD%BB"><span class="nav-number">2.2.</span> <span class="nav-text">2. 用”特征”把主题版本钉死</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%AD%A3%E6%96%87%EF%BC%9A%E4%BB%A3%E7%A0%81%E5%9D%97%E3%80%81%E5%9B%BE%E7%89%87%E9%83%BD%E6%9C%89%E8%87%AA%E5%B7%B1%E7%9A%84%E2%80%9D%E5%86%99%E6%B3%95%E6%8C%87%E7%BA%B9%E2%80%9D"><span class="nav-number">2.3.</span> <span class="nav-text">3. 正文：代码块、图片都有自己的”写法指纹”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%9C%80%E9%BA%BB%E7%83%A6%E7%9A%84%E6%98%AF%E5%85%AC%E5%BC%8F"><span class="nav-number">2.4.</span> <span class="nav-text">4. 最麻烦的是公式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E6%9C%80%E5%90%8E%E7%94%A8%E2%80%9D%E9%80%90%E6%96%87%E4%BB%B6%E5%AF%B9%E6%AF%94%E2%80%9D%E9%AA%8C%E6%94%B6"><span class="nav-number">2.5.</span> <span class="nav-text">5. 最后用”逐文件对比”验收</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%8E%B0%E5%9C%A8%E7%9A%84%E5%B7%A5%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">现在的工程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%99%E8%AE%AD"><span class="nav-number">4.</span> <span class="nav-text">教训</span></a></li></ol>
     </div>
 </div>
 
