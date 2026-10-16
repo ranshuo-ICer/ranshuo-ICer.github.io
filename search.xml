@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2022/10/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>六个「看起来是对的」：一次 ESP32 BLE 静默丢包排查</title>
     <url>/2026/09/21/ble-silent-drop/</url>
     <content><![CDATA[<p>手上有一台 FoloToy AI Passport（TRAE 联名版），ESP32-C3、8MB Flash、没有 PSRAM、240×320 的 ST7789P3 屏。我给它写了个基于 MicroPython 的操作系统（PassportOS），手机通过 BLE 往上推小程序。</p>
@@ -191,201 +215,6 @@
       </tags>
   </entry>
   <entry>
-    <title>AI 日报 · 2026-10-17</title>
-    <url>/2026/10/17/ai-daily-2026-10-17/</url>
-    <content><![CDATA[<p>汇总 <strong>2026年10月16日</strong>（Asia&#x2F;Shanghai）全天的 AI 领域动态，共 <strong>39</strong> 条，由脚本自动抓取整理。</p>
-<h2 id="模型与产品"><a href="#模型与产品" class="headerlink" title="模型与产品"></a>模型与产品</h2><h3 id="Jev-is-Vercel’s-fastest-adopted-AI-model-ever"><a href="#Jev-is-Vercel’s-fastest-adopted-AI-model-ever" class="headerlink" title="Jev is Vercel’s fastest-adopted AI model ever"></a><a class="link"   href="https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/" >Jev is Vercel’s fastest-adopted AI model ever<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>TechCrunch AI · 10-16 23:33</p>
-</blockquote>
-<p>The data comes from Vercel’s AI gateway, a unified API service similar to OpenRouter.</p>
-<h3 id="Meta’s-new-terms-may-allow-it-to-train-AI-on-news-sites-for-free"><a href="#Meta’s-new-terms-may-allow-it-to-train-AI-on-news-sites-for-free" class="headerlink" title="Meta’s new terms may allow it to train AI on news sites for free"></a><a class="link"   href="https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers" >Meta’s new terms may allow it to train AI on news sites for free<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>The Verge AI · 10-16 22:02</p>
-</blockquote>
-<p>Meta’s new terms appear to give it permission to crawl and scrape websites “associated” with the businesses that use its platforms - including online publishers, according to a report from Nieman Lab. The new terms, which go into effect on October 30th, say Meta can use this outside content to “develop, improve, research,” and “train” […]</p>
-<h3 id="长鑫科技-2026-年前三季度预计归母净利润-1310-1325-亿元，同比扭亏为盈"><a href="#长鑫科技-2026-年前三季度预计归母净利润-1310-1325-亿元，同比扭亏为盈" class="headerlink" title="长鑫科技 2026 年前三季度预计归母净利润 1310~1325 亿元，同比扭亏为盈"></a><a class="link"   href="https://www.ithome.com/1/014/168.htm" >长鑫科技 2026 年前三季度预计归母净利润 1310~1325 亿元，同比扭亏为盈<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>IT之家 · 10-16 21:43</p>
-</blockquote>
-<p>IT之家 10 月 16 日消息，长鑫科技今日发布 2026 年前三季度（2026 年 1 月～2026 年 9 月）业绩预告报告： 营业总收入 ：2650 亿元 <del>2700 亿元，同比预增 725.96%</del>741.54% 归母净利润 ：1310 亿元 ~1325 亿元，同比扭亏为盈 AI 解读 本次业绩预告大幅超出市场预期，业绩实现爆发式增长。 公司主营业务与财报亮点 长鑫科技主要从事 DRAM 存储芯片的研发、生产和销售，是国内 DRAM 行业核心企业。 本次 2026 年前三季度预计实现营业收入 2650 亿元至 2700 亿元，同比上年增加 2329.16 亿元至 2379.16 亿元；预计归属于上市公司股东的净利润 1310 亿元至 1325 亿元，同比上年增加 1362.8 亿元至 1377.8 亿元，去年同期归母净利润为净亏损 52.8 亿元。 业绩增长核心原因 2025 年</p>
-<h3 id="德明利-2026-年前三季度预计归母净利润-86-589-5-亿元，预计同比增长-32046-52-33154-49"><a href="#德明利-2026-年前三季度预计归母净利润-86-589-5-亿元，预计同比增长-32046-52-33154-49" class="headerlink" title="德明利 2026 年前三季度预计归母净利润 86.589.5 亿元，预计同比增长 32046.52%33154.49%"></a><a href="https://www.ithome.com/1/014/153.htm">德明利 2026 年前三季度预计归母净利润 86.5<del>89.5 亿元，预计同比增长 32046.52%</del>33154.49%</a></h3><blockquote>
-<p>IT之家 · 10-16 20:41</p>
-</blockquote>
-<p>IT之家 10 月 16 日消息，德明利今日发布 2026 年前三季度（2026 年 1 月～2026 年 9 月）业绩预告报告： 营业总收入 ：275 亿元 <del>295 亿元，预计同比增长 312.97%</del>343% 归母净利润 ：86.5 亿元 <del>89.5 亿元，预计同比增长 32046.52%</del>33154.49% 扣非净利润 ：85.96 亿元 <del>88.96 亿元，预计同比增长 17127.99%</del>17722.26% 基本每股收益 ：27.47 元 ~28.42 元 AI 解读 本次业绩预告扭亏为盈，营收和净利润增速均大幅超市场预期。 公司主营业务简介 德明利是专业存储控制芯片及解决方案提供商，核心业务为自主可控的存储主控芯片与固件方案研发及产业化应用，聚焦存储领域，构建了硬科技 + 软服务双轮支撑体系，推动向场景化、定制化存储解决方案转型升级。 本次财报核心亮点 2026 年前三季度公</p>
-<h3 id="社交平台-Bluesky-扩展旗下-Attie-AI-工具功能：支持创建小游戏、投票等社交应用"><a href="#社交平台-Bluesky-扩展旗下-Attie-AI-工具功能：支持创建小游戏、投票等社交应用" class="headerlink" title="社交平台 Bluesky 扩展旗下 Attie AI 工具功能：支持创建小游戏、投票等社交应用"></a><a class="link"   href="https://www.ithome.com/1/014/141.htm" >社交平台 Bluesky 扩展旗下 Attie AI 工具功能：支持创建小游戏、投票等社交应用<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>IT之家 · 10-16 19:49</p>
-</blockquote>
-<p>IT之家 10 月 16 日消息，社交平台 Bluesky 宣布扩展旗下 AI 工具 Attie，用户现在可以通过输入提示词，创建小游戏、投票和数据仪表盘等轻量级社交应用，并将其作为独立网站分享给其他人。 Bluesky 首席执行官 Toni Schneider 表示，如今的 Attie 能实现“面向社区的氛围编程”，用户无需编写大量代码，只需描述自己的想法，就能快速创建供社区成员使用的应用。 目前，Attie 官方网站已经展示了多个示例，包括模仿《Flappy Bird》的“Flappy Butterfly”小游戏、鼓机、问答游戏，以及以芹菜人为主题的放置点击游戏。每款应用都会获得一个位于 attie.site 域名下的独立链接，页面底部还会标注创建者信息，方便用户分享作品并了解应用的制作者。 不过，从目前的实际体验来看，Attie 生成的应用大多仍属于功能较为简单的轻量级作品，娱乐性和</p>
-<h3 id="Linus用Claude-Code改Linux内核，大神也没兜住代码里的Bug"><a href="#Linus用Claude-Code改Linux内核，大神也没兜住代码里的Bug" class="headerlink" title="Linus用Claude Code改Linux内核，大神也没兜住代码里的Bug"></a><a class="link"   href="https://www.infoq.cn/article/hRw4BZQQUW14sqYMo5F6?utm_source=rss&utm_medium=article" >Linus用Claude Code改Linux内核，大神也没兜住代码里的Bug<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>InfoQ 中文 · 10-16 19:47</p>
-</blockquote>
-<p>点击查看原文&gt;</p>
-<h3 id="XREAL-One-Pro-Plus-智能眼镜发布：峰值亮度提升至-1200-尼特、鼻托结构重新设计，599-美元"><a href="#XREAL-One-Pro-Plus-智能眼镜发布：峰值亮度提升至-1200-尼特、鼻托结构重新设计，599-美元" class="headerlink" title="XREAL One Pro Plus 智能眼镜发布：峰值亮度提升至 1200 尼特、鼻托结构重新设计，599 美元"></a><a class="link"   href="https://www.ithome.com/1/014/137.htm" >XREAL One Pro Plus 智能眼镜发布：峰值亮度提升至 1200 尼特、鼻托结构重新设计，599 美元<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>IT之家 · 10-16 19:37</p>
-</blockquote>
-<p>IT之家 10 月 16 日消息，XREAL 今日在海外发布新款 AR 眼镜 Xreal One Pro Plus，主要提升面板亮度，同时调整人体工程学设计，定价为 599 美元 （IT之家注：现汇率约合 4,015 元人民币） 。 Xreal One Pro Plus 采用重新设计的鼻托结构，旨在改善眼镜与面部的贴合度，提升长时间观看时的舒适性。其搭载双 0.55 英寸索尼 Micro-OLED 面板，峰值亮度最高可达 1200 尼特，较前代产品的 700 尼特明显提升。 除了更高的峰值亮度，新品还加入 AI HDR 功能，借助 AI 技术改善画面对比度，让用户通过眼镜观看内容时获得更好的视觉体验。同时眼镜新增标准、电影和阅读三种显示模式，用户可以根据日常使用、观看影片或阅读等不同场景选择合适的显示效果。 XREAL 表示，新款眼镜还改进了内置的 Real 3D 引擎，可将普通 2D 内</p>
-<h3 id="推翻一切！Nick-Cammarata-万字长文宣告，AI-不是黑箱，99-神经元清晰可见"><a href="#推翻一切！Nick-Cammarata-万字长文宣告，AI-不是黑箱，99-神经元清晰可见" class="headerlink" title="推翻一切！Nick Cammarata 万字长文宣告，AI 不是黑箱，99% 神经元清晰可见"></a><a class="link"   href="https://www.leiphone.com/category/yanxishe/Vr0JmbkUeZV5D9Qz.html" >推翻一切！Nick Cammarata 万字长文宣告，AI 不是黑箱，99% 神经元清晰可见<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>雷锋网 · 10-16 19:33</p>
-</blockquote>
-<p>亲手推翻自己十年前的结论，可解释性大佬 Nick Cammarata 这次读懂 AI 脑回路。 作者丨高允毅 编辑丨岑 峰 “大模型把猫和汽车分为一类，不是弱智。” 在 AI 可解释性领域，有一个十年的经典案例，是 InceptionV1 模型里编号 4e:55 的神经元 。这个神经元在看到“猫脸”和“汽车车头”时，都会被强烈激活。这意味着， 整个神经网络的底层逻辑是不可解释的 。 于是整整十年，整个领域都沿着 “拆” 的思路往前走：既然网络是一团乱麻的黑盒，那就发明工具把它拆开。稀疏自编码器（SAE）分解、特征字典、特征解缠…… 都是先把纠缠的特征拆成一个个独立的、人类能懂的单元，再去理解。 就在昨天， OpenAI早期机制可解释性研究的科学家，也是当年将该案例推向经典的《Zoom In》的共同作者，Nick Cammarata ，亲自推翻了自己当年所下的结论。 “这个神经元根本不认识猫</p>
-<h3 id="长鑫科技市值两月内跌去1万亿；阿里加码AI硬件品牌，天猫、速卖通联动；国行版苹果AI有望12月上线，百度、阿里参与合作丨雷峰早报"><a href="#长鑫科技市值两月内跌去1万亿；阿里加码AI硬件品牌，天猫、速卖通联动；国行版苹果AI有望12月上线，百度、阿里参与合作丨雷峰早报" class="headerlink" title="长鑫科技市值两月内跌去1万亿；阿里加码AI硬件品牌，天猫、速卖通联动；国行版苹果AI有望12月上线，百度、阿里参与合作丨雷峰早报"></a><a class="link"   href="https://www.leiphone.com/category/zaobao/EReMkZNn9w5H85Tf.html" >长鑫科技市值两月内跌去1万亿；阿里加码AI硬件品牌，天猫、速卖通联动；国行版苹果AI有望12月上线，百度、阿里参与合作丨雷峰早报<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>雷锋网 · 10-16 18:39</p>
-</blockquote>
-<p>要闻提示 1.长鑫科技市值两月内跌去1万亿 2.年内已至少18次故障！DeepSeek发放宕机补偿，有人拿到3000元 3.阿里加码AI硬件品牌，天猫、速卖通联动 4.国行版苹果AI有望12月上线，百度、阿里参与合作 5.可灵AI新一代模型Kling 4.0正式上线，专业影像模型“卷”出新高度 6.华为黄宇：韬定律最大挑战在于 EDA 工具 7.内饰一模一样！海外博主称中国车企已进入互相抄袭阶段：理想高管回应 8.OpenAI基础设施负责人将离职 今日头条 长鑫科技市值两月内跌去1万亿 10月15日，长鑫科技股价走低，截至收盘，股价43.59元&#x2F;股，总市值跌破3万亿元。A股“总市值一哥”的位置随之易主，工商银行重回A股总市值第一。 长鑫科技7月27日上市首日，盘中市值超过工商银行，登顶A股市值首位。8月17日，长鑫科技收61.8元&#x2F;股，市值达到4.2万亿元。在随后约两个月时间里，长鑫科技市</p>
-<h3 id="Kling-4-0正式上线：10-bit-HDR、30秒原生直出-刷新视频模型新基准"><a href="#Kling-4-0正式上线：10-bit-HDR、30秒原生直出-刷新视频模型新基准" class="headerlink" title="Kling 4.0正式上线：10-bit HDR、30秒原生直出 刷新视频模型新基准"></a><a class="link"   href="https://www.leiphone.com/category/industrynews/1GERVRJ72xJKmsus.html" >Kling 4.0正式上线：10-bit HDR、30秒原生直出 刷新视频模型新基准<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>雷锋网 · 10-16 10:37</p>
-</blockquote>
-<p>10月15日，可灵AI新一代视频生成模型 Kling 4.0 正式上线。 真实、可控、专业，是这一代模型升级的核心方向。Kling 4.0 聚焦高动态、强运镜的视频创作场景，在三个方向实现集中突破：大幅度动态表现更稳定，提升高速运动与复杂运镜的连贯性；单次原生生成最长可达30秒，支持长镜头与连续叙事，导演思维全程在线；全能参考支持最多15项参考素材组合，同时支持最多10张关键帧输入，帮助创作者将一个构思转化为完整作品。 与专业创作者建立深度链接，与其共同完成作品创作，尤其是核心镜头的高质量交付，是可灵模型持续迭代的重要方向。 专业创作者需要的不只是偶然生成惊艳画面，更要稳定完成决定作品品质的关键镜头，并让生成素材进入完整制作流程。可灵AI相信，技术的价值，不只是让内容得以生成，更是让每一帧画面背后的‘用心’能被看见。无论是承载情绪的特写，还是决定整部作品质感的关键画面，每一个倾注心血的镜头</p>
-<h3 id="付费用户占比超-20-，电商商家「涌入」千问办公"><a href="#付费用户占比超-20-，电商商家「涌入」千问办公" class="headerlink" title="付费用户占比超 20%，电商商家「涌入」千问办公"></a><a class="link"   href="https://www.leiphone.com/category/industrynews/csaOBaiXpZZLOOtp.html" >付费用户占比超 20%，电商商家「涌入」千问办公<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>雷锋网 · 10-16 10:24</p>
-</blockquote>
-<p>一双鞋还没生产出来，商家刘祥龙已经开始琢磨怎么卖了。 准备开一家3D打印鞋店时，他没有急着打样、拍摄、做详情页，而是先让AI帮忙调研市场、制作数字样品，再把商品图和详情页准备好，看看消费者愿不愿意点击、将其加购。 简单说，就是先让市场“投票”，再决定要不要真的把鞋做出来。 过去，开一家新店，从前期调研到商品准备，通常要花上一个月，前期投入超过1万元。如今有千问办公等AI工具搭把手， 他把准备周期压缩到了7天，相关费用也降到了数百元——主要是Token成本。 这不是刘祥龙第一次把AI用进生意里。 他还经营着一家女鞋店铺，约有430款商品，商家分析工具里的经营数据就有43页。在没有AI之前，运营人员需要手动导出报表，再从访客、转化、加购等指标中寻找值得投入的商品。 如今，这些活他慢慢交给了千问办公，部分重复性的运营工作也跑上了自动化流程。 10月14日，千问办公CEO陈宇森在千问办公电商版发布</p>
-<h3 id="ChatGPT-can-peek-at-your-Chrome-tabs-now"><a href="#ChatGPT-can-peek-at-your-Chrome-tabs-now" class="headerlink" title="ChatGPT can peek at your Chrome tabs now"></a><a class="link"   href="https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" >ChatGPT can peek at your Chrome tabs now<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>The Verge AI · 10-16 06:43</p>
-</blockquote>
-<p>OpenAI’s ChatGPT Atlas browser is gone, but now ChatGPT’s Google Chrome extension is getting some upgrades that allow it to use the browser tabs you already have open. With the extension installed, OpenAI says ChatGPT can now view your browser tabs when you tag Chrome in ChatGPT’s web or desktop app, posting a demo video […]</p>
-<h3 id="Sega-pulls-Total-War-Shogun-2-remaster-from-sale-following-disastrous-launch"><a href="#Sega-pulls-Total-War-Shogun-2-remaster-from-sale-following-disastrous-launch" class="headerlink" title="Sega pulls Total War: Shogun 2 remaster from sale following disastrous launch"></a><a class="link"   href="https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled" >Sega pulls Total War: Shogun 2 remaster from sale following disastrous launch<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>The Verge AI · 10-16 06:35</p>
-</blockquote>
-<p>Sega is removing Total War: Shogun 2 - Complete Edition from storefronts following a disastrous launch where users complained about issues like bugs and upscaling that appears to have been done by AI. Complete Edition, a remaster of the 2011 strategy game, launched on Tuesday, and it bundled the main game and all of its […]</p>
-<h3 id="Trump-posts-AI-edited-photo-to-brag-about-White-House-restoration-work"><a href="#Trump-posts-AI-edited-photo-to-brag-about-White-House-restoration-work" class="headerlink" title="Trump posts AI-edited photo to brag about White House restoration work"></a><a class="link"   href="https://www.theverge.com/policy/1012445/donald-trump-ai-photo-white-house-rennovation-column" >Trump posts AI-edited photo to brag about White House restoration work<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>The Verge AI · 10-16 05:09</p>
-</blockquote>
-<p>President Donald Trump posted a series of photos on Truth Social showing off renovations to the White House - but one of them appears to be modified with AI. The picture, which compares an old White House column to a “restored” one, has several discrepancies and was flagged by Google’s AI detector as “made or […]</p>
-<h3 id="Meta-launches-an-open-weight-AI-model-that-runs-on-Macs"><a href="#Meta-launches-an-open-weight-AI-model-that-runs-on-Macs" class="headerlink" title="Meta launches an open-weight AI model that runs on Macs"></a><a class="link"   href="https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/" >Meta launches an open-weight AI model that runs on Macs<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>TechCrunch AI · 10-16 04:04</p>
-</blockquote>
-<p>Meta and Apple have teamed up for the launch of the social media giant’s newest model, Muse Spark Open, which will run locally on Apple silicon.</p>
-<h3 id="Bluesky’s-AI-tool-now-lets-you-make-games-and-apps-to-share-on-social"><a href="#Bluesky’s-AI-tool-now-lets-you-make-games-and-apps-to-share-on-social" class="headerlink" title="Bluesky’s AI tool now lets you make games and apps to share on social"></a><a class="link"   href="https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps" >Bluesky’s AI tool now lets you make games and apps to share on social<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>The Verge AI · 10-16 03:57</p>
-</blockquote>
-<p>Bluesky’s Attie AI tool, which initially launched earlier this year as a way to use AI to build your own feeds, now lets you make “small” social apps like games, polls, and dashboards that you can then share with others as their own websites. In an interview at TechCrunch Disrupt, Bluesky CEO Toni Schneider said […]</p>
-<h3 id="Amazon-devices-chief-Panos-Panay-sees-a-future-where-AI-devices-replace-the-need-to-use-apps"><a href="#Amazon-devices-chief-Panos-Panay-sees-a-future-where-AI-devices-replace-the-need-to-use-apps" class="headerlink" title="Amazon devices chief Panos Panay sees a future where AI devices replace the need to use apps"></a><a class="link"   href="https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/" >Amazon devices chief Panos Panay sees a future where AI devices replace the need to use apps<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>TechCrunch AI · 10-16 03:55</p>
-</blockquote>
-<p>Speaking at TechCrunch Disrupt, Amazon devices chief Panos Panay described a future where ambient AI devices work in the background, anticipating users’ needs instead of waiting for commands.</p>
-<h3 id="Anthropic-is-letting-METR-researchers-look-under-the-hood-with-employee-level-access"><a href="#Anthropic-is-letting-METR-researchers-look-under-the-hood-with-employee-level-access" class="headerlink" title="Anthropic is letting METR researchers look under the hood with employee-level access"></a><a class="link"   href="https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/" >Anthropic is letting METR researchers look under the hood with employee-level access<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>TechCrunch AI · 10-16 03:14</p>
-</blockquote>
-<p>METR will publish its own assessments of Anthropic’s risks, incidents, and practices, and the frontier AI model maker has given up the right to block them.</p>
-<h3 id="Bringing-GPT-Rosalind-to-academic-research-labs"><a href="#Bringing-GPT-Rosalind-to-academic-research-labs" class="headerlink" title="Bringing GPT-Rosalind to academic research labs"></a><a class="link"   href="https://openai.com/index/introducing-the-rosalind-academic-plan" >Bringing GPT-Rosalind to academic research labs<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>OpenAI · 10-16 03:00</p>
-</blockquote>
-<p>Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.</p>
-<h3 id="Meta-and-Apple-team-up-to-make-Muse-AI-models-run-better-on-Macs"><a href="#Meta-and-Apple-team-up-to-make-Muse-AI-models-run-better-on-Macs" class="headerlink" title="Meta and Apple team up to make Muse AI models run better on Macs"></a><a class="link"   href="https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx" >Meta and Apple team up to make Muse AI models run better on Macs<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>The Verge AI · 10-16 02:15</p>
-</blockquote>
-<p>Meta announced the Muse Spark Open AI model today, claiming that it’s the “most capable US open-weight model to date.” But the company also says that it’s the “the first model in its class” that can “run on your desktop using two Apple M5 Ultra Mac Studios with the latest MLX framework.” Meta and Apple, […]</p>
-<h2 id="芯片与算力"><a href="#芯片与算力" class="headerlink" title="芯片与算力"></a>芯片与算力</h2><h3 id="A-week-with-RTX-Spark-everything-we’ve-learned-using-Nvidia’s-new-laptops"><a href="#A-week-with-RTX-Spark-everything-we’ve-learned-using-Nvidia’s-new-laptops" class="headerlink" title="A week with RTX Spark: everything we’ve learned using Nvidia’s new laptops"></a><a class="link"   href="https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions" >A week with RTX Spark: everything we’ve learned using Nvidia’s new laptops<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>The Verge AI · 10-16 23:00</p>
-</blockquote>
-<p>Nvidia’s RTX Spark N1X processor is finally here, and we’ve been collectively testing a small fortune’s worth of powerful laptops sporting this new “superchip.” RTX Spark is designed to be a high-performing Arm-based SoC for laptops and small desktop computers, rivaling the best from Apple, Intel, AMD, and Qualcomm. It has loads of cores, Nvidia […]</p>
-<h3 id="Veritas-expands-its-anti-counterfeit-chip-to-jewelry-trophies-and-fragrance-bottles"><a href="#Veritas-expands-its-anti-counterfeit-chip-to-jewelry-trophies-and-fragrance-bottles" class="headerlink" title="Veritas expands its anti-counterfeit chip to jewelry, trophies, and fragrance bottles"></a><a class="link"   href="https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods/" >Veritas expands its anti-counterfeit chip to jewelry, trophies, and fragrance bottles<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>TechCrunch AI · 10-16 22:00</p>
-</blockquote>
-<p>Counterfeiters are getting better at replicating brands’ marks and passing off dupes, known as “superfakes,” as genuine items. A startup called Veritas wants to tackle the problem with its own chip that verifies goods.</p>
-<h3 id="七彩虹橘宝-R16-游戏本新增-AMD-R7-H-255-16G-512G-RTX-5060-配置，9999-元（国补-8499-15-元）"><a href="#七彩虹橘宝-R16-游戏本新增-AMD-R7-H-255-16G-512G-RTX-5060-配置，9999-元（国补-8499-15-元）" class="headerlink" title="七彩虹橘宝 R16 游戏本新增 AMD R7 H 255 + 16G + 512G + RTX 5060 配置，9999 元（国补 8499.15 元）"></a><a class="link"   href="https://www.ithome.com/1/014/156.htm" >七彩虹橘宝 R16 游戏本新增 AMD R7 H 255 + 16G + 512G + RTX 5060 配置，9999 元（国补 8499.15 元）<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>IT之家 · 10-16 20:48</p>
-</blockquote>
-<p>IT之家 10 月 16 日消息，七彩虹 MEOW 橘宝 R16 游戏本新增了一款搭载 AMD 锐龙 7 H 255 处理器 + RTX 5060 显卡 +16GB 内存 + 512GB 固态硬盘的版本，京东原价 10299 元，首发立减 300 元，叠加国补后到手价为 8499.15 元。 京东 七彩虹 MEOW 橘宝 R16 16 英寸锐龙游戏笔记本电脑 (锐龙 7 H 255 16G 512G RTX5060） 券后 9999 元 领 300 元券 该机采用全新 MEOW 系列家族设计语言，采用冰川白配色，A 面带有特殊纹路和猫爪印设计。 该机搭载 AMD 锐龙 7 H 255 移动处理器、NVIDIA GeForce RTX 5060 笔记本 GPU（115W），配备 16 英寸 2.5K IPS 电竞屏，拥有 2560×1600 分辨率、165 Hz 刷新率、100% sRGB </p>
-<h3 id="NVIDIA-RTX-Spark-发售，华硕、联想、微软、微星多款笔电开放购买"><a href="#NVIDIA-RTX-Spark-发售，华硕、联想、微软、微星多款笔电开放购买" class="headerlink" title="NVIDIA RTX Spark 发售，华硕、联想、微软、微星多款笔电开放购买"></a><a class="link"   href="https://www.ithome.com/1/014/138.htm" >NVIDIA RTX Spark 发售，华硕、联想、微软、微星多款笔电开放购买<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>IT之家 · 10-16 19:37</p>
-</blockquote>
-<p>IT之家 10 月 16 日消息，基于 NVIDIA（英伟达）RTX Spark 超级芯片平台的设备即将发售， 华硕、联想、微软、微星等厂商均将开放产品购买 。感兴趣的IT之家小伙伴可 前往了解 。 华硕 ProArt 创 14 20C + 6144CUDA + 128GB + 1TB，35999 元 20C + 6144CUDA + 32GB + 1TB，18999 元 京东 华硕 ProArt 创 14 RTX Spark 18999 元起 直达链接 华硕 ProArt 创 16 20C + 6144CUDA + 128GB + 1TB，37999 元 京东 华硕 ProArt 创 16 RTX Spark 37999 元 直达链接 联想 YOGA Pro 15 20C + 6144CUDA + 128GB + 2TB，42999 元 20C + 6144CUDA + 64GB + 1</p>
-<h3 id="The-tech-backlash-is-now-in-theaters"><a href="#The-tech-backlash-is-now-in-theaters" class="headerlink" title="The tech backlash is now in theaters"></a><a class="link"   href="https://www.theverge.com/entertainment/1012438/hollywood-tech-backlash-you-can-see-everything-musk-the-social-reckoning-artificial" >The tech backlash is now in theaters<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>The Verge AI · 10-16 05:39</p>
-</blockquote>
-<p>Though movies about disruptive tech founders are nothing new, 2026 has been unusually stacked with features that take a much more critical look at how Silicon Valley is reshaping our reality. Aaron Sorkin’s The Social Reckoning frames Mark Zuckerberg as a robotic villain whose ambitions are destabilizing society. Nathan Fielder and Lance Oppenheim’s You Can […]</p>
-<h2 id="融资与商业"><a href="#融资与商业" class="headerlink" title="融资与商业"></a>融资与商业</h2><h3 id="无人机表演十年后，大漠大想做「会干活」的机群"><a href="#无人机表演十年后，大漠大想做「会干活」的机群" class="headerlink" title="无人机表演十年后，大漠大想做「会干活」的机群"></a><a class="link"   href="https://www.leiphone.com/category/robot/OA7EpCSSkv3D6yMD.html" >无人机表演十年后，大漠大想做「会干活」的机群<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>雷锋网 · 10-16 10:31</p>
-</blockquote>
-<p>即便对大漠大这家公司名字感到陌生的人，大概也看过它的无人机编队表演——7次登上央视春晚，多次出现在《新闻联播》里，但迄今为止，大漠大鲜少对外讲述自己的品牌故事。 在刚刚过去的国庆假期，大漠大在南昌、宜昌、昆明等多地执飞的无人机表演刷屏全网，持续推进“低空＋文旅＋融媒”的低空融媒业务运营，为城市发展打造新的内容传播载体。 但表演本身并不是大漠大的营收主体。据公司披露，设备销售占其整体营收约70%，研发人员占比约40%，无人机集群设备与技术系统，才是支撑其业务的核心。 据雷峰网了解，大漠大海外设备销量五年上涨四十五倍，正在开发具身智能方向的第二产品线；并面向C端用户拓展业务场景；同步推进融资进程，计划于2027年申报IPO。 表演只是名片，设备才是生意。而眼下，在十周年节点，它正准备讲一个更大的故事。 低空融媒：无人机表演正变成流量刚需 今年国庆四城项目，是大漠大表演业务的缩影。 据公司援引的</p>
-<h3 id="When-it-came-to-Cal-AI’s-viral-success-a-small-army-of-influencers-paid-off"><a href="#When-it-came-to-Cal-AI’s-viral-success-a-small-army-of-influencers-paid-off" class="headerlink" title="When it came to Cal AI’s viral success, a small army of influencers paid off"></a><a class="link"   href="https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/" >When it came to Cal AI’s viral success, a small army of influencers paid off<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>TechCrunch AI · 10-16 07:44</p>
-</blockquote>
-<p>The company generated over $30 million in revenue in two years and was acquired by MyFitnessPal for an undisclosed amount of money in March.</p>
-<h2 id="研究与论文"><a href="#研究与论文" class="headerlink" title="研究与论文"></a>研究与论文</h2><h3 id="5-年前的机密文档被泄露：Anthropic-的所有胜利，早在-2021-年就写好了"><a href="#5-年前的机密文档被泄露：Anthropic-的所有胜利，早在-2021-年就写好了" class="headerlink" title="5 年前的机密文档被泄露：Anthropic 的所有胜利，早在 2021 年就写好了"></a><a class="link"   href="https://www.leiphone.com/category/yanxishe/gO1lTcRqFyRtbiFP.html" >5 年前的机密文档被泄露：Anthropic 的所有胜利，早在 2021 年就写好了<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>雷锋网 · 10-16 07:55</p>
-</blockquote>
-<p>一张五年前的研发清单，兑现如今 AI 行业大半成果。 作者丨高允毅 编辑丨岑 峰 最近，一场版权官司意外曝光了 Anthropic 一份内部机密文件 《Concise Research Roadmap》 ，这是 Anthropic 五年前的研究路线图。 这个文档由 Anthropic 联创 Jared Kaplan 撰写，只有三四页，却出现了我们今天讨论的Coding Agent、Tool Use、长上下文、RL、自动化反馈，甚至Agent的安全问题…… 这份文档汇集了Anthropic “最强大脑”们密密麻麻的批注。比如，Anthropic 联合创始人Tom Brown 指出“仓库浏览是简单、高价值的切入点”，系统与可解释性研究科学家 Nelson Elhage 则预判“自动查找项目里的类型定义”会是极具用户价值的功能。 面对“最强编程助手”与“工具能力演示”的路线之争，CEO </p>
-<h2 id="行业应用"><a href="#行业应用" class="headerlink" title="行业应用"></a>行业应用</h2><h3 id="三星携手-Reality-Defender，面向新加坡企业用户开发端侧-AI-深度伪造检测方案"><a href="#三星携手-Reality-Defender，面向新加坡企业用户开发端侧-AI-深度伪造检测方案" class="headerlink" title="三星携手 Reality Defender，面向新加坡企业用户开发端侧 AI 深度伪造检测方案"></a><a class="link"   href="https://www.ithome.com/1/014/144.htm" >三星携手 Reality Defender，面向新加坡企业用户开发端侧 AI 深度伪造检测方案<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>IT之家 · 10-16 19:58</p>
-</blockquote>
-<p>IT之家 10 月 16 日消息，三星宣布联合深度伪造检测公司 Reality Defender 合作，开发面向企业用户的端侧 AI 深度伪造检测方案。该方案将直接在三星 Galaxy 设备上运行，帮助企业识别 AI 生成的虚假语音、视频和图像，降低冒充诈骗及其他相关风险，计划率先落地新加坡市场。 IT之家获悉，Reality Defender 专注于企业级深度伪造检测，利用多种 AI 模型实时分析语音、视频和图像内容。例如，该技术能够在实时通话中识别冒充他人的合成语音，也可用于客户身份识别和新用户注册审核，帮助企业发现可疑的虚假内容。 Reality Defender 表示，随着生成式 AI 技术的发展，利用合成语音和视频实施诈骗的情况日益受到关注。有调查显示，2024 年新加坡有 56% 的企业曾遭遇音频深度伪造诈骗，另有 52% 的企业遇到过视频深度伪造相关事件。 个人用户同样面临此</p>
-<h3 id="上海市委书记陈吉宁会见美国苹果公司执行董事长蒂姆-·-库克"><a href="#上海市委书记陈吉宁会见美国苹果公司执行董事长蒂姆-·-库克" class="headerlink" title="上海市委书记陈吉宁会见美国苹果公司执行董事长蒂姆 · 库克"></a><a class="link"   href="https://www.ithome.com/1/014/135.htm" >上海市委书记陈吉宁会见美国苹果公司执行董事长蒂姆 · 库克<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>IT之家 · 10-16 19:28</p>
-</blockquote>
-<p>IT之家 10 月 16 日消息，据“上海发布”公众号，上海市委书记陈吉宁今天（10 月 16 日）会见了美国苹果公司执行董事长蒂姆 · 库克一行。 陈吉宁提到，当前，新一轮科技革命和产业变革加速突破，人工智能技术和产业发展突飞猛进， 为包括苹果公司在内的全球企业在沪发展带来新的机遇 。欢迎用好上海的改革开放优势、科技创新优势和市场渠道优势，围绕智能终端供给、创新生态培育、人工智能健康发展等深化交流合作，推动更多新产品、新技术、新服务落地上海。上海将持续优化市场化、法治化、国际化一流营商环境，加快完善与高水平开放相适应的监管体系和法律体系，支持全球企业在沪实现更好发展。 蒂姆 · 库克表示，每次来到上海这座全球卓越城市，都能感受到蓬勃发展的活力和科技创新的动力。十分高兴在这里看到人工智能技术赋能千行百业的新实践新探索，愿持续深耕上海， 携手合作伙伴围绕人工智能发展、产业生态构建、供应链管理</p>
-<h3 id="中控技术接入千问办公，打造流程工业领域AI-Native标杆企业"><a href="#中控技术接入千问办公，打造流程工业领域AI-Native标杆企业" class="headerlink" title="中控技术接入千问办公，打造流程工业领域AI Native标杆企业"></a><a class="link"   href="https://www.leiphone.com/category/industrynews/8IM46Vzpf7IFumo7.html" >中控技术接入千问办公，打造流程工业领域AI Native标杆企业<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>雷锋网 · 10-16 15:51</p>
-</blockquote>
-<p>10月16日，中控技术股份有限公司（以下简称“中控技术”）正式接入千问办公，将Agent落地营销全链路。后续，千问办公还将优化中控技术的采购、供应链、财务、人力、研发等场景工作流，共建流程工业领域AI Native标杆企业。 图示 中控技术和千问办公签约现场 中控技术成立于1999年，是以工业数据为基础、AI大模型为核心、全场景智能体为触手的工业AI平台型公司，基于“技术+场景+生态”的立体化布局，推动流程工业从单点智能向全链路智能跃迁，其业务覆盖全球50多个国家和地区，服务海内外4万多家客户。在今日签约仪式上，中控技术副总裁石小磊、阿里云智能集团副总裁张敬、千问办公副总裁朱鸿共同见证双方达成战略合作。 在营销领域，中控技术正与千问办公联合打造AI营销项目，覆盖从搜集市场线索到回款结算的营销全链路。例如在一线销售场景下，销售人员长期处于白天跑客户、晚上写材料的高负荷状态，一份解决方案从现场</p>
-<h3 id="阿里千问上车宝马iX3"><a href="#阿里千问上车宝马iX3" class="headerlink" title="阿里千问上车宝马iX3"></a><a class="link"   href="https://www.leiphone.com/category/industrynews/1zjGZ4srbO3kyVEw.html" >阿里千问上车宝马iX3<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>雷锋网 · 10-16 10:36</p>
-</blockquote>
-<p>10月15日消息，在2026宝马集团中国创新日上，宝马宣布新世代BMW iX3将搭载专为中国市场打造的座舱AI能力。该能力由宝马与阿里巴巴联合开发，以阿里千问大模型为AI底座，并由斑马负责座舱应用与车端集成，融入BMW智能个人助理（BMW Intelligent Personal Assistant）。阿里巴巴集团副总裁、阿里云智能集团CTO李飞飞表示，阿里将从用户场景出发，让新世代宝马智能座舱更加聪明、自然。 目前，阿里已经成为车企的全栈AI技术伙伴。IDC数据显示，2025年下半年，阿里云以42%的份额位居中国汽车公共云IaaS市场第一，并连续五年保持首位。目前，近30家车企和智驾方案商在阿里云开展智驾研发，实际使用PPU超过10万卡。在具体业务中，阿里AI已进入智能座舱、模型训练、软件研发和生产制造等环节。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="Mark-Wahlberg-on-using-AI-in-film-‘the-right-way’-and-being-open-to-an-AI-clone-carrying-on-his-legacy"><a href="#Mark-Wahlberg-on-using-AI-in-film-‘the-right-way’-and-being-open-to-an-AI-clone-carrying-on-his-legacy" class="headerlink" title="Mark Wahlberg on using AI in film ‘the right way’ and being open to an AI clone carrying on his legacy"></a><a class="link"   href="https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/" >Mark Wahlberg on using AI in film ‘the right way’ and being open to an AI clone carrying on his legacy<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>TechCrunch AI · 10-16 22:26</p>
-</blockquote>
-<p>Actor and angel investor Mark Wahlberg says he’s OK with using AI in filmmaking, provided it’s used “to enhance what you’re doing.”</p>
-<h3 id="Replit’s-CEO-says-the-future-of-work-is-the-‘self-driving-company’"><a href="#Replit’s-CEO-says-the-future-of-work-is-the-‘self-driving-company’" class="headerlink" title="Replit’s CEO says the future of work is the ‘self-driving company’"></a><a class="link"   href="https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company/" >Replit’s CEO says the future of work is the ‘self-driving company’<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>TechCrunch AI · 10-16 20:55</p>
-</blockquote>
-<p>Replit CEO Amjad Masad envisions a future of “self-driving companies,” where AI agents handle day-to-day tasks and people focus on higher-level decisions.</p>
-<h3 id="Pi-抛出全新-Agent-Harness，还把自己骂了一年的-MCP-装进了核心"><a href="#Pi-抛出全新-Agent-Harness，还把自己骂了一年的-MCP-装进了核心" class="headerlink" title="Pi 抛出全新 Agent Harness，还把自己骂了一年的 MCP 装进了核心"></a><a class="link"   href="https://www.infoq.cn/article/hQOHf1ZXoBs7uMpWJQss?utm_source=rss&utm_medium=article" >Pi 抛出全新 Agent Harness，还把自己骂了一年的 MCP 装进了核心<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>InfoQ 中文 · 10-16 19:53</p>
-</blockquote>
-<p>点击查看原文&gt;</p>
-<h3 id="Pizza-Bot：开源的后台-AI-智能体收件箱"><a href="#Pizza-Bot：开源的后台-AI-智能体收件箱" class="headerlink" title="Pizza Bot：开源的后台 AI 智能体收件箱"></a><a class="link"   href="https://www.infoq.cn/article/aMgWFmwZ2HoZDtw1g0MQ?utm_source=rss&utm_medium=article" >Pizza Bot：开源的后台 AI 智能体收件箱<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>InfoQ 中文 · 10-16 19:06</p>
-</blockquote>
-<p>点击查看原文&gt;</p>
-<h3 id="AI-写完代码，谁来验证？手淘-TEKO-“写—验—修”自主闭环的工程实践｜QCon上海"><a href="#AI-写完代码，谁来验证？手淘-TEKO-“写—验—修”自主闭环的工程实践｜QCon上海" class="headerlink" title="AI 写完代码，谁来验证？手淘 TEKO “写—验—修”自主闭环的工程实践｜QCon上海"></a><a class="link"   href="https://www.infoq.cn/article/t3XbHewuN37fsodaprUC?utm_source=rss&utm_medium=article" >AI 写完代码，谁来验证？手淘 TEKO “写—验—修”自主闭环的工程实践｜QCon上海<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>InfoQ 中文 · 10-16 18:00</p>
-</blockquote>
-<p>点击查看原文&gt;</p>
-<h3 id="拍照和翻译救不了AI眼镜？千问2218元起推新硬件，要抢现实世界里的上下文"><a href="#拍照和翻译救不了AI眼镜？千问2218元起推新硬件，要抢现实世界里的上下文" class="headerlink" title="拍照和翻译救不了AI眼镜？千问2218元起推新硬件，要抢现实世界里的上下文"></a><a class="link"   href="https://www.infoq.cn/article/wMMAbsA4UOtYlAl1fH4T?utm_source=rss&utm_medium=article" >拍照和翻译救不了AI眼镜？千问2218元起推新硬件，要抢现实世界里的上下文<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>InfoQ 中文 · 10-16 07:06</p>
-</blockquote>
-<p>点击查看原文&gt;</p>
-<h3 id="阶跃星辰开放-Step-5-Preview-权重：长程-Agent-的竞争，延伸到上下文管理与训练系统"><a href="#阶跃星辰开放-Step-5-Preview-权重：长程-Agent-的竞争，延伸到上下文管理与训练系统" class="headerlink" title="阶跃星辰开放 Step 5 Preview 权重：长程 Agent 的竞争，延伸到上下文管理与训练系统"></a><a class="link"   href="https://www.infoq.cn/article/EwqsJX6f03ODRac6Kk4c?utm_source=rss&utm_medium=article" >阶跃星辰开放 Step 5 Preview 权重：长程 Agent 的竞争，延伸到上下文管理与训练系统<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
-<p>InfoQ 中文 · 10-16 04:09</p>
-</blockquote>
-<p>点击查看原文&gt;</p>
-<hr>
-<p><em>本文由自动化脚本于 2026-10-17 00:16 生成；信息来源：IT之家、InfoQ 中文、OpenAI、TechCrunch AI、The Verge AI、雷锋网。</em></p>
-]]></content>
-      <categories>
-        <category>AI日报</category>
-      </categories>
-      <tags>
-        <tag>AI</tag>
-        <tag>日报</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/10/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>如何建立自己的博客</title>
     <url>/2023/04/18/hexo-blog/</url>
     <content><![CDATA[<p>看到别人酷炫的博客，自己也想整一个，如何操作呢？本篇文章将手把手教你建立自己的博客</p>
@@ -555,13 +384,6 @@
       </tags>
   </entry>
   <entry>
-    <title>transformer学习记录</title>
-    <url>/2023/07/07/transformer/</url>
-    <content><![CDATA[<p>最近在和老师汇报Transformer的学习进展，备份一下PPT：<a href="/pdf/transformer.pdf" target="_blank" rel="nofollow">PDF</a>|<a href="/pdf/transformer.pptx" target="_blank" rel="nofollow">PPT</a></p>
-<iframe src="pdf/transformer_ppt.html" frameborder="0" width="100%" height="1000"></iframe>
-]]></content>
-  </entry>
-  <entry>
     <title>博客源码丢了，我从线上站点把它反推了回来</title>
     <url>/2026/09/20/hexo-source-recovery/</url>
     <content><![CDATA[<p>事情是这样的：想给博客改点东西，打开电脑才发现——本地的 Hexo 工程目录不见了。</p>
@@ -644,25 +466,182 @@
       </tags>
   </entry>
   <entry>
-    <title>使用SCP拷贝文件</title>
-    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
-<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
-
-<p>对于文件夹，需要加入 <code>-r</code>参数</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
-
-<hr>
-<blockquote>
-<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
+    <title>AI 日报 · 2026-10-17</title>
+    <url>/2026/10/17/ai-daily-2026-10-17/</url>
+    <content><![CDATA[<p>汇总 <strong>2026年10月16日</strong>（Asia&#x2F;Shanghai）全天的 AI 领域动态，共 <strong>39</strong> 条，由脚本自动抓取整理。</p>
+<h2 id="模型与产品"><a href="#模型与产品" class="headerlink" title="模型与产品"></a>模型与产品</h2><h3 id="Jev-is-Vercel’s-fastest-adopted-AI-model-ever"><a href="#Jev-is-Vercel’s-fastest-adopted-AI-model-ever" class="headerlink" title="Jev is Vercel’s fastest-adopted AI model ever"></a><a class="link"   href="https://techcrunch.com/2026/10/16/jev-is-vercels-fastest-adopted-ai-model-ever/" >Jev is Vercel’s fastest-adopted AI model ever<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>TechCrunch AI · 10-16 23:33</p>
 </blockquote>
+<p>The data comes from Vercel’s AI gateway, a unified API service similar to OpenRouter.</p>
+<h3 id="Meta’s-new-terms-may-allow-it-to-train-AI-on-news-sites-for-free"><a href="#Meta’s-new-terms-may-allow-it-to-train-AI-on-news-sites-for-free" class="headerlink" title="Meta’s new terms may allow it to train AI on news sites for free"></a><a class="link"   href="https://www.theverge.com/tech/1012846/meta-business-terms-scrape-news-publishers" >Meta’s new terms may allow it to train AI on news sites for free<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>The Verge AI · 10-16 22:02</p>
+</blockquote>
+<p>Meta’s new terms appear to give it permission to crawl and scrape websites “associated” with the businesses that use its platforms - including online publishers, according to a report from Nieman Lab. The new terms, which go into effect on October 30th, say Meta can use this outside content to “develop, improve, research,” and “train” […]</p>
+<h3 id="长鑫科技-2026-年前三季度预计归母净利润-1310-1325-亿元，同比扭亏为盈"><a href="#长鑫科技-2026-年前三季度预计归母净利润-1310-1325-亿元，同比扭亏为盈" class="headerlink" title="长鑫科技 2026 年前三季度预计归母净利润 1310~1325 亿元，同比扭亏为盈"></a><a class="link"   href="https://www.ithome.com/1/014/168.htm" >长鑫科技 2026 年前三季度预计归母净利润 1310~1325 亿元，同比扭亏为盈<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>IT之家 · 10-16 21:43</p>
+</blockquote>
+<p>IT之家 10 月 16 日消息，长鑫科技今日发布 2026 年前三季度（2026 年 1 月～2026 年 9 月）业绩预告报告： 营业总收入 ：2650 亿元 <del>2700 亿元，同比预增 725.96%</del>741.54% 归母净利润 ：1310 亿元 ~1325 亿元，同比扭亏为盈 AI 解读 本次业绩预告大幅超出市场预期，业绩实现爆发式增长。 公司主营业务与财报亮点 长鑫科技主要从事 DRAM 存储芯片的研发、生产和销售，是国内 DRAM 行业核心企业。 本次 2026 年前三季度预计实现营业收入 2650 亿元至 2700 亿元，同比上年增加 2329.16 亿元至 2379.16 亿元；预计归属于上市公司股东的净利润 1310 亿元至 1325 亿元，同比上年增加 1362.8 亿元至 1377.8 亿元，去年同期归母净利润为净亏损 52.8 亿元。 业绩增长核心原因 2025 年</p>
+<h3 id="德明利-2026-年前三季度预计归母净利润-86-589-5-亿元，预计同比增长-32046-52-33154-49"><a href="#德明利-2026-年前三季度预计归母净利润-86-589-5-亿元，预计同比增长-32046-52-33154-49" class="headerlink" title="德明利 2026 年前三季度预计归母净利润 86.589.5 亿元，预计同比增长 32046.52%33154.49%"></a><a href="https://www.ithome.com/1/014/153.htm">德明利 2026 年前三季度预计归母净利润 86.5<del>89.5 亿元，预计同比增长 32046.52%</del>33154.49%</a></h3><blockquote>
+<p>IT之家 · 10-16 20:41</p>
+</blockquote>
+<p>IT之家 10 月 16 日消息，德明利今日发布 2026 年前三季度（2026 年 1 月～2026 年 9 月）业绩预告报告： 营业总收入 ：275 亿元 <del>295 亿元，预计同比增长 312.97%</del>343% 归母净利润 ：86.5 亿元 <del>89.5 亿元，预计同比增长 32046.52%</del>33154.49% 扣非净利润 ：85.96 亿元 <del>88.96 亿元，预计同比增长 17127.99%</del>17722.26% 基本每股收益 ：27.47 元 ~28.42 元 AI 解读 本次业绩预告扭亏为盈，营收和净利润增速均大幅超市场预期。 公司主营业务简介 德明利是专业存储控制芯片及解决方案提供商，核心业务为自主可控的存储主控芯片与固件方案研发及产业化应用，聚焦存储领域，构建了硬科技 + 软服务双轮支撑体系，推动向场景化、定制化存储解决方案转型升级。 本次财报核心亮点 2026 年前三季度公</p>
+<h3 id="社交平台-Bluesky-扩展旗下-Attie-AI-工具功能：支持创建小游戏、投票等社交应用"><a href="#社交平台-Bluesky-扩展旗下-Attie-AI-工具功能：支持创建小游戏、投票等社交应用" class="headerlink" title="社交平台 Bluesky 扩展旗下 Attie AI 工具功能：支持创建小游戏、投票等社交应用"></a><a class="link"   href="https://www.ithome.com/1/014/141.htm" >社交平台 Bluesky 扩展旗下 Attie AI 工具功能：支持创建小游戏、投票等社交应用<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>IT之家 · 10-16 19:49</p>
+</blockquote>
+<p>IT之家 10 月 16 日消息，社交平台 Bluesky 宣布扩展旗下 AI 工具 Attie，用户现在可以通过输入提示词，创建小游戏、投票和数据仪表盘等轻量级社交应用，并将其作为独立网站分享给其他人。 Bluesky 首席执行官 Toni Schneider 表示，如今的 Attie 能实现“面向社区的氛围编程”，用户无需编写大量代码，只需描述自己的想法，就能快速创建供社区成员使用的应用。 目前，Attie 官方网站已经展示了多个示例，包括模仿《Flappy Bird》的“Flappy Butterfly”小游戏、鼓机、问答游戏，以及以芹菜人为主题的放置点击游戏。每款应用都会获得一个位于 attie.site 域名下的独立链接，页面底部还会标注创建者信息，方便用户分享作品并了解应用的制作者。 不过，从目前的实际体验来看，Attie 生成的应用大多仍属于功能较为简单的轻量级作品，娱乐性和</p>
+<h3 id="Linus用Claude-Code改Linux内核，大神也没兜住代码里的Bug"><a href="#Linus用Claude-Code改Linux内核，大神也没兜住代码里的Bug" class="headerlink" title="Linus用Claude Code改Linux内核，大神也没兜住代码里的Bug"></a><a class="link"   href="https://www.infoq.cn/article/hRw4BZQQUW14sqYMo5F6?utm_source=rss&utm_medium=article" >Linus用Claude Code改Linux内核，大神也没兜住代码里的Bug<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>InfoQ 中文 · 10-16 19:47</p>
+</blockquote>
+<p>点击查看原文&gt;</p>
+<h3 id="XREAL-One-Pro-Plus-智能眼镜发布：峰值亮度提升至-1200-尼特、鼻托结构重新设计，599-美元"><a href="#XREAL-One-Pro-Plus-智能眼镜发布：峰值亮度提升至-1200-尼特、鼻托结构重新设计，599-美元" class="headerlink" title="XREAL One Pro Plus 智能眼镜发布：峰值亮度提升至 1200 尼特、鼻托结构重新设计，599 美元"></a><a class="link"   href="https://www.ithome.com/1/014/137.htm" >XREAL One Pro Plus 智能眼镜发布：峰值亮度提升至 1200 尼特、鼻托结构重新设计，599 美元<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>IT之家 · 10-16 19:37</p>
+</blockquote>
+<p>IT之家 10 月 16 日消息，XREAL 今日在海外发布新款 AR 眼镜 Xreal One Pro Plus，主要提升面板亮度，同时调整人体工程学设计，定价为 599 美元 （IT之家注：现汇率约合 4,015 元人民币） 。 Xreal One Pro Plus 采用重新设计的鼻托结构，旨在改善眼镜与面部的贴合度，提升长时间观看时的舒适性。其搭载双 0.55 英寸索尼 Micro-OLED 面板，峰值亮度最高可达 1200 尼特，较前代产品的 700 尼特明显提升。 除了更高的峰值亮度，新品还加入 AI HDR 功能，借助 AI 技术改善画面对比度，让用户通过眼镜观看内容时获得更好的视觉体验。同时眼镜新增标准、电影和阅读三种显示模式，用户可以根据日常使用、观看影片或阅读等不同场景选择合适的显示效果。 XREAL 表示，新款眼镜还改进了内置的 Real 3D 引擎，可将普通 2D 内</p>
+<h3 id="推翻一切！Nick-Cammarata-万字长文宣告，AI-不是黑箱，99-神经元清晰可见"><a href="#推翻一切！Nick-Cammarata-万字长文宣告，AI-不是黑箱，99-神经元清晰可见" class="headerlink" title="推翻一切！Nick Cammarata 万字长文宣告，AI 不是黑箱，99% 神经元清晰可见"></a><a class="link"   href="https://www.leiphone.com/category/yanxishe/Vr0JmbkUeZV5D9Qz.html" >推翻一切！Nick Cammarata 万字长文宣告，AI 不是黑箱，99% 神经元清晰可见<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>雷锋网 · 10-16 19:33</p>
+</blockquote>
+<p>亲手推翻自己十年前的结论，可解释性大佬 Nick Cammarata 这次读懂 AI 脑回路。 作者丨高允毅 编辑丨岑 峰 “大模型把猫和汽车分为一类，不是弱智。” 在 AI 可解释性领域，有一个十年的经典案例，是 InceptionV1 模型里编号 4e:55 的神经元 。这个神经元在看到“猫脸”和“汽车车头”时，都会被强烈激活。这意味着， 整个神经网络的底层逻辑是不可解释的 。 于是整整十年，整个领域都沿着 “拆” 的思路往前走：既然网络是一团乱麻的黑盒，那就发明工具把它拆开。稀疏自编码器（SAE）分解、特征字典、特征解缠…… 都是先把纠缠的特征拆成一个个独立的、人类能懂的单元，再去理解。 就在昨天， OpenAI早期机制可解释性研究的科学家，也是当年将该案例推向经典的《Zoom In》的共同作者，Nick Cammarata ，亲自推翻了自己当年所下的结论。 “这个神经元根本不认识猫</p>
+<h3 id="长鑫科技市值两月内跌去1万亿；阿里加码AI硬件品牌，天猫、速卖通联动；国行版苹果AI有望12月上线，百度、阿里参与合作丨雷峰早报"><a href="#长鑫科技市值两月内跌去1万亿；阿里加码AI硬件品牌，天猫、速卖通联动；国行版苹果AI有望12月上线，百度、阿里参与合作丨雷峰早报" class="headerlink" title="长鑫科技市值两月内跌去1万亿；阿里加码AI硬件品牌，天猫、速卖通联动；国行版苹果AI有望12月上线，百度、阿里参与合作丨雷峰早报"></a><a class="link"   href="https://www.leiphone.com/category/zaobao/EReMkZNn9w5H85Tf.html" >长鑫科技市值两月内跌去1万亿；阿里加码AI硬件品牌，天猫、速卖通联动；国行版苹果AI有望12月上线，百度、阿里参与合作丨雷峰早报<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>雷锋网 · 10-16 18:39</p>
+</blockquote>
+<p>要闻提示 1.长鑫科技市值两月内跌去1万亿 2.年内已至少18次故障！DeepSeek发放宕机补偿，有人拿到3000元 3.阿里加码AI硬件品牌，天猫、速卖通联动 4.国行版苹果AI有望12月上线，百度、阿里参与合作 5.可灵AI新一代模型Kling 4.0正式上线，专业影像模型“卷”出新高度 6.华为黄宇：韬定律最大挑战在于 EDA 工具 7.内饰一模一样！海外博主称中国车企已进入互相抄袭阶段：理想高管回应 8.OpenAI基础设施负责人将离职 今日头条 长鑫科技市值两月内跌去1万亿 10月15日，长鑫科技股价走低，截至收盘，股价43.59元&#x2F;股，总市值跌破3万亿元。A股“总市值一哥”的位置随之易主，工商银行重回A股总市值第一。 长鑫科技7月27日上市首日，盘中市值超过工商银行，登顶A股市值首位。8月17日，长鑫科技收61.8元&#x2F;股，市值达到4.2万亿元。在随后约两个月时间里，长鑫科技市</p>
+<h3 id="Kling-4-0正式上线：10-bit-HDR、30秒原生直出-刷新视频模型新基准"><a href="#Kling-4-0正式上线：10-bit-HDR、30秒原生直出-刷新视频模型新基准" class="headerlink" title="Kling 4.0正式上线：10-bit HDR、30秒原生直出 刷新视频模型新基准"></a><a class="link"   href="https://www.leiphone.com/category/industrynews/1GERVRJ72xJKmsus.html" >Kling 4.0正式上线：10-bit HDR、30秒原生直出 刷新视频模型新基准<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>雷锋网 · 10-16 10:37</p>
+</blockquote>
+<p>10月15日，可灵AI新一代视频生成模型 Kling 4.0 正式上线。 真实、可控、专业，是这一代模型升级的核心方向。Kling 4.0 聚焦高动态、强运镜的视频创作场景，在三个方向实现集中突破：大幅度动态表现更稳定，提升高速运动与复杂运镜的连贯性；单次原生生成最长可达30秒，支持长镜头与连续叙事，导演思维全程在线；全能参考支持最多15项参考素材组合，同时支持最多10张关键帧输入，帮助创作者将一个构思转化为完整作品。 与专业创作者建立深度链接，与其共同完成作品创作，尤其是核心镜头的高质量交付，是可灵模型持续迭代的重要方向。 专业创作者需要的不只是偶然生成惊艳画面，更要稳定完成决定作品品质的关键镜头，并让生成素材进入完整制作流程。可灵AI相信，技术的价值，不只是让内容得以生成，更是让每一帧画面背后的‘用心’能被看见。无论是承载情绪的特写，还是决定整部作品质感的关键画面，每一个倾注心血的镜头</p>
+<h3 id="付费用户占比超-20-，电商商家「涌入」千问办公"><a href="#付费用户占比超-20-，电商商家「涌入」千问办公" class="headerlink" title="付费用户占比超 20%，电商商家「涌入」千问办公"></a><a class="link"   href="https://www.leiphone.com/category/industrynews/csaOBaiXpZZLOOtp.html" >付费用户占比超 20%，电商商家「涌入」千问办公<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>雷锋网 · 10-16 10:24</p>
+</blockquote>
+<p>一双鞋还没生产出来，商家刘祥龙已经开始琢磨怎么卖了。 准备开一家3D打印鞋店时，他没有急着打样、拍摄、做详情页，而是先让AI帮忙调研市场、制作数字样品，再把商品图和详情页准备好，看看消费者愿不愿意点击、将其加购。 简单说，就是先让市场“投票”，再决定要不要真的把鞋做出来。 过去，开一家新店，从前期调研到商品准备，通常要花上一个月，前期投入超过1万元。如今有千问办公等AI工具搭把手， 他把准备周期压缩到了7天，相关费用也降到了数百元——主要是Token成本。 这不是刘祥龙第一次把AI用进生意里。 他还经营着一家女鞋店铺，约有430款商品，商家分析工具里的经营数据就有43页。在没有AI之前，运营人员需要手动导出报表，再从访客、转化、加购等指标中寻找值得投入的商品。 如今，这些活他慢慢交给了千问办公，部分重复性的运营工作也跑上了自动化流程。 10月14日，千问办公CEO陈宇森在千问办公电商版发布</p>
+<h3 id="ChatGPT-can-peek-at-your-Chrome-tabs-now"><a href="#ChatGPT-can-peek-at-your-Chrome-tabs-now" class="headerlink" title="ChatGPT can peek at your Chrome tabs now"></a><a class="link"   href="https://www.theverge.com/ai-artificial-intelligence/1012510/openai-chatgpt-google-chrome-tabs" >ChatGPT can peek at your Chrome tabs now<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>The Verge AI · 10-16 06:43</p>
+</blockquote>
+<p>OpenAI’s ChatGPT Atlas browser is gone, but now ChatGPT’s Google Chrome extension is getting some upgrades that allow it to use the browser tabs you already have open. With the extension installed, OpenAI says ChatGPT can now view your browser tabs when you tag Chrome in ChatGPT’s web or desktop app, posting a demo video […]</p>
+<h3 id="Sega-pulls-Total-War-Shogun-2-remaster-from-sale-following-disastrous-launch"><a href="#Sega-pulls-Total-War-Shogun-2-remaster-from-sale-following-disastrous-launch" class="headerlink" title="Sega pulls Total War: Shogun 2 remaster from sale following disastrous launch"></a><a class="link"   href="https://www.theverge.com/games/1012512/sega-total-war-shogun-2-remaster-pulled" >Sega pulls Total War: Shogun 2 remaster from sale following disastrous launch<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>The Verge AI · 10-16 06:35</p>
+</blockquote>
+<p>Sega is removing Total War: Shogun 2 - Complete Edition from storefronts following a disastrous launch where users complained about issues like bugs and upscaling that appears to have been done by AI. Complete Edition, a remaster of the 2011 strategy game, launched on Tuesday, and it bundled the main game and all of its […]</p>
+<h3 id="Trump-posts-AI-edited-photo-to-brag-about-White-House-restoration-work"><a href="#Trump-posts-AI-edited-photo-to-brag-about-White-House-restoration-work" class="headerlink" title="Trump posts AI-edited photo to brag about White House restoration work"></a><a class="link"   href="https://www.theverge.com/policy/1012445/donald-trump-ai-photo-white-house-rennovation-column" >Trump posts AI-edited photo to brag about White House restoration work<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>The Verge AI · 10-16 05:09</p>
+</blockquote>
+<p>President Donald Trump posted a series of photos on Truth Social showing off renovations to the White House - but one of them appears to be modified with AI. The picture, which compares an old White House column to a “restored” one, has several discrepancies and was flagged by Google’s AI detector as “made or […]</p>
+<h3 id="Meta-launches-an-open-weight-AI-model-that-runs-on-Macs"><a href="#Meta-launches-an-open-weight-AI-model-that-runs-on-Macs" class="headerlink" title="Meta launches an open-weight AI model that runs on Macs"></a><a class="link"   href="https://techcrunch.com/2026/10/15/meta-launches-an-open-weight-model-that-runs-on-macs/" >Meta launches an open-weight AI model that runs on Macs<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>TechCrunch AI · 10-16 04:04</p>
+</blockquote>
+<p>Meta and Apple have teamed up for the launch of the social media giant’s newest model, Muse Spark Open, which will run locally on Apple silicon.</p>
+<h3 id="Bluesky’s-AI-tool-now-lets-you-make-games-and-apps-to-share-on-social"><a href="#Bluesky’s-AI-tool-now-lets-you-make-games-and-apps-to-share-on-social" class="headerlink" title="Bluesky’s AI tool now lets you make games and apps to share on social"></a><a class="link"   href="https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps" >Bluesky’s AI tool now lets you make games and apps to share on social<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>The Verge AI · 10-16 03:57</p>
+</blockquote>
+<p>Bluesky’s Attie AI tool, which initially launched earlier this year as a way to use AI to build your own feeds, now lets you make “small” social apps like games, polls, and dashboards that you can then share with others as their own websites. In an interview at TechCrunch Disrupt, Bluesky CEO Toni Schneider said […]</p>
+<h3 id="Amazon-devices-chief-Panos-Panay-sees-a-future-where-AI-devices-replace-the-need-to-use-apps"><a href="#Amazon-devices-chief-Panos-Panay-sees-a-future-where-AI-devices-replace-the-need-to-use-apps" class="headerlink" title="Amazon devices chief Panos Panay sees a future where AI devices replace the need to use apps"></a><a class="link"   href="https://techcrunch.com/2026/10/15/amazon-devices-chief-panos-panay-sees-a-future-where-ai-devices-replace-the-need-to-use-apps/" >Amazon devices chief Panos Panay sees a future where AI devices replace the need to use apps<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>TechCrunch AI · 10-16 03:55</p>
+</blockquote>
+<p>Speaking at TechCrunch Disrupt, Amazon devices chief Panos Panay described a future where ambient AI devices work in the background, anticipating users’ needs instead of waiting for commands.</p>
+<h3 id="Anthropic-is-letting-METR-researchers-look-under-the-hood-with-employee-level-access"><a href="#Anthropic-is-letting-METR-researchers-look-under-the-hood-with-employee-level-access" class="headerlink" title="Anthropic is letting METR researchers look under the hood with employee-level access"></a><a class="link"   href="https://techcrunch.com/2026/10/15/anthropic-is-letting-metr-researchers-look-under-the-hood-with-employee-level-access/" >Anthropic is letting METR researchers look under the hood with employee-level access<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>TechCrunch AI · 10-16 03:14</p>
+</blockquote>
+<p>METR will publish its own assessments of Anthropic’s risks, incidents, and practices, and the frontier AI model maker has given up the right to block them.</p>
+<h3 id="Bringing-GPT-Rosalind-to-academic-research-labs"><a href="#Bringing-GPT-Rosalind-to-academic-research-labs" class="headerlink" title="Bringing GPT-Rosalind to academic research labs"></a><a class="link"   href="https://openai.com/index/introducing-the-rosalind-academic-plan" >Bringing GPT-Rosalind to academic research labs<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>OpenAI · 10-16 03:00</p>
+</blockquote>
+<p>Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.</p>
+<h3 id="Meta-and-Apple-team-up-to-make-Muse-AI-models-run-better-on-Macs"><a href="#Meta-and-Apple-team-up-to-make-Muse-AI-models-run-better-on-Macs" class="headerlink" title="Meta and Apple team up to make Muse AI models run better on Macs"></a><a class="link"   href="https://www.theverge.com/news/1012293/meta-apple-muse-spark-open-ai-model-mlx" >Meta and Apple team up to make Muse AI models run better on Macs<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>The Verge AI · 10-16 02:15</p>
+</blockquote>
+<p>Meta announced the Muse Spark Open AI model today, claiming that it’s the “most capable US open-weight model to date.” But the company also says that it’s the “the first model in its class” that can “run on your desktop using two Apple M5 Ultra Mac Studios with the latest MLX framework.” Meta and Apple, […]</p>
+<h2 id="芯片与算力"><a href="#芯片与算力" class="headerlink" title="芯片与算力"></a>芯片与算力</h2><h3 id="A-week-with-RTX-Spark-everything-we’ve-learned-using-Nvidia’s-new-laptops"><a href="#A-week-with-RTX-Spark-everything-we’ve-learned-using-Nvidia’s-new-laptops" class="headerlink" title="A week with RTX Spark: everything we’ve learned using Nvidia’s new laptops"></a><a class="link"   href="https://www.theverge.com/tech/1012748/nvidia-rtx-spark-windows-arm-laptops-asus-hp-lenovo-impressions" >A week with RTX Spark: everything we’ve learned using Nvidia’s new laptops<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>The Verge AI · 10-16 23:00</p>
+</blockquote>
+<p>Nvidia’s RTX Spark N1X processor is finally here, and we’ve been collectively testing a small fortune’s worth of powerful laptops sporting this new “superchip.” RTX Spark is designed to be a high-performing Arm-based SoC for laptops and small desktop computers, rivaling the best from Apple, Intel, AMD, and Qualcomm. It has loads of cores, Nvidia […]</p>
+<h3 id="Veritas-expands-its-anti-counterfeit-chip-to-jewelry-trophies-and-fragrance-bottles"><a href="#Veritas-expands-its-anti-counterfeit-chip-to-jewelry-trophies-and-fragrance-bottles" class="headerlink" title="Veritas expands its anti-counterfeit chip to jewelry, trophies, and fragrance bottles"></a><a class="link"   href="https://techcrunch.com/2026/10/16/veritas-is-building-a-chip-to-verify-luxury-goods/" >Veritas expands its anti-counterfeit chip to jewelry, trophies, and fragrance bottles<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>TechCrunch AI · 10-16 22:00</p>
+</blockquote>
+<p>Counterfeiters are getting better at replicating brands’ marks and passing off dupes, known as “superfakes,” as genuine items. A startup called Veritas wants to tackle the problem with its own chip that verifies goods.</p>
+<h3 id="七彩虹橘宝-R16-游戏本新增-AMD-R7-H-255-16G-512G-RTX-5060-配置，9999-元（国补-8499-15-元）"><a href="#七彩虹橘宝-R16-游戏本新增-AMD-R7-H-255-16G-512G-RTX-5060-配置，9999-元（国补-8499-15-元）" class="headerlink" title="七彩虹橘宝 R16 游戏本新增 AMD R7 H 255 + 16G + 512G + RTX 5060 配置，9999 元（国补 8499.15 元）"></a><a class="link"   href="https://www.ithome.com/1/014/156.htm" >七彩虹橘宝 R16 游戏本新增 AMD R7 H 255 + 16G + 512G + RTX 5060 配置，9999 元（国补 8499.15 元）<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>IT之家 · 10-16 20:48</p>
+</blockquote>
+<p>IT之家 10 月 16 日消息，七彩虹 MEOW 橘宝 R16 游戏本新增了一款搭载 AMD 锐龙 7 H 255 处理器 + RTX 5060 显卡 +16GB 内存 + 512GB 固态硬盘的版本，京东原价 10299 元，首发立减 300 元，叠加国补后到手价为 8499.15 元。 京东 七彩虹 MEOW 橘宝 R16 16 英寸锐龙游戏笔记本电脑 (锐龙 7 H 255 16G 512G RTX5060） 券后 9999 元 领 300 元券 该机采用全新 MEOW 系列家族设计语言，采用冰川白配色，A 面带有特殊纹路和猫爪印设计。 该机搭载 AMD 锐龙 7 H 255 移动处理器、NVIDIA GeForce RTX 5060 笔记本 GPU（115W），配备 16 英寸 2.5K IPS 电竞屏，拥有 2560×1600 分辨率、165 Hz 刷新率、100% sRGB </p>
+<h3 id="NVIDIA-RTX-Spark-发售，华硕、联想、微软、微星多款笔电开放购买"><a href="#NVIDIA-RTX-Spark-发售，华硕、联想、微软、微星多款笔电开放购买" class="headerlink" title="NVIDIA RTX Spark 发售，华硕、联想、微软、微星多款笔电开放购买"></a><a class="link"   href="https://www.ithome.com/1/014/138.htm" >NVIDIA RTX Spark 发售，华硕、联想、微软、微星多款笔电开放购买<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>IT之家 · 10-16 19:37</p>
+</blockquote>
+<p>IT之家 10 月 16 日消息，基于 NVIDIA（英伟达）RTX Spark 超级芯片平台的设备即将发售， 华硕、联想、微软、微星等厂商均将开放产品购买 。感兴趣的IT之家小伙伴可 前往了解 。 华硕 ProArt 创 14 20C + 6144CUDA + 128GB + 1TB，35999 元 20C + 6144CUDA + 32GB + 1TB，18999 元 京东 华硕 ProArt 创 14 RTX Spark 18999 元起 直达链接 华硕 ProArt 创 16 20C + 6144CUDA + 128GB + 1TB，37999 元 京东 华硕 ProArt 创 16 RTX Spark 37999 元 直达链接 联想 YOGA Pro 15 20C + 6144CUDA + 128GB + 2TB，42999 元 20C + 6144CUDA + 64GB + 1</p>
+<h3 id="The-tech-backlash-is-now-in-theaters"><a href="#The-tech-backlash-is-now-in-theaters" class="headerlink" title="The tech backlash is now in theaters"></a><a class="link"   href="https://www.theverge.com/entertainment/1012438/hollywood-tech-backlash-you-can-see-everything-musk-the-social-reckoning-artificial" >The tech backlash is now in theaters<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>The Verge AI · 10-16 05:39</p>
+</blockquote>
+<p>Though movies about disruptive tech founders are nothing new, 2026 has been unusually stacked with features that take a much more critical look at how Silicon Valley is reshaping our reality. Aaron Sorkin’s The Social Reckoning frames Mark Zuckerberg as a robotic villain whose ambitions are destabilizing society. Nathan Fielder and Lance Oppenheim’s You Can […]</p>
+<h2 id="融资与商业"><a href="#融资与商业" class="headerlink" title="融资与商业"></a>融资与商业</h2><h3 id="无人机表演十年后，大漠大想做「会干活」的机群"><a href="#无人机表演十年后，大漠大想做「会干活」的机群" class="headerlink" title="无人机表演十年后，大漠大想做「会干活」的机群"></a><a class="link"   href="https://www.leiphone.com/category/robot/OA7EpCSSkv3D6yMD.html" >无人机表演十年后，大漠大想做「会干活」的机群<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>雷锋网 · 10-16 10:31</p>
+</blockquote>
+<p>即便对大漠大这家公司名字感到陌生的人，大概也看过它的无人机编队表演——7次登上央视春晚，多次出现在《新闻联播》里，但迄今为止，大漠大鲜少对外讲述自己的品牌故事。 在刚刚过去的国庆假期，大漠大在南昌、宜昌、昆明等多地执飞的无人机表演刷屏全网，持续推进“低空＋文旅＋融媒”的低空融媒业务运营，为城市发展打造新的内容传播载体。 但表演本身并不是大漠大的营收主体。据公司披露，设备销售占其整体营收约70%，研发人员占比约40%，无人机集群设备与技术系统，才是支撑其业务的核心。 据雷峰网了解，大漠大海外设备销量五年上涨四十五倍，正在开发具身智能方向的第二产品线；并面向C端用户拓展业务场景；同步推进融资进程，计划于2027年申报IPO。 表演只是名片，设备才是生意。而眼下，在十周年节点，它正准备讲一个更大的故事。 低空融媒：无人机表演正变成流量刚需 今年国庆四城项目，是大漠大表演业务的缩影。 据公司援引的</p>
+<h3 id="When-it-came-to-Cal-AI’s-viral-success-a-small-army-of-influencers-paid-off"><a href="#When-it-came-to-Cal-AI’s-viral-success-a-small-army-of-influencers-paid-off" class="headerlink" title="When it came to Cal AI’s viral success, a small army of influencers paid off"></a><a class="link"   href="https://techcrunch.com/2026/10/15/when-it-came-to-cal-ais-viral-success-a-small-army-of-influencers-paid-off/" >When it came to Cal AI’s viral success, a small army of influencers paid off<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>TechCrunch AI · 10-16 07:44</p>
+</blockquote>
+<p>The company generated over $30 million in revenue in two years and was acquired by MyFitnessPal for an undisclosed amount of money in March.</p>
+<h2 id="研究与论文"><a href="#研究与论文" class="headerlink" title="研究与论文"></a>研究与论文</h2><h3 id="5-年前的机密文档被泄露：Anthropic-的所有胜利，早在-2021-年就写好了"><a href="#5-年前的机密文档被泄露：Anthropic-的所有胜利，早在-2021-年就写好了" class="headerlink" title="5 年前的机密文档被泄露：Anthropic 的所有胜利，早在 2021 年就写好了"></a><a class="link"   href="https://www.leiphone.com/category/yanxishe/gO1lTcRqFyRtbiFP.html" >5 年前的机密文档被泄露：Anthropic 的所有胜利，早在 2021 年就写好了<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>雷锋网 · 10-16 07:55</p>
+</blockquote>
+<p>一张五年前的研发清单，兑现如今 AI 行业大半成果。 作者丨高允毅 编辑丨岑 峰 最近，一场版权官司意外曝光了 Anthropic 一份内部机密文件 《Concise Research Roadmap》 ，这是 Anthropic 五年前的研究路线图。 这个文档由 Anthropic 联创 Jared Kaplan 撰写，只有三四页，却出现了我们今天讨论的Coding Agent、Tool Use、长上下文、RL、自动化反馈，甚至Agent的安全问题…… 这份文档汇集了Anthropic “最强大脑”们密密麻麻的批注。比如，Anthropic 联合创始人Tom Brown 指出“仓库浏览是简单、高价值的切入点”，系统与可解释性研究科学家 Nelson Elhage 则预判“自动查找项目里的类型定义”会是极具用户价值的功能。 面对“最强编程助手”与“工具能力演示”的路线之争，CEO </p>
+<h2 id="行业应用"><a href="#行业应用" class="headerlink" title="行业应用"></a>行业应用</h2><h3 id="三星携手-Reality-Defender，面向新加坡企业用户开发端侧-AI-深度伪造检测方案"><a href="#三星携手-Reality-Defender，面向新加坡企业用户开发端侧-AI-深度伪造检测方案" class="headerlink" title="三星携手 Reality Defender，面向新加坡企业用户开发端侧 AI 深度伪造检测方案"></a><a class="link"   href="https://www.ithome.com/1/014/144.htm" >三星携手 Reality Defender，面向新加坡企业用户开发端侧 AI 深度伪造检测方案<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>IT之家 · 10-16 19:58</p>
+</blockquote>
+<p>IT之家 10 月 16 日消息，三星宣布联合深度伪造检测公司 Reality Defender 合作，开发面向企业用户的端侧 AI 深度伪造检测方案。该方案将直接在三星 Galaxy 设备上运行，帮助企业识别 AI 生成的虚假语音、视频和图像，降低冒充诈骗及其他相关风险，计划率先落地新加坡市场。 IT之家获悉，Reality Defender 专注于企业级深度伪造检测，利用多种 AI 模型实时分析语音、视频和图像内容。例如，该技术能够在实时通话中识别冒充他人的合成语音，也可用于客户身份识别和新用户注册审核，帮助企业发现可疑的虚假内容。 Reality Defender 表示，随着生成式 AI 技术的发展，利用合成语音和视频实施诈骗的情况日益受到关注。有调查显示，2024 年新加坡有 56% 的企业曾遭遇音频深度伪造诈骗，另有 52% 的企业遇到过视频深度伪造相关事件。 个人用户同样面临此</p>
+<h3 id="上海市委书记陈吉宁会见美国苹果公司执行董事长蒂姆-·-库克"><a href="#上海市委书记陈吉宁会见美国苹果公司执行董事长蒂姆-·-库克" class="headerlink" title="上海市委书记陈吉宁会见美国苹果公司执行董事长蒂姆 · 库克"></a><a class="link"   href="https://www.ithome.com/1/014/135.htm" >上海市委书记陈吉宁会见美国苹果公司执行董事长蒂姆 · 库克<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>IT之家 · 10-16 19:28</p>
+</blockquote>
+<p>IT之家 10 月 16 日消息，据“上海发布”公众号，上海市委书记陈吉宁今天（10 月 16 日）会见了美国苹果公司执行董事长蒂姆 · 库克一行。 陈吉宁提到，当前，新一轮科技革命和产业变革加速突破，人工智能技术和产业发展突飞猛进， 为包括苹果公司在内的全球企业在沪发展带来新的机遇 。欢迎用好上海的改革开放优势、科技创新优势和市场渠道优势，围绕智能终端供给、创新生态培育、人工智能健康发展等深化交流合作，推动更多新产品、新技术、新服务落地上海。上海将持续优化市场化、法治化、国际化一流营商环境，加快完善与高水平开放相适应的监管体系和法律体系，支持全球企业在沪实现更好发展。 蒂姆 · 库克表示，每次来到上海这座全球卓越城市，都能感受到蓬勃发展的活力和科技创新的动力。十分高兴在这里看到人工智能技术赋能千行百业的新实践新探索，愿持续深耕上海， 携手合作伙伴围绕人工智能发展、产业生态构建、供应链管理</p>
+<h3 id="中控技术接入千问办公，打造流程工业领域AI-Native标杆企业"><a href="#中控技术接入千问办公，打造流程工业领域AI-Native标杆企业" class="headerlink" title="中控技术接入千问办公，打造流程工业领域AI Native标杆企业"></a><a class="link"   href="https://www.leiphone.com/category/industrynews/8IM46Vzpf7IFumo7.html" >中控技术接入千问办公，打造流程工业领域AI Native标杆企业<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>雷锋网 · 10-16 15:51</p>
+</blockquote>
+<p>10月16日，中控技术股份有限公司（以下简称“中控技术”）正式接入千问办公，将Agent落地营销全链路。后续，千问办公还将优化中控技术的采购、供应链、财务、人力、研发等场景工作流，共建流程工业领域AI Native标杆企业。 图示 中控技术和千问办公签约现场 中控技术成立于1999年，是以工业数据为基础、AI大模型为核心、全场景智能体为触手的工业AI平台型公司，基于“技术+场景+生态”的立体化布局，推动流程工业从单点智能向全链路智能跃迁，其业务覆盖全球50多个国家和地区，服务海内外4万多家客户。在今日签约仪式上，中控技术副总裁石小磊、阿里云智能集团副总裁张敬、千问办公副总裁朱鸿共同见证双方达成战略合作。 在营销领域，中控技术正与千问办公联合打造AI营销项目，覆盖从搜集市场线索到回款结算的营销全链路。例如在一线销售场景下，销售人员长期处于白天跑客户、晚上写材料的高负荷状态，一份解决方案从现场</p>
+<h3 id="阿里千问上车宝马iX3"><a href="#阿里千问上车宝马iX3" class="headerlink" title="阿里千问上车宝马iX3"></a><a class="link"   href="https://www.leiphone.com/category/industrynews/1zjGZ4srbO3kyVEw.html" >阿里千问上车宝马iX3<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>雷锋网 · 10-16 10:36</p>
+</blockquote>
+<p>10月15日消息，在2026宝马集团中国创新日上，宝马宣布新世代BMW iX3将搭载专为中国市场打造的座舱AI能力。该能力由宝马与阿里巴巴联合开发，以阿里千问大模型为AI底座，并由斑马负责座舱应用与车端集成，融入BMW智能个人助理（BMW Intelligent Personal Assistant）。阿里巴巴集团副总裁、阿里云智能集团CTO李飞飞表示，阿里将从用户场景出发，让新世代宝马智能座舱更加聪明、自然。 目前，阿里已经成为车企的全栈AI技术伙伴。IDC数据显示，2025年下半年，阿里云以42%的份额位居中国汽车公共云IaaS市场第一，并连续五年保持首位。目前，近30家车企和智驾方案商在阿里云开展智驾研发，实际使用PPU超过10万卡。在具体业务中，阿里AI已进入智能座舱、模型训练、软件研发和生产制造等环节。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="Mark-Wahlberg-on-using-AI-in-film-‘the-right-way’-and-being-open-to-an-AI-clone-carrying-on-his-legacy"><a href="#Mark-Wahlberg-on-using-AI-in-film-‘the-right-way’-and-being-open-to-an-AI-clone-carrying-on-his-legacy" class="headerlink" title="Mark Wahlberg on using AI in film ‘the right way’ and being open to an AI clone carrying on his legacy"></a><a class="link"   href="https://techcrunch.com/2026/10/16/mark-wahlberg-on-using-ai-in-film-the-right-way-and-being-open-to-an-ai-clone-carrying-on-his-legacy/" >Mark Wahlberg on using AI in film ‘the right way’ and being open to an AI clone carrying on his legacy<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>TechCrunch AI · 10-16 22:26</p>
+</blockquote>
+<p>Actor and angel investor Mark Wahlberg says he’s OK with using AI in filmmaking, provided it’s used “to enhance what you’re doing.”</p>
+<h3 id="Replit’s-CEO-says-the-future-of-work-is-the-‘self-driving-company’"><a href="#Replit’s-CEO-says-the-future-of-work-is-the-‘self-driving-company’" class="headerlink" title="Replit’s CEO says the future of work is the ‘self-driving company’"></a><a class="link"   href="https://techcrunch.com/2026/10/16/replits-ceo-says-the-future-of-work-is-the-self-driving-company/" >Replit’s CEO says the future of work is the ‘self-driving company’<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>TechCrunch AI · 10-16 20:55</p>
+</blockquote>
+<p>Replit CEO Amjad Masad envisions a future of “self-driving companies,” where AI agents handle day-to-day tasks and people focus on higher-level decisions.</p>
+<h3 id="Pi-抛出全新-Agent-Harness，还把自己骂了一年的-MCP-装进了核心"><a href="#Pi-抛出全新-Agent-Harness，还把自己骂了一年的-MCP-装进了核心" class="headerlink" title="Pi 抛出全新 Agent Harness，还把自己骂了一年的 MCP 装进了核心"></a><a class="link"   href="https://www.infoq.cn/article/hQOHf1ZXoBs7uMpWJQss?utm_source=rss&utm_medium=article" >Pi 抛出全新 Agent Harness，还把自己骂了一年的 MCP 装进了核心<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>InfoQ 中文 · 10-16 19:53</p>
+</blockquote>
+<p>点击查看原文&gt;</p>
+<h3 id="Pizza-Bot：开源的后台-AI-智能体收件箱"><a href="#Pizza-Bot：开源的后台-AI-智能体收件箱" class="headerlink" title="Pizza Bot：开源的后台 AI 智能体收件箱"></a><a class="link"   href="https://www.infoq.cn/article/aMgWFmwZ2HoZDtw1g0MQ?utm_source=rss&utm_medium=article" >Pizza Bot：开源的后台 AI 智能体收件箱<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>InfoQ 中文 · 10-16 19:06</p>
+</blockquote>
+<p>点击查看原文&gt;</p>
+<h3 id="AI-写完代码，谁来验证？手淘-TEKO-“写—验—修”自主闭环的工程实践｜QCon上海"><a href="#AI-写完代码，谁来验证？手淘-TEKO-“写—验—修”自主闭环的工程实践｜QCon上海" class="headerlink" title="AI 写完代码，谁来验证？手淘 TEKO “写—验—修”自主闭环的工程实践｜QCon上海"></a><a class="link"   href="https://www.infoq.cn/article/t3XbHewuN37fsodaprUC?utm_source=rss&utm_medium=article" >AI 写完代码，谁来验证？手淘 TEKO “写—验—修”自主闭环的工程实践｜QCon上海<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>InfoQ 中文 · 10-16 18:00</p>
+</blockquote>
+<p>点击查看原文&gt;</p>
+<h3 id="拍照和翻译救不了AI眼镜？千问2218元起推新硬件，要抢现实世界里的上下文"><a href="#拍照和翻译救不了AI眼镜？千问2218元起推新硬件，要抢现实世界里的上下文" class="headerlink" title="拍照和翻译救不了AI眼镜？千问2218元起推新硬件，要抢现实世界里的上下文"></a><a class="link"   href="https://www.infoq.cn/article/wMMAbsA4UOtYlAl1fH4T?utm_source=rss&utm_medium=article" >拍照和翻译救不了AI眼镜？千问2218元起推新硬件，要抢现实世界里的上下文<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>InfoQ 中文 · 10-16 07:06</p>
+</blockquote>
+<p>点击查看原文&gt;</p>
+<h3 id="阶跃星辰开放-Step-5-Preview-权重：长程-Agent-的竞争，延伸到上下文管理与训练系统"><a href="#阶跃星辰开放-Step-5-Preview-权重：长程-Agent-的竞争，延伸到上下文管理与训练系统" class="headerlink" title="阶跃星辰开放 Step 5 Preview 权重：长程 Agent 的竞争，延伸到上下文管理与训练系统"></a><a class="link"   href="https://www.infoq.cn/article/EwqsJX6f03ODRac6Kk4c?utm_source=rss&utm_medium=article" >阶跃星辰开放 Step 5 Preview 权重：长程 Agent 的竞争，延伸到上下文管理与训练系统<i class="fas fa-external-link-alt"></i></a></h3><blockquote>
+<p>InfoQ 中文 · 10-16 04:09</p>
+</blockquote>
+<p>点击查看原文&gt;</p>
+<hr>
+<p><em>本文由自动化脚本于 2026-10-17 00:19 生成；信息来源：IT之家、InfoQ 中文、OpenAI、TechCrunch AI、The Verge AI、雷锋网。</em></p>
 ]]></content>
       <categories>
-        <category>Linux</category>
+        <category>AI日报</category>
       </categories>
       <tags>
-        <tag>SSH</tag>
+        <tag>AI</tag>
+        <tag>日报</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>transformer学习记录</title>
+    <url>/2023/07/07/transformer/</url>
+    <content><![CDATA[<p>最近在和老师汇报Transformer的学习进展，备份一下PPT：<a href="/pdf/transformer.pdf" target="_blank" rel="nofollow">PDF</a>|<a href="/pdf/transformer.pptx" target="_blank" rel="nofollow">PPT</a></p>
+<iframe src="pdf/transformer_ppt.html" frameborder="0" width="100%" height="1000"></iframe>
+]]></content>
   </entry>
   <entry>
     <title>SSH免密登陆</title>
@@ -732,145 +711,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Ubuntu安装NVIDIA驱动</title>
-    <url>/2023/04/17/ubuntu/Ubuntu%2018.04%20%E5%AE%89%E8%A3%85%20NVIDIA%20%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/</url>
-    <content><![CDATA[<p>我们今天的目标是在 Ubuntu 18.04 上安装 NVIDIA 显卡驱动，请注意，你的显卡一定要是 NVIDIA 的显卡才能按照这篇文章的方法安装。我将给大家介绍三种安装方法，建议使用第一种方法安装。</p>
-<p>先来说说带有 NVIDIA 独立显卡的电脑为什么要安装 NVIDIA 显卡驱动吧。下面是我从维基百科摘抄的显卡工作原理的介绍：</p>
+    <title>使用SCP拷贝文件</title>
+    <url>/2023/04/17/ssh/ssh%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="使用SCP拷贝文件"><a href="#使用SCP拷贝文件" class="headerlink" title="使用SCP拷贝文件"></a>使用SCP拷贝文件</h1><p>有时候需要在跨设备复制文件，只要可以使用ssh登陆的设备即可使用scp命令实现文件的复制，非常方便</p>
+<h2 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp username@192.168.xx.xxx://home/username/src /dest</span><br></pre></td></tr></table></figure>
+
+<p>对于文件夹，需要加入 <code>-r</code>参数</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">scp -r username@192.168.xx.xxx://home/username/srcDir /destDir</span><br></pre></td></tr></table></figure>
+
+<hr>
 <blockquote>
-<p>显卡是插在主板上的扩展槽里的（现在一般是 PCI-E 插槽，此前还有 AGP、PCI、ISA 等插槽）。它主要负责把主机向显示器发出的显示信号转化为一般电器信号，使得显示器能明白个人计算机在让它做什么。显卡的主要芯片叫“显示芯片”（Video chipset，也叫 GPU 或 VPU，图形处理器或视觉处理器），是显卡的主要处理单元。显卡上也有和计算机存储器相似的存储器，称为“显示存储器”，简称显存。<br>早期的显卡只是单纯意义的显卡，只起到信号转换的作用；当前我们一般使用的显卡都带有 3D 画面运算和图形加速功能，所以也叫做“图形加速卡”或“3D 加速卡”。PC 上最早的显卡是 IBM 在 1981 年推出的 5150 个人计算机上所搭载的 MDA 和 CGA 两款 2D 加速卡。<br>显卡通常由总线接口、PCB 板、显示芯片、显存、RAMDAC、VGA BIOS、VGA 功能插针、D-sub 插座及其他外围组件构成，现在的显卡大多还具有 VGA、DVI 显示器接口或者 HDMI 接口及 S-Video 端子和 Display Port 接口。</p>
+<p>更多使用方法请参考：<a class="link"   href="https://m.runoob.com/linux/linux-comm-scp.html" >Linux scp命令 | 菜鸟教程 (runoob.com)<i class="fas fa-external-link-alt"></i></a></p>
 </blockquote>
-<p>电脑硬件有 NVIDIA 的显卡，但是没有驱动，那它是不能工作的，所以为了让显卡能够工作，发挥它的作用，我们需要安装显卡驱动。好的，下面来看看三种不同的安装方法吧。</p>
-<h2 id="1-使用-Ubuntu-软件仓库中的稳定版本安装"><a href="#1-使用-Ubuntu-软件仓库中的稳定版本安装" class="headerlink" title="1. 使用 Ubuntu 软件仓库中的稳定版本安装"></a><strong>1. 使用 Ubuntu 软件仓库中的稳定版本安装</strong></h2><p><em>2020.08.09 补充：</em></p>
-<p>介于许多朋友看了这篇文章介绍的方法安装还是会遇到问题，我这里补充一种更好的安装方法，也建议使用这种方法安装，其实我在下面这篇文章中有介绍，请参考 2.2 小节。</p>
-<p><a class="link"   href="https://zhuanlan.zhihu.com/p/63584709" >史上最良心的 Ubuntu desktop 美化优化指导(1)<i class="fas fa-external-link-alt"></i></a></p>
-<h2 id="1-1-查看显卡硬件型号"><a href="#1-1-查看显卡硬件型号" class="headerlink" title="1.1. 查看显卡硬件型号"></a><strong>1.1. 查看显卡硬件型号</strong></h2><p>在终端输入：<code>ubuntu-drivers devices</code>，可以看到如下界面：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-5d32bffc05c68bf8edbd27fd20e837b0_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-
-<p>从上图可以看出，我的显卡是：<code>GM107M [GeForce GTX 860M]</code>，推荐安装的版本号是：<code>nvidia-driver-390 - distro non-free recommended</code>。</p>
-<h2 id="1-2-开始安装"><a href="#1-2-开始安装" class="headerlink" title="1.2. 开始安装"></a><strong>1.2. 开始安装</strong></h2><ul>
-<li>如果同意安装推荐版本，那我们只需要终端输入：<code>sudo ubuntu-drivers autoinstall</code> 就可以自动安装了。</li>
-<li>当然我们也可以使用 apt 命令安装自己想要安装的版本，比如我想安装 <code>340</code> 这个版本号的版本，终端输入：<code>sudo apt install nvidia-340</code> 就自动安装了。</li>
-<li>安装过程中按照提示操作，除非你知道每个提示的真实含义，否则所有的提示都选择默认就可以了，安装完成后重启系统，NVIDIA 显卡就可以正常工作了。安装完成后你可以参照 <code>https://linuxconfig.org/benchmark-your-graphics-card-on-linux</code> 上的介绍测试你的显卡。</li>
-</ul>
-<h2 id="2-使用-PPA-第三方软件仓库安装最新版本"><a href="#2-使用-PPA-第三方软件仓库安装最新版本" class="headerlink" title="2. 使用 PPA 第三方软件仓库安装最新版本"></a><strong>2. 使用 PPA 第三方软件仓库安装最新版本</strong></h2><ul>
-<li>添加 PPA 软件仓库：<code>sudo add-apt-repository ppa:graphics-drivers/ppa</code>，需要输入用户密码，按照提示还需要按下 Enter 键。</li>
-<li>更新软件索引：<code>sudo apt update</code></li>
-<li>接下来的步骤同方法一，只是这样我们就可以选择安装最新版本的驱动程序了。</li>
-</ul>
-<h2 id="3-从-NVIDIA-官网下载最新版驱动手动安装"><a href="#3-从-NVIDIA-官网下载最新版驱动手动安装" class="headerlink" title="3. 从 NVIDIA 官网下载最新版驱动手动安装"></a><strong>3. 从 NVIDIA 官网下载最新版驱动手动安装</strong></h2><ul>
-<li>打开终端，输入：<code>lshw -numeric -C display</code>，确认自己电脑显卡的型号，如下图：</li>
-</ul>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-592fd9491dfa98dfc005c2dd9e966404_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-
-<p>从上图可以看到，我的电脑的显卡是 <code>product: GM107M [GeForce GTX 860M] [10DE:1392]</code>，然后我们到 NVIDIA 的官网下载相应型号的驱动，官网地址是：<code>https://www.nvidia.com/Download/index.aspx</code>，如下图，我选择 GTX 860 显卡的驱动下载。</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic3.zhimg.com/v2-586ce06ccebb8ec8d2013f81e4d1232e_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-
-<p>注意每个选项，特别是操作系统那里，一定选择 Linux 64-bit</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
-                     
-                ></p>
-
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
-                     
-                ></p>
-
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
-                     
-                >英伟达 NVIDIA Quadro RTX8000 专业显卡</p>
-<p>京东</p>
-<p>¥37999.00</p>
-<p>去购买</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
-                     
-                ></p>
-
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
-                     
-                ></p>
-
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
-                     
-                ></p>
-
-<p>选好后点击 SEARCH 按钮搜索相应的驱动，如下图：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pic4.zhimg.com/v2-cad8de4d54178b21244a0e2c124a55ff_b.webp?consumer=ZHI_MENG"
-                     
-                ></p>
-
-<p>看到了吧，官方最新版本号已经是 418.43 了。点击 DOWNLOAD 按钮下载吧。</p>
-<p>接着需要先安装一些 NVIDIA 显卡依赖的软件，在终端依次执行如下命令：</p>
-<ul>
-<li><code>sudo dpkg --add-architecture i386</code></li>
-<li><code>sudo apt update</code></li>
-<li><code>sudo apt install build-essential libc6:i386</code></li>
-</ul>
-<p>Ubuntu 系统默认安装好是使用的一个开源的驱动：<code>nouveau</code>，我们要安装官方的驱动需要先禁用这个开源驱动，方法如下，依次执行：</p>
-<ul>
-<li><code>sudo bash -c &quot;echo blacklist nouveau &gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
-<li><code>sudo bash -c &quot;echo options nouveau modeset=0 &gt;&gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
-</ul>
-<p>执行完上面两条指令后，我们使用如下命令看看是否成功禁用了开源驱动：<code>cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</code>。如果和下面一样，表示成功了。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</span><br><span class="line">blacklist nouveau</span><br><span class="line">options nouveau modeset=0</span><br></pre></td></tr></table></figure>
-
-<p>这个时候我们需要先重启一下系统，重启吧。</p>
-<p>重启成功后打开终端，输入如下命令：<code>sudo telinit 3</code>。然后按快捷键：<code>CTRL+ALT+F1</code> 进入字符界面，输入用户名和密码，然后登录系统，进入我们保存下载 NVIDIA 驱动的目录，默认是：<code>Downloads/</code> 目录，<code>cd Downloads/</code>，然后执行：<code>bash NVIDIA-Linux-x86_64-418.43.bin</code>。注意：<code>NVIDIA-Linux-x86_64-418.43.bin</code> 要根据你下载的驱动文件的名字相应改动。</p>
-<p>安装过程中都点同意即可，如果你遇到下面的提示，安装下面我的输入输入后回车继续安装：</p>
-<blockquote>
-<p>The distribution-provided pre-install script failed!<br>Are you sure you want to continue? -&gt; <strong>CONTINUE INSTALLATION</strong><br>Would you like to run the nvidia-xconfig utility? -&gt; <strong>YES</strong></p>
-</blockquote>
-<p>安装完成后重启系统就可以点击软件列表中的 NVIDIA 的配置软件配置显卡驱动了，如果你遇到如下报错，请依次在终端输入如下命令解决：</p>
-<ul>
-<li>报错：WARNING: Unable to find suitable destination to install 32-bit compatibility libraries</li>
-<li>解决办法：<ul>
-<li>sudo dpkg –add-architecture i386</li>
-<li>sudo apt update</li>
-<li>sudo apt install libc6:i386</li>
-</ul>
-</li>
-</ul>
-<p>好了，今天分享了如何安装 NVIDIA 显卡驱动，再次提醒，如果你的显卡不是 NVIDIA 显卡，千万不要这么干，也不要在虚拟机中这么干。有什么不懂的可以留言和我讨论。</p>
 ]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>深度学习</tag>
+        <tag>SSH</tag>
       </tags>
   </entry>
   <entry>
@@ -908,79 +766,6 @@
       <tags>
         <tag>深度学习</tag>
         <tag>损失函数</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ImageNet数据集的下载与使用</title>
-    <url>/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="ImageNet数据集的下载与使用"><a href="#ImageNet数据集的下载与使用" class="headerlink" title="ImageNet数据集的下载与使用"></a>ImageNet数据集的下载与使用</h1><h2 id="1-数据下载"><a href="#1-数据下载" class="headerlink" title="1. 数据下载"></a>1. 数据下载</h2><h3 id="1-1-方法一：官网下载"><a href="#1-1-方法一：官网下载" class="headerlink" title="1.1 方法一：官网下载"></a>1.1 方法一：官网下载</h3><p><a href="https://link.zhihu.com/?target=https://www.image-net.org/">ImageNet <strong>www.image-net.org/</strong></a></p>
-<p>在官方网站注册账号，注册时最好使用教育邮箱(.edu )之后。按照流程申请，收到邮件之后可以就可以在 Download界面里下数据啦~<br>推荐下载12年的数据，因为比较经典。不如果你如果凑巧财力雄厚，也可以考虑最顶上那个ImageNet21k，它相比12年的数据大的离谱。</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://pica.zhimg.com/80/v2-b757f1bbb9600f7ae4bc1dd551cbbfdb_720w.webp?source=1940ef5c"
-                     
-                ></p>
-
-<p>点进去之后，下载如下三个压缩包（图片分类任务用这三个足够了）</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/80/v2-4c58bc88b0d657922d6ee7d4c9498b19_720w.webp?source=1940ef5c"
-                     
-                ></p>
-
-<h3 id="1-2-方法二"><a href="#1-2-方法二" class="headerlink" title="1.2 方法二"></a>1.2 方法二</h3><p>如果你觉得这么下不方便&#x2F;网速太慢容易断，可以在这个网址自行找12年的版本下载（别全下了呀）</p>
-<p><a href="https://link.zhihu.com/?target=https://hyper.ai/datasets/4889">ImageNet 10 图像识别数据集 - 数据集下载 - 超神经<strong>hyper.ai&#x2F;datasets&#x2F;4889</strong></a></p>
-<h2 id="2-数据解压"><a href="#2-数据解压" class="headerlink" title="2. 数据解压"></a>2. 数据解压</h2><p>下载完毕后把 Development kit 留着备用，我们会得到训练集与验证集的两个压缩包，分别是 <code>ILSVRC2012_img_train.tar</code> 和 <code>ILSVRC2012_img_val.tar</code>。</p>
-<p>首先创建两个用于放训练集和测试集的文件夹，然后解压：</p>
-<figure class="highlight console"><table><tr><td class="code"><pre><span class="line">mkdir train</span><br><span class="line">mkdir val</span><br><span class="line">tar xvf ILSVRC2012_img_train.tar -C ./train</span><br><span class="line">tar xvf ILSVRC2012_img_val.tar -C ./val</span><br></pre></td></tr></table></figure>
-
-<p>对于train的压缩包，解压之后其实还是1000个tar压缩包（对应1000个类别），需要再次解压，解压脚本unzip.sh如下（PS：可能需要自己改一下目录 dir ）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span>=./train</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> `<span class="built_in">ls</span> <span class="variable">$dir</span>/*tar` <span class="keyword">do</span></span><br><span class="line">  filename=`<span class="built_in">basename</span> <span class="variable">$x</span> .tar`</span><br><span class="line">  <span class="built_in">mkdir</span> <span class="variable">$dir</span>/<span class="variable">$filename</span></span><br><span class="line">  tar -xvf <span class="variable">$x</span> -C <span class="variable">$dir</span>/<span class="variable">$filename</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">rm</span> *.tar</span><br></pre></td></tr></table></figure>
-
-<p>执行脚本之后，我们就获得了1000个文件夹和对应的图片数据啦~截至目前，我们已经把所有的 JPEG 图片搞了出来。</p>
-<h2 id="3-数据标签"><a href="#3-数据标签" class="headerlink" title="3. 数据标签"></a>3. 数据标签</h2><p>对于训练集，不同类别的数据躺在不同的文件夹里，用起来很方便（同一文件夹的视为一类）。但是验证集没有对应的标签，需要额外处理。</p>
-<p>验证集的标签在 Development kit （文件名为 <code>ILSVRC2012_devkit_t12.tar.gz</code>）中的 <code>ILSVRC2012_devkit_t12\data\ILSVRC2012_validation_ground_truth.txt</code> 中：</p>
-<p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://picx.zhimg.com/80/v2-10219b98d7686a62a5f86d3d7322ac6b_720w.webp?source=1940ef5c"
-                     
-                ></p>
-
-<p>但是新的问题又来了，那就是这个数字和文件夹的名字虽然是一一对应的，但还是需要额外的映射……好在映射关系储存在和txt文件同目录下的 <code>meta.mat</code> 文件中。我们希望验证集的文件结构长得和训练集一样，即 :</p>
-<ul>
-<li>&#x2F;val<ul>
-<li>&#x2F;n01440764<ul>
-<li>images</li>
-</ul>
-</li>
-<li>&#x2F;n01443537</li>
-<li>images</li>
-</ul>
-</li>
-</ul>
-<p>因此，我们首先解压 devkit 压缩包，把我们需要的东西取出来：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xzf ILSVRC2012_devkit_t12.tar.gz</span><br></pre></td></tr></table></figure>
-
-<p>之后，在imagenet目录（devkit和val的<a class="link"   href="https://www.zhihu.com/search?q=%E6%A0%B9%E7%9B%AE%E5%BD%95&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:1930557182%7D" >根目录<i class="fas fa-external-link-alt"></i></a>下）创建并运行如下 python 脚本</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">move_valimg</span>(<span class="params">val_dir=<span class="string">&#x27;./val&#x27;</span>, devkit_dir=<span class="string">&#x27;./ILSVRC2012_devkit_t12&#x27;</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    move valimg to correspongding folders.</span></span><br><span class="line"><span class="string">    val_id(start from 1) -&gt; ILSVRC_ID(start from 1) -&gt; WIND</span></span><br><span class="line"><span class="string">    organize like:</span></span><br><span class="line"><span class="string">    /val</span></span><br><span class="line"><span class="string">       /n01440764</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">       /n01443537</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">        .....</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># load synset, val ground truth and val images list</span></span><br><span class="line">    synset = io.loadmat(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;meta.mat&#x27;</span>))</span><br><span class="line"></span><br><span class="line">    ground_truth = <span class="built_in">open</span>(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;ILSVRC2012_validation_ground_truth.txt&#x27;</span>))</span><br><span class="line">    lines = ground_truth.readlines()</span><br><span class="line">    labels = [<span class="built_in">int</span>(line[:-<span class="number">1</span>]) <span class="keyword">for</span> line <span class="keyword">in</span> lines]</span><br><span class="line"></span><br><span class="line">    root, _, filenames = <span class="built_in">next</span>(os.walk(val_dir))</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="comment"># val image name -&gt; ILSVRC ID -&gt; WIND</span></span><br><span class="line">        val_id = <span class="built_in">int</span>(filename.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>].split(<span class="string">&#x27;_&#x27;</span>)[-<span class="number">1</span>])</span><br><span class="line">        ILSVRC_ID = labels[val_id-<span class="number">1</span>]</span><br><span class="line">        WIND = synset[<span class="string">&#x27;synsets&#x27;</span>][ILSVRC_ID-<span class="number">1</span>][<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;val_id:%d, ILSVRC_ID:%d, WIND:%s&quot;</span> % (val_id, ILSVRC_ID, WIND))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># move val images</span></span><br><span class="line">        output_dir = os.path.join(root, WIND)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(output_dir):</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            os.mkdir(output_dir)</span><br><span class="line">        shutil.move(os.path.join(root, filename), os.path.join(output_dir, filename))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    move_valimg()</span><br></pre></td></tr></table></figure>
-
-<h2 id="4-用Pytorch加载"><a href="#4-用Pytorch加载" class="headerlink" title="4. 用Pytorch加载"></a>4. 用Pytorch加载</h2><p>使用 torchvision.datasets.ImageFolder() 就可以直接加载处理好的数据集啦！</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torchvision.datasets <span class="keyword">as</span> datasets</span><br><span class="line"></span><br><span class="line">root = <span class="string">&#x27;data/imagenet&#x27;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_imagenet</span>(<span class="params">root, train = <span class="literal">True</span>, transform = <span class="literal">None</span>, target_transform = <span class="literal">None</span></span>):</span><br><span class="line">    <span class="keyword">if</span> train:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;train&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;val&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> datasets.ImageFolder(root = root,</span><br><span class="line">                               transform = transform,</span><br><span class="line">                               target_transform = target_transform)</span><br></pre></td></tr></table></figure>
-
-<p>作者：薰风初入弦<br>链接：<a class="link"   href="https://www.zhihu.com/question/264345314/answer/1930557182" >https://www.zhihu.com/question/264345314/answer/1930557182<i class="fas fa-external-link-alt"></i></a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<hr>
-<blockquote>
-<p>[^1] <a class="link"   href="https://www.zhihu.com/question/264345314" >ImageNet使用方法？ - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>深度学习</category>
-      </categories>
-      <tags>
-        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
@@ -1182,6 +967,221 @@
       <tags>
         <tag>深度学习</tag>
         <tag>损失函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ImageNet数据集的下载与使用</title>
+    <url>/2023/04/17/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/imageNet%E6%95%B0%E6%8D%AE%E9%9B%86%E4%B8%8B%E8%BD%BD%E4%B8%8E%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="ImageNet数据集的下载与使用"><a href="#ImageNet数据集的下载与使用" class="headerlink" title="ImageNet数据集的下载与使用"></a>ImageNet数据集的下载与使用</h1><h2 id="1-数据下载"><a href="#1-数据下载" class="headerlink" title="1. 数据下载"></a>1. 数据下载</h2><h3 id="1-1-方法一：官网下载"><a href="#1-1-方法一：官网下载" class="headerlink" title="1.1 方法一：官网下载"></a>1.1 方法一：官网下载</h3><p><a href="https://link.zhihu.com/?target=https://www.image-net.org/">ImageNet <strong>www.image-net.org/</strong></a></p>
+<p>在官方网站注册账号，注册时最好使用教育邮箱(.edu )之后。按照流程申请，收到邮件之后可以就可以在 Download界面里下数据啦~<br>推荐下载12年的数据，因为比较经典。不如果你如果凑巧财力雄厚，也可以考虑最顶上那个ImageNet21k，它相比12年的数据大的离谱。</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pica.zhimg.com/80/v2-b757f1bbb9600f7ae4bc1dd551cbbfdb_720w.webp?source=1940ef5c"
+                     
+                ></p>
+
+<p>点进去之后，下载如下三个压缩包（图片分类任务用这三个足够了）</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/80/v2-4c58bc88b0d657922d6ee7d4c9498b19_720w.webp?source=1940ef5c"
+                     
+                ></p>
+
+<h3 id="1-2-方法二"><a href="#1-2-方法二" class="headerlink" title="1.2 方法二"></a>1.2 方法二</h3><p>如果你觉得这么下不方便&#x2F;网速太慢容易断，可以在这个网址自行找12年的版本下载（别全下了呀）</p>
+<p><a href="https://link.zhihu.com/?target=https://hyper.ai/datasets/4889">ImageNet 10 图像识别数据集 - 数据集下载 - 超神经<strong>hyper.ai&#x2F;datasets&#x2F;4889</strong></a></p>
+<h2 id="2-数据解压"><a href="#2-数据解压" class="headerlink" title="2. 数据解压"></a>2. 数据解压</h2><p>下载完毕后把 Development kit 留着备用，我们会得到训练集与验证集的两个压缩包，分别是 <code>ILSVRC2012_img_train.tar</code> 和 <code>ILSVRC2012_img_val.tar</code>。</p>
+<p>首先创建两个用于放训练集和测试集的文件夹，然后解压：</p>
+<figure class="highlight console"><table><tr><td class="code"><pre><span class="line">mkdir train</span><br><span class="line">mkdir val</span><br><span class="line">tar xvf ILSVRC2012_img_train.tar -C ./train</span><br><span class="line">tar xvf ILSVRC2012_img_val.tar -C ./val</span><br></pre></td></tr></table></figure>
+
+<p>对于train的压缩包，解压之后其实还是1000个tar压缩包（对应1000个类别），需要再次解压，解压脚本unzip.sh如下（PS：可能需要自己改一下目录 dir ）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">dir</span>=./train</span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> `<span class="built_in">ls</span> <span class="variable">$dir</span>/*tar` <span class="keyword">do</span></span><br><span class="line">  filename=`<span class="built_in">basename</span> <span class="variable">$x</span> .tar`</span><br><span class="line">  <span class="built_in">mkdir</span> <span class="variable">$dir</span>/<span class="variable">$filename</span></span><br><span class="line">  tar -xvf <span class="variable">$x</span> -C <span class="variable">$dir</span>/<span class="variable">$filename</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"><span class="built_in">rm</span> *.tar</span><br></pre></td></tr></table></figure>
+
+<p>执行脚本之后，我们就获得了1000个文件夹和对应的图片数据啦~截至目前，我们已经把所有的 JPEG 图片搞了出来。</p>
+<h2 id="3-数据标签"><a href="#3-数据标签" class="headerlink" title="3. 数据标签"></a>3. 数据标签</h2><p>对于训练集，不同类别的数据躺在不同的文件夹里，用起来很方便（同一文件夹的视为一类）。但是验证集没有对应的标签，需要额外处理。</p>
+<p>验证集的标签在 Development kit （文件名为 <code>ILSVRC2012_devkit_t12.tar.gz</code>）中的 <code>ILSVRC2012_devkit_t12\data\ILSVRC2012_validation_ground_truth.txt</code> 中：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/80/v2-10219b98d7686a62a5f86d3d7322ac6b_720w.webp?source=1940ef5c"
+                     
+                ></p>
+
+<p>但是新的问题又来了，那就是这个数字和文件夹的名字虽然是一一对应的，但还是需要额外的映射……好在映射关系储存在和txt文件同目录下的 <code>meta.mat</code> 文件中。我们希望验证集的文件结构长得和训练集一样，即 :</p>
+<ul>
+<li>&#x2F;val<ul>
+<li>&#x2F;n01440764<ul>
+<li>images</li>
+</ul>
+</li>
+<li>&#x2F;n01443537</li>
+<li>images</li>
+</ul>
+</li>
+</ul>
+<p>因此，我们首先解压 devkit 压缩包，把我们需要的东西取出来：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -xzf ILSVRC2012_devkit_t12.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>之后，在imagenet目录（devkit和val的<a class="link"   href="https://www.zhihu.com/search?q=%E6%A0%B9%E7%9B%AE%E5%BD%95&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22answer%22,%22sourceId%22:1930557182%7D" >根目录<i class="fas fa-external-link-alt"></i></a>下）创建并运行如下 python 脚本</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> scipy <span class="keyword">import</span> io</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">move_valimg</span>(<span class="params">val_dir=<span class="string">&#x27;./val&#x27;</span>, devkit_dir=<span class="string">&#x27;./ILSVRC2012_devkit_t12&#x27;</span></span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    move valimg to correspongding folders.</span></span><br><span class="line"><span class="string">    val_id(start from 1) -&gt; ILSVRC_ID(start from 1) -&gt; WIND</span></span><br><span class="line"><span class="string">    organize like:</span></span><br><span class="line"><span class="string">    /val</span></span><br><span class="line"><span class="string">       /n01440764</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">       /n01443537</span></span><br><span class="line"><span class="string">           images</span></span><br><span class="line"><span class="string">        .....</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="comment"># load synset, val ground truth and val images list</span></span><br><span class="line">    synset = io.loadmat(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;meta.mat&#x27;</span>))</span><br><span class="line"></span><br><span class="line">    ground_truth = <span class="built_in">open</span>(os.path.join(devkit_dir, <span class="string">&#x27;data&#x27;</span>, <span class="string">&#x27;ILSVRC2012_validation_ground_truth.txt&#x27;</span>))</span><br><span class="line">    lines = ground_truth.readlines()</span><br><span class="line">    labels = [<span class="built_in">int</span>(line[:-<span class="number">1</span>]) <span class="keyword">for</span> line <span class="keyword">in</span> lines]</span><br><span class="line"></span><br><span class="line">    root, _, filenames = <span class="built_in">next</span>(os.walk(val_dir))</span><br><span class="line">    <span class="keyword">for</span> filename <span class="keyword">in</span> filenames:</span><br><span class="line">        <span class="comment"># val image name -&gt; ILSVRC ID -&gt; WIND</span></span><br><span class="line">        val_id = <span class="built_in">int</span>(filename.split(<span class="string">&#x27;.&#x27;</span>)[<span class="number">0</span>].split(<span class="string">&#x27;_&#x27;</span>)[-<span class="number">1</span>])</span><br><span class="line">        ILSVRC_ID = labels[val_id-<span class="number">1</span>]</span><br><span class="line">        WIND = synset[<span class="string">&#x27;synsets&#x27;</span>][ILSVRC_ID-<span class="number">1</span>][<span class="number">0</span>][<span class="number">1</span>][<span class="number">0</span>]</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;val_id:%d, ILSVRC_ID:%d, WIND:%s&quot;</span> % (val_id, ILSVRC_ID, WIND))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># move val images</span></span><br><span class="line">        output_dir = os.path.join(root, WIND)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(output_dir):</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            os.mkdir(output_dir)</span><br><span class="line">        shutil.move(os.path.join(root, filename), os.path.join(output_dir, filename))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    move_valimg()</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-用Pytorch加载"><a href="#4-用Pytorch加载" class="headerlink" title="4. 用Pytorch加载"></a>4. 用Pytorch加载</h2><p>使用 torchvision.datasets.ImageFolder() 就可以直接加载处理好的数据集啦！</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> torchvision.datasets <span class="keyword">as</span> datasets</span><br><span class="line"></span><br><span class="line">root = <span class="string">&#x27;data/imagenet&#x27;</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_imagenet</span>(<span class="params">root, train = <span class="literal">True</span>, transform = <span class="literal">None</span>, target_transform = <span class="literal">None</span></span>):</span><br><span class="line">    <span class="keyword">if</span> train:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;train&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        root = os.path.join(root, <span class="string">&#x27;val&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> datasets.ImageFolder(root = root,</span><br><span class="line">                               transform = transform,</span><br><span class="line">                               target_transform = target_transform)</span><br></pre></td></tr></table></figure>
+
+<p>作者：薰风初入弦<br>链接：<a class="link"   href="https://www.zhihu.com/question/264345314/answer/1930557182" >https://www.zhihu.com/question/264345314/answer/1930557182<i class="fas fa-external-link-alt"></i></a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<hr>
+<blockquote>
+<p>[^1] <a class="link"   href="https://www.zhihu.com/question/264345314" >ImageNet使用方法？ - 知乎 (zhihu.com)<i class="fas fa-external-link-alt"></i></a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ubuntu安装NVIDIA驱动</title>
+    <url>/2023/04/17/ubuntu/Ubuntu%2018.04%20%E5%AE%89%E8%A3%85%20NVIDIA%20%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/</url>
+    <content><![CDATA[<p>我们今天的目标是在 Ubuntu 18.04 上安装 NVIDIA 显卡驱动，请注意，你的显卡一定要是 NVIDIA 的显卡才能按照这篇文章的方法安装。我将给大家介绍三种安装方法，建议使用第一种方法安装。</p>
+<p>先来说说带有 NVIDIA 独立显卡的电脑为什么要安装 NVIDIA 显卡驱动吧。下面是我从维基百科摘抄的显卡工作原理的介绍：</p>
+<blockquote>
+<p>显卡是插在主板上的扩展槽里的（现在一般是 PCI-E 插槽，此前还有 AGP、PCI、ISA 等插槽）。它主要负责把主机向显示器发出的显示信号转化为一般电器信号，使得显示器能明白个人计算机在让它做什么。显卡的主要芯片叫“显示芯片”（Video chipset，也叫 GPU 或 VPU，图形处理器或视觉处理器），是显卡的主要处理单元。显卡上也有和计算机存储器相似的存储器，称为“显示存储器”，简称显存。<br>早期的显卡只是单纯意义的显卡，只起到信号转换的作用；当前我们一般使用的显卡都带有 3D 画面运算和图形加速功能，所以也叫做“图形加速卡”或“3D 加速卡”。PC 上最早的显卡是 IBM 在 1981 年推出的 5150 个人计算机上所搭载的 MDA 和 CGA 两款 2D 加速卡。<br>显卡通常由总线接口、PCB 板、显示芯片、显存、RAMDAC、VGA BIOS、VGA 功能插针、D-sub 插座及其他外围组件构成，现在的显卡大多还具有 VGA、DVI 显示器接口或者 HDMI 接口及 S-Video 端子和 Display Port 接口。</p>
+</blockquote>
+<p>电脑硬件有 NVIDIA 的显卡，但是没有驱动，那它是不能工作的，所以为了让显卡能够工作，发挥它的作用，我们需要安装显卡驱动。好的，下面来看看三种不同的安装方法吧。</p>
+<h2 id="1-使用-Ubuntu-软件仓库中的稳定版本安装"><a href="#1-使用-Ubuntu-软件仓库中的稳定版本安装" class="headerlink" title="1. 使用 Ubuntu 软件仓库中的稳定版本安装"></a><strong>1. 使用 Ubuntu 软件仓库中的稳定版本安装</strong></h2><p><em>2020.08.09 补充：</em></p>
+<p>介于许多朋友看了这篇文章介绍的方法安装还是会遇到问题，我这里补充一种更好的安装方法，也建议使用这种方法安装，其实我在下面这篇文章中有介绍，请参考 2.2 小节。</p>
+<p><a class="link"   href="https://zhuanlan.zhihu.com/p/63584709" >史上最良心的 Ubuntu desktop 美化优化指导(1)<i class="fas fa-external-link-alt"></i></a></p>
+<h2 id="1-1-查看显卡硬件型号"><a href="#1-1-查看显卡硬件型号" class="headerlink" title="1.1. 查看显卡硬件型号"></a><strong>1.1. 查看显卡硬件型号</strong></h2><p>在终端输入：<code>ubuntu-drivers devices</code>，可以看到如下界面：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-5d32bffc05c68bf8edbd27fd20e837b0_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+
+<p>从上图可以看出，我的显卡是：<code>GM107M [GeForce GTX 860M]</code>，推荐安装的版本号是：<code>nvidia-driver-390 - distro non-free recommended</code>。</p>
+<h2 id="1-2-开始安装"><a href="#1-2-开始安装" class="headerlink" title="1.2. 开始安装"></a><strong>1.2. 开始安装</strong></h2><ul>
+<li>如果同意安装推荐版本，那我们只需要终端输入：<code>sudo ubuntu-drivers autoinstall</code> 就可以自动安装了。</li>
+<li>当然我们也可以使用 apt 命令安装自己想要安装的版本，比如我想安装 <code>340</code> 这个版本号的版本，终端输入：<code>sudo apt install nvidia-340</code> 就自动安装了。</li>
+<li>安装过程中按照提示操作，除非你知道每个提示的真实含义，否则所有的提示都选择默认就可以了，安装完成后重启系统，NVIDIA 显卡就可以正常工作了。安装完成后你可以参照 <code>https://linuxconfig.org/benchmark-your-graphics-card-on-linux</code> 上的介绍测试你的显卡。</li>
+</ul>
+<h2 id="2-使用-PPA-第三方软件仓库安装最新版本"><a href="#2-使用-PPA-第三方软件仓库安装最新版本" class="headerlink" title="2. 使用 PPA 第三方软件仓库安装最新版本"></a><strong>2. 使用 PPA 第三方软件仓库安装最新版本</strong></h2><ul>
+<li>添加 PPA 软件仓库：<code>sudo add-apt-repository ppa:graphics-drivers/ppa</code>，需要输入用户密码，按照提示还需要按下 Enter 键。</li>
+<li>更新软件索引：<code>sudo apt update</code></li>
+<li>接下来的步骤同方法一，只是这样我们就可以选择安装最新版本的驱动程序了。</li>
+</ul>
+<h2 id="3-从-NVIDIA-官网下载最新版驱动手动安装"><a href="#3-从-NVIDIA-官网下载最新版驱动手动安装" class="headerlink" title="3. 从 NVIDIA 官网下载最新版驱动手动安装"></a><strong>3. 从 NVIDIA 官网下载最新版驱动手动安装</strong></h2><ul>
+<li>打开终端，输入：<code>lshw -numeric -C display</code>，确认自己电脑显卡的型号，如下图：</li>
+</ul>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-592fd9491dfa98dfc005c2dd9e966404_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+
+<p>从上图可以看到，我的电脑的显卡是 <code>product: GM107M [GeForce GTX 860M] [10DE:1392]</code>，然后我们到 NVIDIA 的官网下载相应型号的驱动，官网地址是：<code>https://www.nvidia.com/Download/index.aspx</code>，如下图，我选择 GTX 860 显卡的驱动下载。</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic3.zhimg.com/v2-586ce06ccebb8ec8d2013f81e4d1232e_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+
+<p>注意每个选项，特别是操作系统那里，一定选择 Linux 64-bit</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
+                     
+                ></p>
+
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
+                     
+                ></p>
+
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
+                     
+                >英伟达 NVIDIA Quadro RTX8000 专业显卡</p>
+<p>京东</p>
+<p>¥37999.00</p>
+<p>去购买</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
+                     
+                ></p>
+
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://picx.zhimg.com/v2-b4f188c51182c73f1054c39cef5c05ae_720w.jpg?source=b555e01d"
+                     
+                ></p>
+
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic1.zhimg.com/v2-9f3d8b0bc503cc760c01c440c84fceba.png"
+                     
+                ></p>
+
+<p>选好后点击 SEARCH 按钮搜索相应的驱动，如下图：</p>
+<p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://pic4.zhimg.com/v2-cad8de4d54178b21244a0e2c124a55ff_b.webp?consumer=ZHI_MENG"
+                     
+                ></p>
+
+<p>看到了吧，官方最新版本号已经是 418.43 了。点击 DOWNLOAD 按钮下载吧。</p>
+<p>接着需要先安装一些 NVIDIA 显卡依赖的软件，在终端依次执行如下命令：</p>
+<ul>
+<li><code>sudo dpkg --add-architecture i386</code></li>
+<li><code>sudo apt update</code></li>
+<li><code>sudo apt install build-essential libc6:i386</code></li>
+</ul>
+<p>Ubuntu 系统默认安装好是使用的一个开源的驱动：<code>nouveau</code>，我们要安装官方的驱动需要先禁用这个开源驱动，方法如下，依次执行：</p>
+<ul>
+<li><code>sudo bash -c &quot;echo blacklist nouveau &gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
+<li><code>sudo bash -c &quot;echo options nouveau modeset=0 &gt;&gt; /etc/modprobe.d/blacklist-nvidia-nouveau.conf&quot;</code></li>
+</ul>
+<p>执行完上面两条指令后，我们使用如下命令看看是否成功禁用了开源驱动：<code>cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</code>。如果和下面一样，表示成功了。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">$ cat /etc/modprobe.d/blacklist-nvidia-nouveau.conf</span><br><span class="line">blacklist nouveau</span><br><span class="line">options nouveau modeset=0</span><br></pre></td></tr></table></figure>
+
+<p>这个时候我们需要先重启一下系统，重启吧。</p>
+<p>重启成功后打开终端，输入如下命令：<code>sudo telinit 3</code>。然后按快捷键：<code>CTRL+ALT+F1</code> 进入字符界面，输入用户名和密码，然后登录系统，进入我们保存下载 NVIDIA 驱动的目录，默认是：<code>Downloads/</code> 目录，<code>cd Downloads/</code>，然后执行：<code>bash NVIDIA-Linux-x86_64-418.43.bin</code>。注意：<code>NVIDIA-Linux-x86_64-418.43.bin</code> 要根据你下载的驱动文件的名字相应改动。</p>
+<p>安装过程中都点同意即可，如果你遇到下面的提示，安装下面我的输入输入后回车继续安装：</p>
+<blockquote>
+<p>The distribution-provided pre-install script failed!<br>Are you sure you want to continue? -&gt; <strong>CONTINUE INSTALLATION</strong><br>Would you like to run the nvidia-xconfig utility? -&gt; <strong>YES</strong></p>
+</blockquote>
+<p>安装完成后重启系统就可以点击软件列表中的 NVIDIA 的配置软件配置显卡驱动了，如果你遇到如下报错，请依次在终端输入如下命令解决：</p>
+<ul>
+<li>报错：WARNING: Unable to find suitable destination to install 32-bit compatibility libraries</li>
+<li>解决办法：<ul>
+<li>sudo dpkg –add-architecture i386</li>
+<li>sudo apt update</li>
+<li>sudo apt install libc6:i386</li>
+</ul>
+</li>
+</ul>
+<p>好了，今天分享了如何安装 NVIDIA 显卡驱动，再次提醒，如果你的显卡不是 NVIDIA 显卡，千万不要这么干，也不要在虚拟机中这么干。有什么不懂的可以留言和我讨论。</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>深度学习</tag>
       </tags>
   </entry>
   <entry>
